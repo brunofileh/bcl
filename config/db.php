@@ -2,8 +2,8 @@
 
 return [
     'class' => 'yii\db\Connection',
-    'dsn' => 'mysql:host=localhost;dbname=bcl',
-    'username' => 'root',
-    'password' => '123456',
+    'dsn' => 'pgsql:host=localhost;dbname=bcl',
+    'username' => 'postgres',
+    'password' => 'postgres',
     'charset' => 'utf8',
 ];

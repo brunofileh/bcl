@@ -5,6 +5,9 @@ $params = require(__DIR__ . '/params.php');
 $config = [
     'id' => 'basic',
     'basePath' => dirname(__DIR__),
+	'charset'	 => 'UTF-8',
+	'language'	 => 'pt-BR',
+	'timeZone'	 => 'America/Sao_Paulo',
     'bootstrap' => ['log'],
     'components' => [
         'request' => [
@@ -15,7 +18,7 @@ $config = [
             'class' => 'yii\caching\FileCache',
         ],
         'user' => [
-            'identityClass' => 'app\models\Usuarios',
+            'identityClass' => 'app\models\UserLogin',
 			'loginUrl' => ['site/login'],
 			'enableAutoLogin' => true 
         ],
