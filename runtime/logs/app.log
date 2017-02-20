@@ -21889,3 +21889,137 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1487531048.536
     'REQUEST_TIME' => 1487531048
 ]
+2017-02-19 23:32:21 [127.0.0.1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined index: FabricacaoHistoricoSearch' in /var/www/bcl/controllers/FabricacaoHistoricoController.php:89
+Stack trace:
+#0 /var/www/bcl/controllers/FabricacaoHistoricoController.php(89): yii\base\ErrorHandler->handleError(8, 'Undefined index...', '/var/www/bcl/co...', 89, Array)
+#1 [internal function]: app\controllers\FabricacaoHistoricoController->actionUpdate('6')
+#2 /var/www/bcl/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#3 /var/www/bcl/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#4 /var/www/bcl/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('update', Array)
+#5 /var/www/bcl/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('fabricacao-hist...', Array)
+#6 /var/www/bcl/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /var/www/bcl/web/index.php(12): yii\base\Application->run()
+#8 {main}
+2017-02-19 23:32:21 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'fabricacao-historico/update'
+    'id' => '6'
+]
+
+$_POST = [
+    '_csrf' => 'UVFoQWJ4YVNoEhgWUgoEIToVAAUrLxQ7IjQxLQ4XNxc9Fw13UQgGNg=='
+    'FabricacaoHistorico' => [
+        'data_conclusao' => '01/01/2011'
+        'pessoa' => 'wwww'
+        'qnt' => '2'
+        'pago_status' => '1'
+    ]
+]
+
+$_COOKIE = [
+    '_csrf' => '50c50dc3d183fbb2c6173352d8566cff982c5420426ed4efabbac6a64b458e06a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"9CpW0rerkDhDIWuhseYlloVDlFe63pge\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/bcl/web/index.php?r=fabricacao-historico%2Fupdate&id=6'
+    'HTTP_COOKIE' => '_csrf=50c50dc3d183fbb2c6173352d8566cff982c5420426ed4efabbac6a64b458e06a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%229CpW0rerkDhDIWuhseYlloVDlFe63pge%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '267'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/bcl/web/index.php'
+    'REMOTE_PORT' => '44098'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=fabricacao-historico%2Fupdate&id=6'
+    'REQUEST_URI' => '/bcl/web/index.php?r=fabricacao-historico%2Fupdate&id=6'
+    'SCRIPT_NAME' => '/bcl/web/index.php'
+    'PHP_SELF' => '/bcl/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1487557941.392
+    'REQUEST_TIME' => 1487557941
+]
+2017-02-19 23:32:43 [127.0.0.1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined index: qtd' in /var/www/bcl/controllers/FabricacaoHistoricoController.php:89
+Stack trace:
+#0 /var/www/bcl/controllers/FabricacaoHistoricoController.php(89): yii\base\ErrorHandler->handleError(8, 'Undefined index...', '/var/www/bcl/co...', 89, Array)
+#1 [internal function]: app\controllers\FabricacaoHistoricoController->actionUpdate('6')
+#2 /var/www/bcl/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#3 /var/www/bcl/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#4 /var/www/bcl/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('update', Array)
+#5 /var/www/bcl/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('fabricacao-hist...', Array)
+#6 /var/www/bcl/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /var/www/bcl/web/index.php(12): yii\base\Application->run()
+#8 {main}
+2017-02-19 23:32:43 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'fabricacao-historico/update'
+    'id' => '6'
+]
+
+$_POST = [
+    '_csrf' => 'U004Q19MYnJqDkgUbz4HADgJUAcWGxcaIChhLzMjNDY/C111bDwFFw=='
+    'FabricacaoHistoricoSearch' => [
+        'data_conclusao' => '01/01/2011'
+        'pessoa' => 'wwww'
+        'qnt' => '2'
+        'pago_status' => '1'
+    ]
+]
+
+$_COOKIE = [
+    '_csrf' => '50c50dc3d183fbb2c6173352d8566cff982c5420426ed4efabbac6a64b458e06a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"9CpW0rerkDhDIWuhseYlloVDlFe63pge\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/bcl/web/index.php?r=fabricacao-historico%2Fupdate&id=6'
+    'HTTP_COOKIE' => '_csrf=50c50dc3d183fbb2c6173352d8566cff982c5420426ed4efabbac6a64b458e06a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%229CpW0rerkDhDIWuhseYlloVDlFe63pge%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '299'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/bcl/web/index.php'
+    'REMOTE_PORT' => '44136'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=fabricacao-historico%2Fupdate&id=6'
+    'REQUEST_URI' => '/bcl/web/index.php?r=fabricacao-historico%2Fupdate&id=6'
+    'SCRIPT_NAME' => '/bcl/web/index.php'
+    'PHP_SELF' => '/bcl/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1487557963.238
+    'REQUEST_TIME' => 1487557963
+]
