@@ -27694,3 +27694,2337 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1488400111.967
     'REQUEST_TIME' => 1488400111
 ]
+2017-03-02 17:51:19 [::1][-][ta8i6dqvceapn0vb58uvvql9d0][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: estoque/produto-comercial' in C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Controller.php:127
+Stack trace:
+#0 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('produto-comerci...', Array)
+#1 C:\wamp64\www\bcl\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('estoque/produto...', Array)
+#2 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 C:\wamp64\www\bcl\web\index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Página não encontrada.' in C:\wamp64\www\bcl\vendor\yiisoft\yii2\web\Application.php:114
+Stack trace:
+#0 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\bcl\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2017-03-02 17:51:19 [::1][-][ta8i6dqvceapn0vb58uvvql9d0][info][application] $_COOKIE = [
+    '_ga' => 'GA1.1.798709550.1486065091'
+    '__utma' => '111872281.798709550.1486065091.1488402151.1488471054.36'
+    '__utmz' => '111872281.1486136376.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    'snis_h' => 'p5br3grkoh5cbdn3r30r29m0k2'
+    '__utmc' => '111872281'
+    'sinisa_dev' => 'cemmp7g6cbao17ntqnjds05pn3'
+    '_csrf' => 'e4a95e2d609991255e396d1b273498617791e76189e6cff588161f11e66709b6a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"K73Yf1-aDxt7SyTnF5HEs06cStriab6d\";}'
+    'sinisa_test' => 'mo4s3isqkvq5e49tjlhk6k9kt5'
+    'PHPSESSID' => 'ta8i6dqvceapn0vb58uvvql9d0'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/bcl/web/index.php?r=estoque/'
+    'HTTP_COOKIE' => '_ga=GA1.1.798709550.1486065091; __utma=111872281.798709550.1486065091.1488402151.1488471054.36; __utmz=111872281.1486136376.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); snis_h=p5br3grkoh5cbdn3r30r29m0k2; __utmc=111872281; sinisa_dev=cemmp7g6cbao17ntqnjds05pn3; _csrf=e4a95e2d609991255e396d1b273498617791e76189e6cff588161f11e66709b6a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22K73Yf1-aDxt7SyTnF5HEs06cStriab6d%22%3B%7D; sinisa_test=mo4s3isqkvq5e49tjlhk6k9kt5; PHPSESSID=ta8i6dqvceapn0vb58uvvql9d0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\wamp64\\bin\\php\\php5.6.16;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\MySQL\\MySQL Utilities 1.6\\;C:\\Program Files\\Git\\cmd;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win64) PHP/5.6.16 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win64) PHP/5.6.16'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www/'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/bcl/web/index.php'
+    'REMOTE_PORT' => '49861'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/bcl/web/index.php/estoque/produto-comercial'
+    'SCRIPT_NAME' => '/bcl/web/index.php'
+    'PATH_INFO' => '/estoque/produto-comercial'
+    'PATH_TRANSLATED' => 'C:\\wamp64\\www\\estoque\\produto-comercial'
+    'PHP_SELF' => '/bcl/web/index.php/estoque/produto-comercial'
+    'REQUEST_TIME_FLOAT' => 1488487879.231
+    'REQUEST_TIME' => 1488487879
+]
+2017-03-02 17:51:54 [::1][-][ta8i6dqvceapn0vb58uvvql9d0][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: estoque/produto-comercial' in C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Controller.php:127
+Stack trace:
+#0 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('produto-comerci...', Array)
+#1 C:\wamp64\www\bcl\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('estoque/produto...', Array)
+#2 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 C:\wamp64\www\bcl\web\index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Página não encontrada.' in C:\wamp64\www\bcl\vendor\yiisoft\yii2\web\Application.php:114
+Stack trace:
+#0 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\bcl\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2017-03-02 17:51:54 [::1][-][ta8i6dqvceapn0vb58uvvql9d0][info][application] $_COOKIE = [
+    '_ga' => 'GA1.1.798709550.1486065091'
+    '__utma' => '111872281.798709550.1486065091.1488402151.1488471054.36'
+    '__utmz' => '111872281.1486136376.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    'snis_h' => 'p5br3grkoh5cbdn3r30r29m0k2'
+    '__utmc' => '111872281'
+    'sinisa_dev' => 'cemmp7g6cbao17ntqnjds05pn3'
+    '_csrf' => 'e4a95e2d609991255e396d1b273498617791e76189e6cff588161f11e66709b6a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"K73Yf1-aDxt7SyTnF5HEs06cStriab6d\";}'
+    'sinisa_test' => 'mo4s3isqkvq5e49tjlhk6k9kt5'
+    'PHPSESSID' => 'ta8i6dqvceapn0vb58uvvql9d0'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/bcl/web/index.php/produto-comercial/create'
+    'HTTP_COOKIE' => '_ga=GA1.1.798709550.1486065091; __utma=111872281.798709550.1486065091.1488402151.1488471054.36; __utmz=111872281.1486136376.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); snis_h=p5br3grkoh5cbdn3r30r29m0k2; __utmc=111872281; sinisa_dev=cemmp7g6cbao17ntqnjds05pn3; _csrf=e4a95e2d609991255e396d1b273498617791e76189e6cff588161f11e66709b6a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22K73Yf1-aDxt7SyTnF5HEs06cStriab6d%22%3B%7D; sinisa_test=mo4s3isqkvq5e49tjlhk6k9kt5; PHPSESSID=ta8i6dqvceapn0vb58uvvql9d0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\wamp64\\bin\\php\\php5.6.16;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\MySQL\\MySQL Utilities 1.6\\;C:\\Program Files\\Git\\cmd;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win64) PHP/5.6.16 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win64) PHP/5.6.16'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www/'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/bcl/web/index.php'
+    'REMOTE_PORT' => '49871'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/bcl/web/index.php/estoque/produto-comercial'
+    'SCRIPT_NAME' => '/bcl/web/index.php'
+    'PATH_INFO' => '/estoque/produto-comercial'
+    'PATH_TRANSLATED' => 'C:\\wamp64\\www\\estoque\\produto-comercial'
+    'PHP_SELF' => '/bcl/web/index.php/estoque/produto-comercial'
+    'REQUEST_TIME_FLOAT' => 1488487914.922
+    'REQUEST_TIME' => 1488487914
+]
+2017-03-02 17:52:37 [::1][-][ta8i6dqvceapn0vb58uvvql9d0][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: estoque/produto-comercial' in C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Controller.php:127
+Stack trace:
+#0 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('produto-comerci...', Array)
+#1 C:\wamp64\www\bcl\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('estoque/produto...', Array)
+#2 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 C:\wamp64\www\bcl\web\index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Página não encontrada.' in C:\wamp64\www\bcl\vendor\yiisoft\yii2\web\Application.php:114
+Stack trace:
+#0 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\bcl\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2017-03-02 17:52:36 [::1][-][ta8i6dqvceapn0vb58uvvql9d0][info][application] $_COOKIE = [
+    '_ga' => 'GA1.1.798709550.1486065091'
+    '__utma' => '111872281.798709550.1486065091.1488402151.1488471054.36'
+    '__utmz' => '111872281.1486136376.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    'snis_h' => 'p5br3grkoh5cbdn3r30r29m0k2'
+    '__utmc' => '111872281'
+    'sinisa_dev' => 'cemmp7g6cbao17ntqnjds05pn3'
+    '_csrf' => 'e4a95e2d609991255e396d1b273498617791e76189e6cff588161f11e66709b6a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"K73Yf1-aDxt7SyTnF5HEs06cStriab6d\";}'
+    'sinisa_test' => 'mo4s3isqkvq5e49tjlhk6k9kt5'
+    'PHPSESSID' => 'ta8i6dqvceapn0vb58uvvql9d0'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/bcl/web/index.php/produto-comercial/create'
+    'HTTP_COOKIE' => '_ga=GA1.1.798709550.1486065091; __utma=111872281.798709550.1486065091.1488402151.1488471054.36; __utmz=111872281.1486136376.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); snis_h=p5br3grkoh5cbdn3r30r29m0k2; __utmc=111872281; sinisa_dev=cemmp7g6cbao17ntqnjds05pn3; _csrf=e4a95e2d609991255e396d1b273498617791e76189e6cff588161f11e66709b6a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22K73Yf1-aDxt7SyTnF5HEs06cStriab6d%22%3B%7D; sinisa_test=mo4s3isqkvq5e49tjlhk6k9kt5; PHPSESSID=ta8i6dqvceapn0vb58uvvql9d0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\wamp64\\bin\\php\\php5.6.16;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\MySQL\\MySQL Utilities 1.6\\;C:\\Program Files\\Git\\cmd;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win64) PHP/5.6.16 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win64) PHP/5.6.16'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www/'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/bcl/web/index.php'
+    'REMOTE_PORT' => '49873'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/bcl/web/index.php/estoque/produto-comercial'
+    'SCRIPT_NAME' => '/bcl/web/index.php'
+    'PATH_INFO' => '/estoque/produto-comercial'
+    'PATH_TRANSLATED' => 'C:\\wamp64\\www\\estoque\\produto-comercial'
+    'PHP_SELF' => '/bcl/web/index.php/estoque/produto-comercial'
+    'REQUEST_TIME_FLOAT' => 1488487956.948
+    'REQUEST_TIME' => 1488487956
+]
+2017-03-02 17:52:39 [::1][-][ta8i6dqvceapn0vb58uvvql9d0][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: estoque/produto-comercial' in C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Controller.php:127
+Stack trace:
+#0 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('produto-comerci...', Array)
+#1 C:\wamp64\www\bcl\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('estoque/produto...', Array)
+#2 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 C:\wamp64\www\bcl\web\index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Página não encontrada.' in C:\wamp64\www\bcl\vendor\yiisoft\yii2\web\Application.php:114
+Stack trace:
+#0 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\bcl\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2017-03-02 17:52:38 [::1][-][ta8i6dqvceapn0vb58uvvql9d0][info][application] $_COOKIE = [
+    '_ga' => 'GA1.1.798709550.1486065091'
+    '__utma' => '111872281.798709550.1486065091.1488402151.1488471054.36'
+    '__utmz' => '111872281.1486136376.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    'snis_h' => 'p5br3grkoh5cbdn3r30r29m0k2'
+    '__utmc' => '111872281'
+    'sinisa_dev' => 'cemmp7g6cbao17ntqnjds05pn3'
+    '_csrf' => 'e4a95e2d609991255e396d1b273498617791e76189e6cff588161f11e66709b6a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"K73Yf1-aDxt7SyTnF5HEs06cStriab6d\";}'
+    'sinisa_test' => 'mo4s3isqkvq5e49tjlhk6k9kt5'
+    'PHPSESSID' => 'ta8i6dqvceapn0vb58uvvql9d0'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/bcl/web/index.php/produto-comercial/create'
+    'HTTP_COOKIE' => '_ga=GA1.1.798709550.1486065091; __utma=111872281.798709550.1486065091.1488402151.1488471054.36; __utmz=111872281.1486136376.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); snis_h=p5br3grkoh5cbdn3r30r29m0k2; __utmc=111872281; sinisa_dev=cemmp7g6cbao17ntqnjds05pn3; _csrf=e4a95e2d609991255e396d1b273498617791e76189e6cff588161f11e66709b6a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22K73Yf1-aDxt7SyTnF5HEs06cStriab6d%22%3B%7D; sinisa_test=mo4s3isqkvq5e49tjlhk6k9kt5; PHPSESSID=ta8i6dqvceapn0vb58uvvql9d0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\wamp64\\bin\\php\\php5.6.16;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\MySQL\\MySQL Utilities 1.6\\;C:\\Program Files\\Git\\cmd;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win64) PHP/5.6.16 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win64) PHP/5.6.16'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www/'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/bcl/web/index.php'
+    'REMOTE_PORT' => '49873'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/bcl/web/index.php/estoque/produto-comercial'
+    'SCRIPT_NAME' => '/bcl/web/index.php'
+    'PATH_INFO' => '/estoque/produto-comercial'
+    'PATH_TRANSLATED' => 'C:\\wamp64\\www\\estoque\\produto-comercial'
+    'PHP_SELF' => '/bcl/web/index.php/estoque/produto-comercial'
+    'REQUEST_TIME_FLOAT' => 1488487958.979
+    'REQUEST_TIME' => 1488487958
+]
+2017-03-02 17:52:43 [::1][-][-][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Getting unknown property: app\models\VisFabricacaoSearch::cor_pano_fk' in C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Component.php:147
+Stack trace:
+#0 C:\wamp64\www\bcl\vendor\yiisoft\yii2\db\BaseActiveRecord.php(286): yii\base\Component->__get('cor_pano_fk')
+#1 C:\wamp64\www\bcl\models\VisFabricacaoSearch.php(65): yii\db\BaseActiveRecord->__get('cor_pano_fk')
+#2 C:\wamp64\www\bcl\controllers\FabricacaoController.php(38): app\models\VisFabricacaoSearch->search(Array)
+#3 [internal function]: app\controllers\FabricacaoController->actionIndex()
+#4 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#5 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#6 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('index', Array)
+#7 C:\wamp64\www\bcl\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('fabricacao/inde...', Array)
+#8 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 C:\wamp64\www\bcl\web\index.php(12): yii\base\Application->run()
+#10 {main}
+2017-03-02 17:52:43 [::1][-][-][info][application] $_COOKIE = [
+    '_ga' => 'GA1.1.798709550.1486065091'
+    '__utma' => '111872281.798709550.1486065091.1488402151.1488471054.36'
+    '__utmz' => '111872281.1486136376.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    'snis_h' => 'p5br3grkoh5cbdn3r30r29m0k2'
+    '__utmc' => '111872281'
+    'sinisa_dev' => 'cemmp7g6cbao17ntqnjds05pn3'
+    '_csrf' => 'e4a95e2d609991255e396d1b273498617791e76189e6cff588161f11e66709b6a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"K73Yf1-aDxt7SyTnF5HEs06cStriab6d\";}'
+    'sinisa_test' => 'mo4s3isqkvq5e49tjlhk6k9kt5'
+    'PHPSESSID' => 'ta8i6dqvceapn0vb58uvvql9d0'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/bcl/web/index.php/produto-comercial/index'
+    'HTTP_COOKIE' => '_ga=GA1.1.798709550.1486065091; __utma=111872281.798709550.1486065091.1488402151.1488471054.36; __utmz=111872281.1486136376.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); snis_h=p5br3grkoh5cbdn3r30r29m0k2; __utmc=111872281; sinisa_dev=cemmp7g6cbao17ntqnjds05pn3; _csrf=e4a95e2d609991255e396d1b273498617791e76189e6cff588161f11e66709b6a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22K73Yf1-aDxt7SyTnF5HEs06cStriab6d%22%3B%7D; sinisa_test=mo4s3isqkvq5e49tjlhk6k9kt5; PHPSESSID=ta8i6dqvceapn0vb58uvvql9d0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\wamp64\\bin\\php\\php5.6.16;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\MySQL\\MySQL Utilities 1.6\\;C:\\Program Files\\Git\\cmd;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win64) PHP/5.6.16 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win64) PHP/5.6.16'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www/'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/bcl/web/index.php'
+    'REMOTE_PORT' => '49873'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/bcl/web/index.php/fabricacao/index'
+    'SCRIPT_NAME' => '/bcl/web/index.php'
+    'PATH_INFO' => '/fabricacao/index'
+    'PATH_TRANSLATED' => 'C:\\wamp64\\www\\fabricacao\\index'
+    'PHP_SELF' => '/bcl/web/index.php/fabricacao/index'
+    'REQUEST_TIME_FLOAT' => 1488487963.625
+    'REQUEST_TIME' => 1488487963
+]
+2017-03-02 17:53:40 [::1][-][-][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Getting unknown property: app\models\VisFabricacaoSearch::cor_pano_fk' in C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Component.php:147
+Stack trace:
+#0 C:\wamp64\www\bcl\vendor\yiisoft\yii2\db\BaseActiveRecord.php(286): yii\base\Component->__get('cor_pano_fk')
+#1 C:\wamp64\www\bcl\models\VisFabricacaoSearch.php(65): yii\db\BaseActiveRecord->__get('cor_pano_fk')
+#2 C:\wamp64\www\bcl\controllers\FabricacaoController.php(38): app\models\VisFabricacaoSearch->search(Array)
+#3 [internal function]: app\controllers\FabricacaoController->actionIndex()
+#4 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#5 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#6 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('index', Array)
+#7 C:\wamp64\www\bcl\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('fabricacao/inde...', Array)
+#8 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 C:\wamp64\www\bcl\web\index.php(12): yii\base\Application->run()
+#10 {main}
+2017-03-02 17:53:40 [::1][-][-][info][application] $_COOKIE = [
+    '_ga' => 'GA1.1.798709550.1486065091'
+    '__utma' => '111872281.798709550.1486065091.1488402151.1488471054.36'
+    '__utmz' => '111872281.1486136376.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    'snis_h' => 'p5br3grkoh5cbdn3r30r29m0k2'
+    '__utmc' => '111872281'
+    'sinisa_dev' => 'cemmp7g6cbao17ntqnjds05pn3'
+    '_csrf' => 'e4a95e2d609991255e396d1b273498617791e76189e6cff588161f11e66709b6a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"K73Yf1-aDxt7SyTnF5HEs06cStriab6d\";}'
+    'sinisa_test' => 'mo4s3isqkvq5e49tjlhk6k9kt5'
+    'PHPSESSID' => 'ta8i6dqvceapn0vb58uvvql9d0'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/bcl/web/index.php/produto-comercial/index'
+    'HTTP_COOKIE' => '_ga=GA1.1.798709550.1486065091; __utma=111872281.798709550.1486065091.1488402151.1488471054.36; __utmz=111872281.1486136376.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); snis_h=p5br3grkoh5cbdn3r30r29m0k2; __utmc=111872281; sinisa_dev=cemmp7g6cbao17ntqnjds05pn3; _csrf=e4a95e2d609991255e396d1b273498617791e76189e6cff588161f11e66709b6a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22K73Yf1-aDxt7SyTnF5HEs06cStriab6d%22%3B%7D; sinisa_test=mo4s3isqkvq5e49tjlhk6k9kt5; PHPSESSID=ta8i6dqvceapn0vb58uvvql9d0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\wamp64\\bin\\php\\php5.6.16;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\MySQL\\MySQL Utilities 1.6\\;C:\\Program Files\\Git\\cmd;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win64) PHP/5.6.16 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win64) PHP/5.6.16'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www/'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/bcl/web/index.php'
+    'REMOTE_PORT' => '49883'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/bcl/web/index.php/fabricacao/index'
+    'SCRIPT_NAME' => '/bcl/web/index.php'
+    'PATH_INFO' => '/fabricacao/index'
+    'PATH_TRANSLATED' => 'C:\\wamp64\\www\\fabricacao\\index'
+    'PHP_SELF' => '/bcl/web/index.php/fabricacao/index'
+    'REQUEST_TIME_FLOAT' => 1488488020.041
+    'REQUEST_TIME' => 1488488020
+]
+2017-03-02 17:53:41 [::1][-][-][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Getting unknown property: app\models\VisFabricacaoSearch::cor_pano_fk' in C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Component.php:147
+Stack trace:
+#0 C:\wamp64\www\bcl\vendor\yiisoft\yii2\db\BaseActiveRecord.php(286): yii\base\Component->__get('cor_pano_fk')
+#1 C:\wamp64\www\bcl\models\VisFabricacaoSearch.php(65): yii\db\BaseActiveRecord->__get('cor_pano_fk')
+#2 C:\wamp64\www\bcl\controllers\FabricacaoController.php(38): app\models\VisFabricacaoSearch->search(Array)
+#3 [internal function]: app\controllers\FabricacaoController->actionIndex()
+#4 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#5 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#6 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('index', Array)
+#7 C:\wamp64\www\bcl\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('fabricacao/inde...', Array)
+#8 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 C:\wamp64\www\bcl\web\index.php(12): yii\base\Application->run()
+#10 {main}
+2017-03-02 17:53:41 [::1][-][-][info][application] $_COOKIE = [
+    '_ga' => 'GA1.1.798709550.1486065091'
+    '__utma' => '111872281.798709550.1486065091.1488402151.1488471054.36'
+    '__utmz' => '111872281.1486136376.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    'snis_h' => 'p5br3grkoh5cbdn3r30r29m0k2'
+    '__utmc' => '111872281'
+    'sinisa_dev' => 'cemmp7g6cbao17ntqnjds05pn3'
+    '_csrf' => 'e4a95e2d609991255e396d1b273498617791e76189e6cff588161f11e66709b6a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"K73Yf1-aDxt7SyTnF5HEs06cStriab6d\";}'
+    'sinisa_test' => 'mo4s3isqkvq5e49tjlhk6k9kt5'
+    'PHPSESSID' => 'ta8i6dqvceapn0vb58uvvql9d0'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/bcl/web/index.php/produto-comercial/index'
+    'HTTP_COOKIE' => '_ga=GA1.1.798709550.1486065091; __utma=111872281.798709550.1486065091.1488402151.1488471054.36; __utmz=111872281.1486136376.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); snis_h=p5br3grkoh5cbdn3r30r29m0k2; __utmc=111872281; sinisa_dev=cemmp7g6cbao17ntqnjds05pn3; _csrf=e4a95e2d609991255e396d1b273498617791e76189e6cff588161f11e66709b6a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22K73Yf1-aDxt7SyTnF5HEs06cStriab6d%22%3B%7D; sinisa_test=mo4s3isqkvq5e49tjlhk6k9kt5; PHPSESSID=ta8i6dqvceapn0vb58uvvql9d0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\wamp64\\bin\\php\\php5.6.16;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\MySQL\\MySQL Utilities 1.6\\;C:\\Program Files\\Git\\cmd;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win64) PHP/5.6.16 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win64) PHP/5.6.16'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www/'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/bcl/web/index.php'
+    'REMOTE_PORT' => '49885'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/bcl/web/index.php/fabricacao/index'
+    'SCRIPT_NAME' => '/bcl/web/index.php'
+    'PATH_INFO' => '/fabricacao/index'
+    'PATH_TRANSLATED' => 'C:\\wamp64\\www\\fabricacao\\index'
+    'PHP_SELF' => '/bcl/web/index.php/fabricacao/index'
+    'REQUEST_TIME_FLOAT' => 1488488021.402
+    'REQUEST_TIME' => 1488488021
+]
+2017-03-02 17:54:44 [::1][-][-][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Getting unknown property: app\models\VisFabricacaoSearch::preco' in C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Component.php:147
+Stack trace:
+#0 C:\wamp64\www\bcl\vendor\yiisoft\yii2\db\BaseActiveRecord.php(286): yii\base\Component->__get('preco')
+#1 C:\wamp64\www\bcl\models\VisFabricacaoSearch.php(66): yii\db\BaseActiveRecord->__get('preco')
+#2 C:\wamp64\www\bcl\controllers\FabricacaoController.php(38): app\models\VisFabricacaoSearch->search(Array)
+#3 [internal function]: app\controllers\FabricacaoController->actionIndex()
+#4 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#5 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#6 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('index', Array)
+#7 C:\wamp64\www\bcl\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('fabricacao/inde...', Array)
+#8 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 C:\wamp64\www\bcl\web\index.php(12): yii\base\Application->run()
+#10 {main}
+2017-03-02 17:54:44 [::1][-][-][info][application] $_COOKIE = [
+    '_ga' => 'GA1.1.798709550.1486065091'
+    '__utma' => '111872281.798709550.1486065091.1488402151.1488471054.36'
+    '__utmz' => '111872281.1486136376.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    'snis_h' => 'p5br3grkoh5cbdn3r30r29m0k2'
+    '__utmc' => '111872281'
+    'sinisa_dev' => 'cemmp7g6cbao17ntqnjds05pn3'
+    '_csrf' => 'e4a95e2d609991255e396d1b273498617791e76189e6cff588161f11e66709b6a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"K73Yf1-aDxt7SyTnF5HEs06cStriab6d\";}'
+    'sinisa_test' => 'mo4s3isqkvq5e49tjlhk6k9kt5'
+    'PHPSESSID' => 'ta8i6dqvceapn0vb58uvvql9d0'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/bcl/web/index.php/produto-comercial/index'
+    'HTTP_COOKIE' => '_ga=GA1.1.798709550.1486065091; __utma=111872281.798709550.1486065091.1488402151.1488471054.36; __utmz=111872281.1486136376.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); snis_h=p5br3grkoh5cbdn3r30r29m0k2; __utmc=111872281; sinisa_dev=cemmp7g6cbao17ntqnjds05pn3; _csrf=e4a95e2d609991255e396d1b273498617791e76189e6cff588161f11e66709b6a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22K73Yf1-aDxt7SyTnF5HEs06cStriab6d%22%3B%7D; sinisa_test=mo4s3isqkvq5e49tjlhk6k9kt5; PHPSESSID=ta8i6dqvceapn0vb58uvvql9d0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\wamp64\\bin\\php\\php5.6.16;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\MySQL\\MySQL Utilities 1.6\\;C:\\Program Files\\Git\\cmd;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win64) PHP/5.6.16 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win64) PHP/5.6.16'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www/'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/bcl/web/index.php'
+    'REMOTE_PORT' => '49889'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/bcl/web/index.php/fabricacao/index'
+    'SCRIPT_NAME' => '/bcl/web/index.php'
+    'PATH_INFO' => '/fabricacao/index'
+    'PATH_TRANSLATED' => 'C:\\wamp64\\www\\fabricacao\\index'
+    'PHP_SELF' => '/bcl/web/index.php/fabricacao/index'
+    'REQUEST_TIME_FLOAT' => 1488488084.231
+    'REQUEST_TIME' => 1488488084
+]
+2017-03-02 17:55:09 [::1][-][-][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Getting unknown property: app\models\VisFabricacaoSearch::cor' in C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Component.php:147
+Stack trace:
+#0 C:\wamp64\www\bcl\vendor\yiisoft\yii2\db\BaseActiveRecord.php(286): yii\base\Component->__get('cor')
+#1 C:\wamp64\www\bcl\models\VisFabricacaoSearch.php(64): yii\db\BaseActiveRecord->__get('cor')
+#2 C:\wamp64\www\bcl\controllers\FabricacaoController.php(38): app\models\VisFabricacaoSearch->search(Array)
+#3 [internal function]: app\controllers\FabricacaoController->actionIndex()
+#4 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#5 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#6 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('index', Array)
+#7 C:\wamp64\www\bcl\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('fabricacao/inde...', Array)
+#8 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 C:\wamp64\www\bcl\web\index.php(12): yii\base\Application->run()
+#10 {main}
+2017-03-02 17:55:09 [::1][-][-][info][application] $_COOKIE = [
+    '_ga' => 'GA1.1.798709550.1486065091'
+    '__utma' => '111872281.798709550.1486065091.1488402151.1488471054.36'
+    '__utmz' => '111872281.1486136376.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    'snis_h' => 'p5br3grkoh5cbdn3r30r29m0k2'
+    '__utmc' => '111872281'
+    'sinisa_dev' => 'cemmp7g6cbao17ntqnjds05pn3'
+    '_csrf' => 'e4a95e2d609991255e396d1b273498617791e76189e6cff588161f11e66709b6a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"K73Yf1-aDxt7SyTnF5HEs06cStriab6d\";}'
+    'sinisa_test' => 'mo4s3isqkvq5e49tjlhk6k9kt5'
+    'PHPSESSID' => 'ta8i6dqvceapn0vb58uvvql9d0'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/bcl/web/index.php/produto-comercial/index'
+    'HTTP_COOKIE' => '_ga=GA1.1.798709550.1486065091; __utma=111872281.798709550.1486065091.1488402151.1488471054.36; __utmz=111872281.1486136376.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); snis_h=p5br3grkoh5cbdn3r30r29m0k2; __utmc=111872281; sinisa_dev=cemmp7g6cbao17ntqnjds05pn3; _csrf=e4a95e2d609991255e396d1b273498617791e76189e6cff588161f11e66709b6a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22K73Yf1-aDxt7SyTnF5HEs06cStriab6d%22%3B%7D; sinisa_test=mo4s3isqkvq5e49tjlhk6k9kt5; PHPSESSID=ta8i6dqvceapn0vb58uvvql9d0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\wamp64\\bin\\php\\php5.6.16;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\MySQL\\MySQL Utilities 1.6\\;C:\\Program Files\\Git\\cmd;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win64) PHP/5.6.16 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win64) PHP/5.6.16'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www/'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/bcl/web/index.php'
+    'REMOTE_PORT' => '49892'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/bcl/web/index.php/fabricacao/index'
+    'SCRIPT_NAME' => '/bcl/web/index.php'
+    'PATH_INFO' => '/fabricacao/index'
+    'PATH_TRANSLATED' => 'C:\\wamp64\\www\\fabricacao\\index'
+    'PHP_SELF' => '/bcl/web/index.php/fabricacao/index'
+    'REQUEST_TIME_FLOAT' => 1488488109.043
+    'REQUEST_TIME' => 1488488109
+]
+2017-03-02 17:55:46 [::1][-][-][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Getting unknown property: app\models\VisFabricacaoSearch::produto_comercial_fk' in C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Component.php:147
+Stack trace:
+#0 C:\wamp64\www\bcl\vendor\yiisoft\yii2\db\BaseActiveRecord.php(286): yii\base\Component->__get('produto_comerci...')
+#1 C:\wamp64\www\bcl\vendor\yiisoft\yii2\helpers\BaseArrayHelper.php(209): yii\db\BaseActiveRecord->__get('produto_comerci...')
+#2 C:\wamp64\www\bcl\vendor\yiisoft\yii2\grid\DataColumn.php(216): yii\helpers\BaseArrayHelper::getValue(Object(app\models\VisFabricacaoSearch), 'produto_comerci...')
+#3 C:\wamp64\www\bcl\vendor\yiisoft\yii2\grid\DataColumn.php(227): yii\grid\DataColumn->getDataCellValue(Object(app\models\VisFabricacaoSearch), Array, 0)
+#4 C:\wamp64\www\bcl\vendor\yiisoft\yii2\grid\Column.php(110): yii\grid\DataColumn->renderDataCellContent(Object(app\models\VisFabricacaoSearch), Array, 0)
+#5 C:\wamp64\www\bcl\vendor\yiisoft\yii2\grid\GridView.php(507): yii\grid\Column->renderDataCell(Object(app\models\VisFabricacaoSearch), Array, 0)
+#6 C:\wamp64\www\bcl\vendor\yiisoft\yii2\grid\GridView.php(476): yii\grid\GridView->renderTableRow(Object(app\models\VisFabricacaoSearch), Array, 0)
+#7 C:\wamp64\www\bcl\vendor\yiisoft\yii2\grid\GridView.php(347): yii\grid\GridView->renderTableBody()
+#8 C:\wamp64\www\bcl\vendor\yiisoft\yii2\widgets\BaseListView.php(155): yii\grid\GridView->renderItems()
+#9 C:\wamp64\www\bcl\vendor\yiisoft\yii2\grid\GridView.php(316): yii\widgets\BaseListView->renderSection('{items}')
+#10 C:\wamp64\www\bcl\vendor\yiisoft\yii2\widgets\BaseListView.php(130): yii\grid\GridView->renderSection('{items}')
+#11 [internal function]: yii\widgets\BaseListView->yii\widgets\{closure}(Array)
+#12 C:\wamp64\www\bcl\vendor\yiisoft\yii2\widgets\BaseListView.php(133): preg_replace_callback('/{\\w+}/', Object(Closure), '{summary}\n{item...')
+#13 C:\wamp64\www\bcl\vendor\yiisoft\yii2\grid\GridView.php(291): yii\widgets\BaseListView->run()
+#14 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Widget.php(139): yii\grid\GridView->run()
+#15 C:\wamp64\www\bcl\views\fabricacao\index.php(44): yii\base\Widget::widget(Array)
+#16 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\View.php(328): require('C:\\wamp64\\www\\b...')
+#17 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\View.php(250): yii\base\View->renderPhpFile('C:\\wamp64\\www\\b...', Array)
+#18 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\View.php(152): yii\base\View->renderFile('C:\\wamp64\\www\\b...', Array, Object(app\controllers\FabricacaoController))
+#19 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Controller.php(381): yii\base\View->render('index', Array, Object(app\controllers\FabricacaoController))
+#20 C:\wamp64\www\bcl\controllers\FabricacaoController.php(44): yii\base\Controller->render('index', Array)
+#21 [internal function]: app\controllers\FabricacaoController->actionIndex()
+#22 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#23 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#24 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('index', Array)
+#25 C:\wamp64\www\bcl\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('fabricacao/inde...', Array)
+#26 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#27 C:\wamp64\www\bcl\web\index.php(12): yii\base\Application->run()
+#28 {main}
+2017-03-02 17:55:46 [::1][-][-][info][application] $_COOKIE = [
+    '_ga' => 'GA1.1.798709550.1486065091'
+    '__utma' => '111872281.798709550.1486065091.1488402151.1488471054.36'
+    '__utmz' => '111872281.1486136376.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    'snis_h' => 'p5br3grkoh5cbdn3r30r29m0k2'
+    '__utmc' => '111872281'
+    'sinisa_dev' => 'cemmp7g6cbao17ntqnjds05pn3'
+    '_csrf' => 'e4a95e2d609991255e396d1b273498617791e76189e6cff588161f11e66709b6a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"K73Yf1-aDxt7SyTnF5HEs06cStriab6d\";}'
+    'sinisa_test' => 'mo4s3isqkvq5e49tjlhk6k9kt5'
+    'PHPSESSID' => 'ta8i6dqvceapn0vb58uvvql9d0'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/bcl/web/index.php/produto-comercial/index'
+    'HTTP_COOKIE' => '_ga=GA1.1.798709550.1486065091; __utma=111872281.798709550.1486065091.1488402151.1488471054.36; __utmz=111872281.1486136376.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); snis_h=p5br3grkoh5cbdn3r30r29m0k2; __utmc=111872281; sinisa_dev=cemmp7g6cbao17ntqnjds05pn3; _csrf=e4a95e2d609991255e396d1b273498617791e76189e6cff588161f11e66709b6a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22K73Yf1-aDxt7SyTnF5HEs06cStriab6d%22%3B%7D; sinisa_test=mo4s3isqkvq5e49tjlhk6k9kt5; PHPSESSID=ta8i6dqvceapn0vb58uvvql9d0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\wamp64\\bin\\php\\php5.6.16;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\MySQL\\MySQL Utilities 1.6\\;C:\\Program Files\\Git\\cmd;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win64) PHP/5.6.16 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win64) PHP/5.6.16'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www/'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/bcl/web/index.php'
+    'REMOTE_PORT' => '49973'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/bcl/web/index.php/fabricacao/index'
+    'SCRIPT_NAME' => '/bcl/web/index.php'
+    'PATH_INFO' => '/fabricacao/index'
+    'PATH_TRANSLATED' => 'C:\\wamp64\\www\\fabricacao\\index'
+    'PHP_SELF' => '/bcl/web/index.php/fabricacao/index'
+    'REQUEST_TIME_FLOAT' => 1488488146.06
+    'REQUEST_TIME' => 1488488146
+]
+2017-03-02 17:57:06 [::1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[42P01]: Undefined table: 7 ERROR:  relation "bcl.vis_produto" does not exist
+LINE 1: ...icao" AS "label", "produto_preco_fk" AS "id" FROM "bcl"."vis...
+                                                             ^' in C:\wamp64\www\bcl\vendor\yiisoft\yii2\db\Command.php:902
+Stack trace:
+#0 C:\wamp64\www\bcl\vendor\yiisoft\yii2\db\Command.php(902): PDOStatement->execute()
+#1 C:\wamp64\www\bcl\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#2 C:\wamp64\www\bcl\vendor\yiisoft\yii2\db\Query.php(213): yii\db\Command->queryAll()
+#3 C:\wamp64\www\bcl\vendor\yiisoft\yii2\db\ActiveQuery.php(133): yii\db\Query->all('<span class="ke...')
+#4 C:\wamp64\www\bcl\controllers\FabricacaoController.php(74): yii\db\ActiveQuery->all()
+#5 [internal function]: app\controllers\FabricacaoController->actionCreate()
+#6 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array('[<span class="t...', '[]')
+#7 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams('[]')
+#8 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('<span class="st...', '[]')
+#9 C:\wamp64\www\bcl\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('<span class="st...', '[]')
+#10 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 C:\wamp64\www\bcl\web\index.php(12): yii\base\Application->run()
+#12 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[42P01]: Undefined table: 7 ERROR:  relation "bcl.vis_produto" does not exist
+LINE 1: ...icao" AS "label", "produto_preco_fk" AS "id" FROM "bcl"."vis...
+                                                             ^
+The SQL being executed was: SELECT "descricao" AS "value", "descricao" AS "label", "produto_preco_fk" AS "id" FROM "bcl"."vis_produto"' in C:\wamp64\www\bcl\vendor\yiisoft\yii2\db\Schema.php:636
+Stack trace:
+#0 C:\wamp64\www\bcl\vendor\yiisoft\yii2\db\Command.php(917): yii\db\Schema->convertException(Object(PDOException), 'SELECT "descric...')
+#1 C:\wamp64\www\bcl\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#2 C:\wamp64\www\bcl\vendor\yiisoft\yii2\db\Query.php(213): yii\db\Command->queryAll()
+#3 C:\wamp64\www\bcl\vendor\yiisoft\yii2\db\ActiveQuery.php(133): yii\db\Query->all('<span class="ke...')
+#4 C:\wamp64\www\bcl\controllers\FabricacaoController.php(74): yii\db\ActiveQuery->all()
+#5 [internal function]: app\controllers\FabricacaoController->actionCreate()
+#6 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array('[<span class="t...', '[]')
+#7 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams('[]')
+#8 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('<span class="st...', '[]')
+#9 C:\wamp64\www\bcl\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('<span class="st...', '[]')
+#10 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 C:\wamp64\www\bcl\web\index.php(12): yii\base\Application->run()
+#12 {main}
+Additional Information:
+Array
+(
+    [0] => 42P01
+    [1] => 7
+    [2] => ERROR:  relation "bcl.vis_produto" does not exist
+LINE 1: ...icao" AS "label", "produto_preco_fk" AS "id" FROM "bcl"."vis...
+                                                             ^
+)
+
+2017-03-02 17:57:06 [::1][-][-][info][application] $_COOKIE = [
+    '_ga' => 'GA1.1.798709550.1486065091'
+    '__utma' => '111872281.798709550.1486065091.1488402151.1488471054.36'
+    '__utmz' => '111872281.1486136376.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    'snis_h' => 'p5br3grkoh5cbdn3r30r29m0k2'
+    '__utmc' => '111872281'
+    'sinisa_dev' => 'cemmp7g6cbao17ntqnjds05pn3'
+    '_csrf' => 'e4a95e2d609991255e396d1b273498617791e76189e6cff588161f11e66709b6a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"K73Yf1-aDxt7SyTnF5HEs06cStriab6d\";}'
+    'sinisa_test' => 'mo4s3isqkvq5e49tjlhk6k9kt5'
+    'PHPSESSID' => 'ta8i6dqvceapn0vb58uvvql9d0'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/bcl/web/index.php/fabricacao/index'
+    'HTTP_COOKIE' => '_ga=GA1.1.798709550.1486065091; __utma=111872281.798709550.1486065091.1488402151.1488471054.36; __utmz=111872281.1486136376.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); snis_h=p5br3grkoh5cbdn3r30r29m0k2; __utmc=111872281; sinisa_dev=cemmp7g6cbao17ntqnjds05pn3; _csrf=e4a95e2d609991255e396d1b273498617791e76189e6cff588161f11e66709b6a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22K73Yf1-aDxt7SyTnF5HEs06cStriab6d%22%3B%7D; sinisa_test=mo4s3isqkvq5e49tjlhk6k9kt5; PHPSESSID=ta8i6dqvceapn0vb58uvvql9d0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\wamp64\\bin\\php\\php5.6.16;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\MySQL\\MySQL Utilities 1.6\\;C:\\Program Files\\Git\\cmd;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win64) PHP/5.6.16 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win64) PHP/5.6.16'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www/'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/bcl/web/index.php'
+    'REMOTE_PORT' => '49981'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/bcl/web/index.php/fabricacao/create'
+    'SCRIPT_NAME' => '/bcl/web/index.php'
+    'PATH_INFO' => '/fabricacao/create'
+    'PATH_TRANSLATED' => 'C:\\wamp64\\www\\fabricacao\\create'
+    'PHP_SELF' => '/bcl/web/index.php/fabricacao/create'
+    'REQUEST_TIME_FLOAT' => 1488488226.104
+    'REQUEST_TIME' => 1488488226
+]
+2017-03-02 18:00:23 [::1][-][ta8i6dqvceapn0vb58uvvql9d0][error][yii\web\HttpException:400] exception 'yii\web\BadRequestHttpException' with message 'Parâmetros obrigatórios ausentes: id' in C:\wamp64\www\bcl\vendor\yiisoft\yii2\web\Controller.php:149
+Stack trace:
+#0 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\InlineAction.php(51): yii\web\Controller->bindActionParams(Object(yii\base\InlineAction), Array)
+#1 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#2 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('view', Array)
+#3 C:\wamp64\www\bcl\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('fabricacao/view', Array)
+#4 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#5 C:\wamp64\www\bcl\web\index.php(12): yii\base\Application->run()
+#6 {main}
+2017-03-02 18:00:23 [::1][-][ta8i6dqvceapn0vb58uvvql9d0][info][application] $_COOKIE = [
+    '_ga' => 'GA1.1.798709550.1486065091'
+    '__utma' => '111872281.798709550.1486065091.1488402151.1488471054.36'
+    '__utmz' => '111872281.1486136376.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    'snis_h' => 'p5br3grkoh5cbdn3r30r29m0k2'
+    '__utmc' => '111872281'
+    'sinisa_dev' => 'cemmp7g6cbao17ntqnjds05pn3'
+    '_csrf' => 'e4a95e2d609991255e396d1b273498617791e76189e6cff588161f11e66709b6a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"K73Yf1-aDxt7SyTnF5HEs06cStriab6d\";}'
+    'sinisa_test' => 'mo4s3isqkvq5e49tjlhk6k9kt5'
+    'PHPSESSID' => 'ta8i6dqvceapn0vb58uvvql9d0'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/bcl/web/index.php/fabricacao/index'
+    'HTTP_COOKIE' => '_ga=GA1.1.798709550.1486065091; __utma=111872281.798709550.1486065091.1488402151.1488471054.36; __utmz=111872281.1486136376.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); snis_h=p5br3grkoh5cbdn3r30r29m0k2; __utmc=111872281; sinisa_dev=cemmp7g6cbao17ntqnjds05pn3; _csrf=e4a95e2d609991255e396d1b273498617791e76189e6cff588161f11e66709b6a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22K73Yf1-aDxt7SyTnF5HEs06cStriab6d%22%3B%7D; sinisa_test=mo4s3isqkvq5e49tjlhk6k9kt5; PHPSESSID=ta8i6dqvceapn0vb58uvvql9d0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\wamp64\\bin\\php\\php5.6.16;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\MySQL\\MySQL Utilities 1.6\\;C:\\Program Files\\Git\\cmd;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win64) PHP/5.6.16 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win64) PHP/5.6.16'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www/'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/bcl/web/index.php'
+    'REMOTE_PORT' => '50011'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/bcl/web/index.php/fabricacao/view'
+    'SCRIPT_NAME' => '/bcl/web/index.php'
+    'PATH_INFO' => '/fabricacao/view'
+    'PATH_TRANSLATED' => 'C:\\wamp64\\www\\fabricacao\\view'
+    'PHP_SELF' => '/bcl/web/index.php/fabricacao/view'
+    'REQUEST_TIME_FLOAT' => 1488488423.203
+    'REQUEST_TIME' => 1488488423
+]
+2017-03-02 18:10:03 [::1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'app\controllers\VisFabricacaoSearch' not found' in C:\wamp64\www\bcl\controllers\FabricacaoController.php:53
+Stack trace:
+#0 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\InlineAction.php(57): ::call_user_func_array:{C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\InlineAction.php:57}()
+#1 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams()
+#2 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction()
+#3 C:\wamp64\www\bcl\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction()
+#4 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest()
+#5 C:\wamp64\www\bcl\web\index.php(12): yii\base\Application->run()
+#6 {main}
+2017-03-02 18:10:03 [::1][-][-][info][application] $_GET = [
+    'id' => '23'
+]
+
+$_COOKIE = [
+    '_ga' => 'GA1.1.798709550.1486065091'
+    '__utma' => '111872281.798709550.1486065091.1488402151.1488471054.36'
+    '__utmz' => '111872281.1486136376.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    'snis_h' => 'p5br3grkoh5cbdn3r30r29m0k2'
+    '__utmc' => '111872281'
+    'sinisa_dev' => 'cemmp7g6cbao17ntqnjds05pn3'
+    '_csrf' => 'e4a95e2d609991255e396d1b273498617791e76189e6cff588161f11e66709b6a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"K73Yf1-aDxt7SyTnF5HEs06cStriab6d\";}'
+    'sinisa_test' => 'mo4s3isqkvq5e49tjlhk6k9kt5'
+    'PHPSESSID' => 'ta8i6dqvceapn0vb58uvvql9d0'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/bcl/web/index.php/fabricacao/index'
+    'HTTP_COOKIE' => '_ga=GA1.1.798709550.1486065091; __utma=111872281.798709550.1486065091.1488402151.1488471054.36; __utmz=111872281.1486136376.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); snis_h=p5br3grkoh5cbdn3r30r29m0k2; __utmc=111872281; sinisa_dev=cemmp7g6cbao17ntqnjds05pn3; _csrf=e4a95e2d609991255e396d1b273498617791e76189e6cff588161f11e66709b6a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22K73Yf1-aDxt7SyTnF5HEs06cStriab6d%22%3B%7D; sinisa_test=mo4s3isqkvq5e49tjlhk6k9kt5; PHPSESSID=ta8i6dqvceapn0vb58uvvql9d0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\wamp64\\bin\\php\\php5.6.16;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\MySQL\\MySQL Utilities 1.6\\;C:\\Program Files\\Git\\cmd;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win64) PHP/5.6.16 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win64) PHP/5.6.16'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www/'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/bcl/web/index.php'
+    'REMOTE_PORT' => '50096'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'id=23'
+    'REQUEST_URI' => '/bcl/web/index.php/fabricacao/view?id=23'
+    'SCRIPT_NAME' => '/bcl/web/index.php'
+    'PATH_INFO' => '/fabricacao/view'
+    'PATH_TRANSLATED' => 'C:\\wamp64\\www\\fabricacao\\view'
+    'PHP_SELF' => '/bcl/web/index.php/fabricacao/view'
+    'REQUEST_TIME_FLOAT' => 1488489003.617
+    'REQUEST_TIME' => 1488489003
+]
+2017-03-02 18:11:19 [::1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[42P01]: Undefined table: 7 ERROR:  relation "bcl.vis_produto" does not exist
+LINE 1: SELECT "produto_preco_fk", "descricao" FROM "bcl"."vis_produ...
+                                                    ^' in C:\wamp64\www\bcl\vendor\yiisoft\yii2\db\Command.php:902
+Stack trace:
+#0 C:\wamp64\www\bcl\vendor\yiisoft\yii2\db\Command.php(902): PDOStatement->execute()
+#1 C:\wamp64\www\bcl\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#2 C:\wamp64\www\bcl\vendor\yiisoft\yii2\db\Query.php(213): yii\db\Command->queryAll()
+#3 C:\wamp64\www\bcl\vendor\yiisoft\yii2\db\ActiveQuery.php(133): yii\db\Query->all('<span class="ke...')
+#4 C:\wamp64\www\bcl\controllers\FabricacaoController.php(146): yii\db\ActiveQuery->all()
+#5 [internal function]: app\controllers\FabricacaoController->actionMudaStatus('<span class="st...')
+#6 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array('[<span class="t...', '[<span class="s...')
+#7 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams('[<span class="s...')
+#8 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#9 C:\wamp64\www\bcl\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#10 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 C:\wamp64\www\bcl\web\index.php(12): yii\base\Application->run()
+#12 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[42P01]: Undefined table: 7 ERROR:  relation "bcl.vis_produto" does not exist
+LINE 1: SELECT "produto_preco_fk", "descricao" FROM "bcl"."vis_produ...
+                                                    ^
+The SQL being executed was: SELECT "produto_preco_fk", "descricao" FROM "bcl"."vis_produto" ORDER BY "descricao"' in C:\wamp64\www\bcl\vendor\yiisoft\yii2\db\Schema.php:636
+Stack trace:
+#0 C:\wamp64\www\bcl\vendor\yiisoft\yii2\db\Command.php(917): yii\db\Schema->convertException(Object(PDOException), 'SELECT "produto...')
+#1 C:\wamp64\www\bcl\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#2 C:\wamp64\www\bcl\vendor\yiisoft\yii2\db\Query.php(213): yii\db\Command->queryAll()
+#3 C:\wamp64\www\bcl\vendor\yiisoft\yii2\db\ActiveQuery.php(133): yii\db\Query->all('<span class="ke...')
+#4 C:\wamp64\www\bcl\controllers\FabricacaoController.php(146): yii\db\ActiveQuery->all()
+#5 [internal function]: app\controllers\FabricacaoController->actionMudaStatus('<span class="st...')
+#6 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array('[<span class="t...', '[<span class="s...')
+#7 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams('[<span class="s...')
+#8 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#9 C:\wamp64\www\bcl\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#10 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 C:\wamp64\www\bcl\web\index.php(12): yii\base\Application->run()
+#12 {main}
+Additional Information:
+Array
+(
+    [0] => 42P01
+    [1] => 7
+    [2] => ERROR:  relation "bcl.vis_produto" does not exist
+LINE 1: SELECT "produto_preco_fk", "descricao" FROM "bcl"."vis_produ...
+                                                    ^
+)
+
+2017-03-02 18:11:19 [::1][-][-][info][application] $_GET = [
+    'id' => '9'
+]
+
+$_COOKIE = [
+    '_ga' => 'GA1.1.798709550.1486065091'
+    '__utma' => '111872281.798709550.1486065091.1488402151.1488471054.36'
+    '__utmz' => '111872281.1486136376.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    'snis_h' => 'p5br3grkoh5cbdn3r30r29m0k2'
+    '__utmc' => '111872281'
+    'sinisa_dev' => 'cemmp7g6cbao17ntqnjds05pn3'
+    '_csrf' => 'e4a95e2d609991255e396d1b273498617791e76189e6cff588161f11e66709b6a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"K73Yf1-aDxt7SyTnF5HEs06cStriab6d\";}'
+    'sinisa_test' => 'mo4s3isqkvq5e49tjlhk6k9kt5'
+    'PHPSESSID' => 'ta8i6dqvceapn0vb58uvvql9d0'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/bcl/web/index.php/fabricacao/index'
+    'HTTP_COOKIE' => '_ga=GA1.1.798709550.1486065091; __utma=111872281.798709550.1486065091.1488402151.1488471054.36; __utmz=111872281.1486136376.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); snis_h=p5br3grkoh5cbdn3r30r29m0k2; __utmc=111872281; sinisa_dev=cemmp7g6cbao17ntqnjds05pn3; _csrf=e4a95e2d609991255e396d1b273498617791e76189e6cff588161f11e66709b6a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22K73Yf1-aDxt7SyTnF5HEs06cStriab6d%22%3B%7D; sinisa_test=mo4s3isqkvq5e49tjlhk6k9kt5; PHPSESSID=ta8i6dqvceapn0vb58uvvql9d0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\wamp64\\bin\\php\\php5.6.16;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\MySQL\\MySQL Utilities 1.6\\;C:\\Program Files\\Git\\cmd;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win64) PHP/5.6.16 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win64) PHP/5.6.16'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www/'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/bcl/web/index.php'
+    'REMOTE_PORT' => '50119'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'id=9'
+    'REQUEST_URI' => '/bcl/web/index.php/fabricacao/muda-status?id=9'
+    'SCRIPT_NAME' => '/bcl/web/index.php'
+    'PATH_INFO' => '/fabricacao/muda-status'
+    'PATH_TRANSLATED' => 'C:\\wamp64\\www\\fabricacao\\muda-status'
+    'PHP_SELF' => '/bcl/web/index.php/fabricacao/muda-status'
+    'REQUEST_TIME_FLOAT' => 1488489079.786
+    'REQUEST_TIME' => 1488489079
+]
+2017-03-02 18:13:58 [::1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[42703]: Undefined column: 7 ERROR:  column "produto_comercial" does not exist
+LINE 1: SELECT "id", "produto_comercial" AS "descricao" FROM "bcl"."...
+                     ^' in C:\wamp64\www\bcl\vendor\yiisoft\yii2\db\Command.php:902
+Stack trace:
+#0 C:\wamp64\www\bcl\vendor\yiisoft\yii2\db\Command.php(902): PDOStatement->execute()
+#1 C:\wamp64\www\bcl\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#2 C:\wamp64\www\bcl\vendor\yiisoft\yii2\db\Query.php(213): yii\db\Command->queryAll()
+#3 C:\wamp64\www\bcl\vendor\yiisoft\yii2\db\ActiveQuery.php(133): yii\db\Query->all('<span class="ke...')
+#4 C:\wamp64\www\bcl\controllers\FabricacaoController.php(146): yii\db\ActiveQuery->all()
+#5 [internal function]: app\controllers\FabricacaoController->actionMudaStatus('<span class="st...')
+#6 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array('[<span class="t...', '[<span class="s...')
+#7 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams('[<span class="s...')
+#8 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#9 C:\wamp64\www\bcl\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#10 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 C:\wamp64\www\bcl\web\index.php(12): yii\base\Application->run()
+#12 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[42703]: Undefined column: 7 ERROR:  column "produto_comercial" does not exist
+LINE 1: SELECT "id", "produto_comercial" AS "descricao" FROM "bcl"."...
+                     ^
+The SQL being executed was: SELECT "id", "produto_comercial" AS "descricao" FROM "bcl"."vis_produto_comercial" ORDER BY "produto_comercial"' in C:\wamp64\www\bcl\vendor\yiisoft\yii2\db\Schema.php:636
+Stack trace:
+#0 C:\wamp64\www\bcl\vendor\yiisoft\yii2\db\Command.php(917): yii\db\Schema->convertException(Object(PDOException), 'SELECT "id", "p...')
+#1 C:\wamp64\www\bcl\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#2 C:\wamp64\www\bcl\vendor\yiisoft\yii2\db\Query.php(213): yii\db\Command->queryAll()
+#3 C:\wamp64\www\bcl\vendor\yiisoft\yii2\db\ActiveQuery.php(133): yii\db\Query->all('<span class="ke...')
+#4 C:\wamp64\www\bcl\controllers\FabricacaoController.php(146): yii\db\ActiveQuery->all()
+#5 [internal function]: app\controllers\FabricacaoController->actionMudaStatus('<span class="st...')
+#6 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array('[<span class="t...', '[<span class="s...')
+#7 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams('[<span class="s...')
+#8 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#9 C:\wamp64\www\bcl\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#10 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 C:\wamp64\www\bcl\web\index.php(12): yii\base\Application->run()
+#12 {main}
+Additional Information:
+Array
+(
+    [0] => 42703
+    [1] => 7
+    [2] => ERROR:  column "produto_comercial" does not exist
+LINE 1: SELECT "id", "produto_comercial" AS "descricao" FROM "bcl"."...
+                     ^
+)
+
+2017-03-02 18:13:58 [::1][-][-][info][application] $_GET = [
+    'id' => '9'
+]
+
+$_COOKIE = [
+    '_ga' => 'GA1.1.798709550.1486065091'
+    '__utma' => '111872281.798709550.1486065091.1488402151.1488471054.36'
+    '__utmz' => '111872281.1486136376.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    'snis_h' => 'p5br3grkoh5cbdn3r30r29m0k2'
+    '__utmc' => '111872281'
+    'sinisa_dev' => 'cemmp7g6cbao17ntqnjds05pn3'
+    '_csrf' => 'e4a95e2d609991255e396d1b273498617791e76189e6cff588161f11e66709b6a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"K73Yf1-aDxt7SyTnF5HEs06cStriab6d\";}'
+    'sinisa_test' => 'mo4s3isqkvq5e49tjlhk6k9kt5'
+    'PHPSESSID' => 'ta8i6dqvceapn0vb58uvvql9d0'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/bcl/web/index.php/fabricacao/index'
+    'HTTP_COOKIE' => '_ga=GA1.1.798709550.1486065091; __utma=111872281.798709550.1486065091.1488402151.1488471054.36; __utmz=111872281.1486136376.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); snis_h=p5br3grkoh5cbdn3r30r29m0k2; __utmc=111872281; sinisa_dev=cemmp7g6cbao17ntqnjds05pn3; _csrf=e4a95e2d609991255e396d1b273498617791e76189e6cff588161f11e66709b6a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22K73Yf1-aDxt7SyTnF5HEs06cStriab6d%22%3B%7D; sinisa_test=mo4s3isqkvq5e49tjlhk6k9kt5; PHPSESSID=ta8i6dqvceapn0vb58uvvql9d0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\wamp64\\bin\\php\\php5.6.16;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\MySQL\\MySQL Utilities 1.6\\;C:\\Program Files\\Git\\cmd;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win64) PHP/5.6.16 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win64) PHP/5.6.16'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www/'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/bcl/web/index.php'
+    'REMOTE_PORT' => '50131'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'id=9'
+    'REQUEST_URI' => '/bcl/web/index.php/fabricacao/muda-status?id=9'
+    'SCRIPT_NAME' => '/bcl/web/index.php'
+    'PATH_INFO' => '/fabricacao/muda-status'
+    'PATH_TRANSLATED' => 'C:\\wamp64\\www\\fabricacao\\muda-status'
+    'PHP_SELF' => '/bcl/web/index.php/fabricacao/muda-status'
+    'REQUEST_TIME_FLOAT' => 1488489238.297
+    'REQUEST_TIME' => 1488489238
+]
+2017-03-02 18:14:35 [::1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[42703]: Undefined column: 7 ERROR:  column "produto_comercial" does not exist
+LINE 1: SELECT "id", "produto_comercial" FROM "bcl"."vis_produto_com...
+                     ^' in C:\wamp64\www\bcl\vendor\yiisoft\yii2\db\Command.php:902
+Stack trace:
+#0 C:\wamp64\www\bcl\vendor\yiisoft\yii2\db\Command.php(902): PDOStatement->execute()
+#1 C:\wamp64\www\bcl\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#2 C:\wamp64\www\bcl\vendor\yiisoft\yii2\db\Query.php(213): yii\db\Command->queryAll()
+#3 C:\wamp64\www\bcl\vendor\yiisoft\yii2\db\ActiveQuery.php(133): yii\db\Query->all('<span class="ke...')
+#4 C:\wamp64\www\bcl\controllers\FabricacaoController.php(146): yii\db\ActiveQuery->all()
+#5 [internal function]: app\controllers\FabricacaoController->actionMudaStatus('<span class="st...')
+#6 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array('[<span class="t...', '[<span class="s...')
+#7 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams('[<span class="s...')
+#8 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#9 C:\wamp64\www\bcl\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#10 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 C:\wamp64\www\bcl\web\index.php(12): yii\base\Application->run()
+#12 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[42703]: Undefined column: 7 ERROR:  column "produto_comercial" does not exist
+LINE 1: SELECT "id", "produto_comercial" FROM "bcl"."vis_produto_com...
+                     ^
+The SQL being executed was: SELECT "id", "produto_comercial" FROM "bcl"."vis_produto_comercial" ORDER BY "produto_comercial"' in C:\wamp64\www\bcl\vendor\yiisoft\yii2\db\Schema.php:636
+Stack trace:
+#0 C:\wamp64\www\bcl\vendor\yiisoft\yii2\db\Command.php(917): yii\db\Schema->convertException(Object(PDOException), 'SELECT "id", "p...')
+#1 C:\wamp64\www\bcl\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#2 C:\wamp64\www\bcl\vendor\yiisoft\yii2\db\Query.php(213): yii\db\Command->queryAll()
+#3 C:\wamp64\www\bcl\vendor\yiisoft\yii2\db\ActiveQuery.php(133): yii\db\Query->all('<span class="ke...')
+#4 C:\wamp64\www\bcl\controllers\FabricacaoController.php(146): yii\db\ActiveQuery->all()
+#5 [internal function]: app\controllers\FabricacaoController->actionMudaStatus('<span class="st...')
+#6 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array('[<span class="t...', '[<span class="s...')
+#7 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams('[<span class="s...')
+#8 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#9 C:\wamp64\www\bcl\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#10 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 C:\wamp64\www\bcl\web\index.php(12): yii\base\Application->run()
+#12 {main}
+Additional Information:
+Array
+(
+    [0] => 42703
+    [1] => 7
+    [2] => ERROR:  column "produto_comercial" does not exist
+LINE 1: SELECT "id", "produto_comercial" FROM "bcl"."vis_produto_com...
+                     ^
+)
+
+2017-03-02 18:14:35 [::1][-][-][info][application] $_GET = [
+    'id' => '9'
+]
+
+$_COOKIE = [
+    '_ga' => 'GA1.1.798709550.1486065091'
+    '__utma' => '111872281.798709550.1486065091.1488402151.1488471054.36'
+    '__utmz' => '111872281.1486136376.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    'snis_h' => 'p5br3grkoh5cbdn3r30r29m0k2'
+    '__utmc' => '111872281'
+    'sinisa_dev' => 'cemmp7g6cbao17ntqnjds05pn3'
+    '_csrf' => 'e4a95e2d609991255e396d1b273498617791e76189e6cff588161f11e66709b6a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"K73Yf1-aDxt7SyTnF5HEs06cStriab6d\";}'
+    'sinisa_test' => 'mo4s3isqkvq5e49tjlhk6k9kt5'
+    'PHPSESSID' => 'ta8i6dqvceapn0vb58uvvql9d0'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/bcl/web/index.php/fabricacao/index'
+    'HTTP_COOKIE' => '_ga=GA1.1.798709550.1486065091; __utma=111872281.798709550.1486065091.1488402151.1488471054.36; __utmz=111872281.1486136376.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); snis_h=p5br3grkoh5cbdn3r30r29m0k2; __utmc=111872281; sinisa_dev=cemmp7g6cbao17ntqnjds05pn3; _csrf=e4a95e2d609991255e396d1b273498617791e76189e6cff588161f11e66709b6a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22K73Yf1-aDxt7SyTnF5HEs06cStriab6d%22%3B%7D; sinisa_test=mo4s3isqkvq5e49tjlhk6k9kt5; PHPSESSID=ta8i6dqvceapn0vb58uvvql9d0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\wamp64\\bin\\php\\php5.6.16;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\MySQL\\MySQL Utilities 1.6\\;C:\\Program Files\\Git\\cmd;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win64) PHP/5.6.16 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win64) PHP/5.6.16'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www/'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/bcl/web/index.php'
+    'REMOTE_PORT' => '50135'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'id=9'
+    'REQUEST_URI' => '/bcl/web/index.php/fabricacao/muda-status?id=9'
+    'SCRIPT_NAME' => '/bcl/web/index.php'
+    'PATH_INFO' => '/fabricacao/muda-status'
+    'PATH_TRANSLATED' => 'C:\\wamp64\\www\\fabricacao\\muda-status'
+    'PHP_SELF' => '/bcl/web/index.php/fabricacao/muda-status'
+    'REQUEST_TIME_FLOAT' => 1488489275.562
+    'REQUEST_TIME' => 1488489275
+]
+2017-03-02 18:17:00 [::1][-][-][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Getting unknown property: app\models\FabricacaoHistoricoSearch::obs' in C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Component.php:147
+Stack trace:
+#0 C:\wamp64\www\bcl\vendor\yiisoft\yii2\db\BaseActiveRecord.php(286): yii\base\Component->__get('obs')
+#1 C:\wamp64\www\bcl\vendor\yiisoft\yii2\helpers\BaseHtml.php(2081): yii\db\BaseActiveRecord->__get('obs')
+#2 C:\wamp64\www\bcl\vendor\yiisoft\yii2\helpers\BaseHtml.php(1264): yii\helpers\BaseHtml::getAttributeValue(Object(app\models\FabricacaoHistoricoSearch), 'obs')
+#3 C:\wamp64\www\bcl\vendor\yiisoft\yii2\helpers\BaseHtml.php(1313): yii\helpers\BaseHtml::activeInput('text', Object(app\models\FabricacaoHistoricoSearch), 'obs', Array)
+#4 C:\wamp64\www\bcl\vendor\yiisoft\yii2\widgets\ActiveField.php(395): yii\helpers\BaseHtml::activeTextInput(Object(app\models\FabricacaoHistoricoSearch), 'obs', Array)
+#5 C:\wamp64\www\bcl\views\fabricacao\_form_status.php(38): yii\widgets\ActiveField->textInput(Array)
+#6 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\View.php(328): require('C:\\wamp64\\www\\b...')
+#7 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\View.php(250): yii\base\View->renderPhpFile('C:\\wamp64\\www\\b...', Array)
+#8 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\View.php(152): yii\base\View->renderFile('C:\\wamp64\\www\\b...', Array, NULL)
+#9 C:\wamp64\www\bcl\views\fabricacao\muda-status.php(56): yii\base\View->render('_form_status', Array)
+#10 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\View.php(328): require('C:\\wamp64\\www\\b...')
+#11 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\View.php(250): yii\base\View->renderPhpFile('C:\\wamp64\\www\\b...', Array)
+#12 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\View.php(152): yii\base\View->renderFile('C:\\wamp64\\www\\b...', Array, Object(app\controllers\FabricacaoController))
+#13 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Controller.php(381): yii\base\View->render('muda-status', Array, Object(app\controllers\FabricacaoController))
+#14 C:\wamp64\www\bcl\controllers\FabricacaoController.php(233): yii\base\Controller->render('muda-status', Array)
+#15 [internal function]: app\controllers\FabricacaoController->actionMudaStatus('9')
+#16 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#17 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#18 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('muda-status', Array)
+#19 C:\wamp64\www\bcl\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('fabricacao/muda...', Array)
+#20 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#21 C:\wamp64\www\bcl\web\index.php(12): yii\base\Application->run()
+#22 {main}
+2017-03-02 18:16:59 [::1][-][-][info][application] $_GET = [
+    'id' => '9'
+]
+
+$_COOKIE = [
+    '_ga' => 'GA1.1.798709550.1486065091'
+    '__utma' => '111872281.798709550.1486065091.1488402151.1488471054.36'
+    '__utmz' => '111872281.1486136376.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    'snis_h' => 'p5br3grkoh5cbdn3r30r29m0k2'
+    '__utmc' => '111872281'
+    'sinisa_dev' => 'cemmp7g6cbao17ntqnjds05pn3'
+    '_csrf' => 'e4a95e2d609991255e396d1b273498617791e76189e6cff588161f11e66709b6a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"K73Yf1-aDxt7SyTnF5HEs06cStriab6d\";}'
+    'sinisa_test' => 'mo4s3isqkvq5e49tjlhk6k9kt5'
+    'PHPSESSID' => 'ta8i6dqvceapn0vb58uvvql9d0'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/bcl/web/index.php/fabricacao/index'
+    'HTTP_COOKIE' => '_ga=GA1.1.798709550.1486065091; __utma=111872281.798709550.1486065091.1488402151.1488471054.36; __utmz=111872281.1486136376.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); snis_h=p5br3grkoh5cbdn3r30r29m0k2; __utmc=111872281; sinisa_dev=cemmp7g6cbao17ntqnjds05pn3; _csrf=e4a95e2d609991255e396d1b273498617791e76189e6cff588161f11e66709b6a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22K73Yf1-aDxt7SyTnF5HEs06cStriab6d%22%3B%7D; sinisa_test=mo4s3isqkvq5e49tjlhk6k9kt5; PHPSESSID=ta8i6dqvceapn0vb58uvvql9d0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\wamp64\\bin\\php\\php5.6.16;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\MySQL\\MySQL Utilities 1.6\\;C:\\Program Files\\Git\\cmd;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win64) PHP/5.6.16 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win64) PHP/5.6.16'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www/'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/bcl/web/index.php'
+    'REMOTE_PORT' => '50141'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'id=9'
+    'REQUEST_URI' => '/bcl/web/index.php/fabricacao/muda-status?id=9'
+    'SCRIPT_NAME' => '/bcl/web/index.php'
+    'PATH_INFO' => '/fabricacao/muda-status'
+    'PATH_TRANSLATED' => 'C:\\wamp64\\www\\fabricacao\\muda-status'
+    'PHP_SELF' => '/bcl/web/index.php/fabricacao/muda-status'
+    'REQUEST_TIME_FLOAT' => 1488489419.789
+    'REQUEST_TIME' => 1488489419
+]
+2017-03-02 18:18:03 [::1][-][ta8i6dqvceapn0vb58uvvql9d0][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'The requested page does not exist.' in C:\wamp64\www\bcl\controllers\FabricacaoController.php:261
+Stack trace:
+#0 C:\wamp64\www\bcl\controllers\FabricacaoController.php(142): app\controllers\FabricacaoController->findModel('35')
+#1 [internal function]: app\controllers\FabricacaoController->actionMudaStatus('35')
+#2 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#4 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('muda-status', Array)
+#5 C:\wamp64\www\bcl\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('fabricacao/muda...', Array)
+#6 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\wamp64\www\bcl\web\index.php(12): yii\base\Application->run()
+#8 {main}
+2017-03-02 18:18:03 [::1][-][ta8i6dqvceapn0vb58uvvql9d0][info][application] $_GET = [
+    'id' => '35'
+]
+
+$_COOKIE = [
+    '_ga' => 'GA1.1.798709550.1486065091'
+    '__utma' => '111872281.798709550.1486065091.1488402151.1488471054.36'
+    '__utmz' => '111872281.1486136376.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    'snis_h' => 'p5br3grkoh5cbdn3r30r29m0k2'
+    '__utmc' => '111872281'
+    'sinisa_dev' => 'cemmp7g6cbao17ntqnjds05pn3'
+    '_csrf' => 'e4a95e2d609991255e396d1b273498617791e76189e6cff588161f11e66709b6a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"K73Yf1-aDxt7SyTnF5HEs06cStriab6d\";}'
+    'sinisa_test' => 'mo4s3isqkvq5e49tjlhk6k9kt5'
+    'PHPSESSID' => 'ta8i6dqvceapn0vb58uvvql9d0'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_ga=GA1.1.798709550.1486065091; __utma=111872281.798709550.1486065091.1488402151.1488471054.36; __utmz=111872281.1486136376.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); snis_h=p5br3grkoh5cbdn3r30r29m0k2; __utmc=111872281; sinisa_dev=cemmp7g6cbao17ntqnjds05pn3; _csrf=e4a95e2d609991255e396d1b273498617791e76189e6cff588161f11e66709b6a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22K73Yf1-aDxt7SyTnF5HEs06cStriab6d%22%3B%7D; sinisa_test=mo4s3isqkvq5e49tjlhk6k9kt5; PHPSESSID=ta8i6dqvceapn0vb58uvvql9d0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\wamp64\\bin\\php\\php5.6.16;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\MySQL\\MySQL Utilities 1.6\\;C:\\Program Files\\Git\\cmd;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win64) PHP/5.6.16 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win64) PHP/5.6.16'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www/'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/bcl/web/index.php'
+    'REMOTE_PORT' => '50156'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'id=35'
+    'REQUEST_URI' => '/bcl/web/index.php/fabricacao/muda-status?id=35'
+    'SCRIPT_NAME' => '/bcl/web/index.php'
+    'PATH_INFO' => '/fabricacao/muda-status'
+    'PATH_TRANSLATED' => 'C:\\wamp64\\www\\fabricacao\\muda-status'
+    'PHP_SELF' => '/bcl/web/index.php/fabricacao/muda-status'
+    'REQUEST_TIME_FLOAT' => 1488489483.058
+    'REQUEST_TIME' => 1488489483
+]
+2017-03-02 18:18:06 [::1][-][ta8i6dqvceapn0vb58uvvql9d0][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'The requested page does not exist.' in C:\wamp64\www\bcl\controllers\FabricacaoController.php:261
+Stack trace:
+#0 C:\wamp64\www\bcl\controllers\FabricacaoController.php(142): app\controllers\FabricacaoController->findModel('27')
+#1 [internal function]: app\controllers\FabricacaoController->actionMudaStatus('27')
+#2 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#4 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('muda-status', Array)
+#5 C:\wamp64\www\bcl\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('fabricacao/muda...', Array)
+#6 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\wamp64\www\bcl\web\index.php(12): yii\base\Application->run()
+#8 {main}
+2017-03-02 18:18:06 [::1][-][ta8i6dqvceapn0vb58uvvql9d0][info][application] $_GET = [
+    'id' => '27'
+]
+
+$_COOKIE = [
+    '_ga' => 'GA1.1.798709550.1486065091'
+    '__utma' => '111872281.798709550.1486065091.1488402151.1488471054.36'
+    '__utmz' => '111872281.1486136376.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    'snis_h' => 'p5br3grkoh5cbdn3r30r29m0k2'
+    '__utmc' => '111872281'
+    'sinisa_dev' => 'cemmp7g6cbao17ntqnjds05pn3'
+    '_csrf' => 'e4a95e2d609991255e396d1b273498617791e76189e6cff588161f11e66709b6a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"K73Yf1-aDxt7SyTnF5HEs06cStriab6d\";}'
+    'sinisa_test' => 'mo4s3isqkvq5e49tjlhk6k9kt5'
+    'PHPSESSID' => 'ta8i6dqvceapn0vb58uvvql9d0'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_ga=GA1.1.798709550.1486065091; __utma=111872281.798709550.1486065091.1488402151.1488471054.36; __utmz=111872281.1486136376.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); snis_h=p5br3grkoh5cbdn3r30r29m0k2; __utmc=111872281; sinisa_dev=cemmp7g6cbao17ntqnjds05pn3; _csrf=e4a95e2d609991255e396d1b273498617791e76189e6cff588161f11e66709b6a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22K73Yf1-aDxt7SyTnF5HEs06cStriab6d%22%3B%7D; sinisa_test=mo4s3isqkvq5e49tjlhk6k9kt5; PHPSESSID=ta8i6dqvceapn0vb58uvvql9d0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\wamp64\\bin\\php\\php5.6.16;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\MySQL\\MySQL Utilities 1.6\\;C:\\Program Files\\Git\\cmd;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win64) PHP/5.6.16 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win64) PHP/5.6.16'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www/'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/bcl/web/index.php'
+    'REMOTE_PORT' => '50156'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'id=27'
+    'REQUEST_URI' => '/bcl/web/index.php/fabricacao/muda-status?id=27'
+    'SCRIPT_NAME' => '/bcl/web/index.php'
+    'PATH_INFO' => '/fabricacao/muda-status'
+    'PATH_TRANSLATED' => 'C:\\wamp64\\www\\fabricacao\\muda-status'
+    'PHP_SELF' => '/bcl/web/index.php/fabricacao/muda-status'
+    'REQUEST_TIME_FLOAT' => 1488489486.216
+    'REQUEST_TIME' => 1488489486
+]
+2017-03-02 18:18:09 [::1][-][ta8i6dqvceapn0vb58uvvql9d0][error][yii\web\HttpException:404] exception 'yii\web\NotFoundHttpException' with message 'The requested page does not exist.' in C:\wamp64\www\bcl\controllers\FabricacaoController.php:261
+Stack trace:
+#0 C:\wamp64\www\bcl\controllers\FabricacaoController.php(142): app\controllers\FabricacaoController->findModel('26')
+#1 [internal function]: app\controllers\FabricacaoController->actionMudaStatus('26')
+#2 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#3 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#4 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('muda-status', Array)
+#5 C:\wamp64\www\bcl\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('fabricacao/muda...', Array)
+#6 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 C:\wamp64\www\bcl\web\index.php(12): yii\base\Application->run()
+#8 {main}
+2017-03-02 18:18:09 [::1][-][ta8i6dqvceapn0vb58uvvql9d0][info][application] $_GET = [
+    'id' => '26'
+]
+
+$_COOKIE = [
+    '_ga' => 'GA1.1.798709550.1486065091'
+    '__utma' => '111872281.798709550.1486065091.1488402151.1488471054.36'
+    '__utmz' => '111872281.1486136376.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    'snis_h' => 'p5br3grkoh5cbdn3r30r29m0k2'
+    '__utmc' => '111872281'
+    'sinisa_dev' => 'cemmp7g6cbao17ntqnjds05pn3'
+    '_csrf' => 'e4a95e2d609991255e396d1b273498617791e76189e6cff588161f11e66709b6a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"K73Yf1-aDxt7SyTnF5HEs06cStriab6d\";}'
+    'sinisa_test' => 'mo4s3isqkvq5e49tjlhk6k9kt5'
+    'PHPSESSID' => 'ta8i6dqvceapn0vb58uvvql9d0'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_ga=GA1.1.798709550.1486065091; __utma=111872281.798709550.1486065091.1488402151.1488471054.36; __utmz=111872281.1486136376.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); snis_h=p5br3grkoh5cbdn3r30r29m0k2; __utmc=111872281; sinisa_dev=cemmp7g6cbao17ntqnjds05pn3; _csrf=e4a95e2d609991255e396d1b273498617791e76189e6cff588161f11e66709b6a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22K73Yf1-aDxt7SyTnF5HEs06cStriab6d%22%3B%7D; sinisa_test=mo4s3isqkvq5e49tjlhk6k9kt5; PHPSESSID=ta8i6dqvceapn0vb58uvvql9d0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\wamp64\\bin\\php\\php5.6.16;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\MySQL\\MySQL Utilities 1.6\\;C:\\Program Files\\Git\\cmd;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win64) PHP/5.6.16 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win64) PHP/5.6.16'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www/'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/bcl/web/index.php'
+    'REMOTE_PORT' => '50156'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'id=26'
+    'REQUEST_URI' => '/bcl/web/index.php/fabricacao/muda-status?id=26'
+    'SCRIPT_NAME' => '/bcl/web/index.php'
+    'PATH_INFO' => '/fabricacao/muda-status'
+    'PATH_TRANSLATED' => 'C:\\wamp64\\www\\fabricacao\\muda-status'
+    'PHP_SELF' => '/bcl/web/index.php/fabricacao/muda-status'
+    'REQUEST_TIME_FLOAT' => 1488489489.273
+    'REQUEST_TIME' => 1488489489
+]
+2017-03-02 18:21:01 [::1][-][-][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Getting unknown property: app\models\VisFabricacaoSearch::produto_comercial_fk' in C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Component.php:147
+Stack trace:
+#0 C:\wamp64\www\bcl\vendor\yiisoft\yii2\db\BaseActiveRecord.php(286): yii\base\Component->__get('produto_comerci...')
+#1 C:\wamp64\www\bcl\controllers\FabricacaoController.php(148): yii\db\BaseActiveRecord->__get('produto_comerci...')
+#2 [internal function]: app\controllers\FabricacaoController->actionMudaStatus('25')
+#3 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#4 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#5 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('muda-status', Array)
+#6 C:\wamp64\www\bcl\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('fabricacao/muda...', Array)
+#7 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 C:\wamp64\www\bcl\web\index.php(12): yii\base\Application->run()
+#9 {main}
+2017-03-02 18:21:01 [::1][-][-][info][application] $_GET = [
+    'id' => '25'
+]
+
+$_COOKIE = [
+    '_ga' => 'GA1.1.798709550.1486065091'
+    '__utma' => '111872281.798709550.1486065091.1488402151.1488471054.36'
+    '__utmz' => '111872281.1486136376.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    'snis_h' => 'p5br3grkoh5cbdn3r30r29m0k2'
+    '__utmc' => '111872281'
+    'sinisa_dev' => 'cemmp7g6cbao17ntqnjds05pn3'
+    '_csrf' => 'e4a95e2d609991255e396d1b273498617791e76189e6cff588161f11e66709b6a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"K73Yf1-aDxt7SyTnF5HEs06cStriab6d\";}'
+    'sinisa_test' => 'mo4s3isqkvq5e49tjlhk6k9kt5'
+    'PHPSESSID' => 'ta8i6dqvceapn0vb58uvvql9d0'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_ga=GA1.1.798709550.1486065091; __utma=111872281.798709550.1486065091.1488402151.1488471054.36; __utmz=111872281.1486136376.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); snis_h=p5br3grkoh5cbdn3r30r29m0k2; __utmc=111872281; sinisa_dev=cemmp7g6cbao17ntqnjds05pn3; _csrf=e4a95e2d609991255e396d1b273498617791e76189e6cff588161f11e66709b6a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22K73Yf1-aDxt7SyTnF5HEs06cStriab6d%22%3B%7D; sinisa_test=mo4s3isqkvq5e49tjlhk6k9kt5; PHPSESSID=ta8i6dqvceapn0vb58uvvql9d0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\wamp64\\bin\\php\\php5.6.16;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\MySQL\\MySQL Utilities 1.6\\;C:\\Program Files\\Git\\cmd;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win64) PHP/5.6.16 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win64) PHP/5.6.16'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www/'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/bcl/web/index.php'
+    'REMOTE_PORT' => '50175'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'id=25'
+    'REQUEST_URI' => '/bcl/web/index.php/fabricacao/muda-status?id=25'
+    'SCRIPT_NAME' => '/bcl/web/index.php'
+    'PATH_INFO' => '/fabricacao/muda-status'
+    'PATH_TRANSLATED' => 'C:\\wamp64\\www\\fabricacao\\muda-status'
+    'PHP_SELF' => '/bcl/web/index.php/fabricacao/muda-status'
+    'REQUEST_TIME_FLOAT' => 1488489661.162
+    'REQUEST_TIME' => 1488489661
+]
+2017-03-02 18:21:13 [::1][-][-][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Getting unknown property: app\models\VisFabricacaoSearch::produto_comercial_fk' in C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Component.php:147
+Stack trace:
+#0 C:\wamp64\www\bcl\vendor\yiisoft\yii2\db\BaseActiveRecord.php(286): yii\base\Component->__get('produto_comerci...')
+#1 C:\wamp64\www\bcl\controllers\FabricacaoController.php(148): yii\db\BaseActiveRecord->__get('produto_comerci...')
+#2 [internal function]: app\controllers\FabricacaoController->actionMudaStatus('25')
+#3 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#4 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#5 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('muda-status', Array)
+#6 C:\wamp64\www\bcl\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('fabricacao/muda...', Array)
+#7 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 C:\wamp64\www\bcl\web\index.php(12): yii\base\Application->run()
+#9 {main}
+2017-03-02 18:21:13 [::1][-][-][info][application] $_GET = [
+    'id' => '25'
+]
+
+$_COOKIE = [
+    '_ga' => 'GA1.1.798709550.1486065091'
+    '__utma' => '111872281.798709550.1486065091.1488402151.1488471054.36'
+    '__utmz' => '111872281.1486136376.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    'snis_h' => 'p5br3grkoh5cbdn3r30r29m0k2'
+    '__utmc' => '111872281'
+    'sinisa_dev' => 'cemmp7g6cbao17ntqnjds05pn3'
+    '_csrf' => 'e4a95e2d609991255e396d1b273498617791e76189e6cff588161f11e66709b6a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"K73Yf1-aDxt7SyTnF5HEs06cStriab6d\";}'
+    'sinisa_test' => 'mo4s3isqkvq5e49tjlhk6k9kt5'
+    'PHPSESSID' => 'ta8i6dqvceapn0vb58uvvql9d0'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_ga=GA1.1.798709550.1486065091; __utma=111872281.798709550.1486065091.1488402151.1488471054.36; __utmz=111872281.1486136376.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); snis_h=p5br3grkoh5cbdn3r30r29m0k2; __utmc=111872281; sinisa_dev=cemmp7g6cbao17ntqnjds05pn3; _csrf=e4a95e2d609991255e396d1b273498617791e76189e6cff588161f11e66709b6a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22K73Yf1-aDxt7SyTnF5HEs06cStriab6d%22%3B%7D; sinisa_test=mo4s3isqkvq5e49tjlhk6k9kt5; PHPSESSID=ta8i6dqvceapn0vb58uvvql9d0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\wamp64\\bin\\php\\php5.6.16;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\MySQL\\MySQL Utilities 1.6\\;C:\\Program Files\\Git\\cmd;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win64) PHP/5.6.16 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win64) PHP/5.6.16'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www/'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/bcl/web/index.php'
+    'REMOTE_PORT' => '50178'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'id=25'
+    'REQUEST_URI' => '/bcl/web/index.php/fabricacao/muda-status?id=25'
+    'SCRIPT_NAME' => '/bcl/web/index.php'
+    'PATH_INFO' => '/fabricacao/muda-status'
+    'PATH_TRANSLATED' => 'C:\\wamp64\\www\\fabricacao\\muda-status'
+    'PHP_SELF' => '/bcl/web/index.php/fabricacao/muda-status'
+    'REQUEST_TIME_FLOAT' => 1488489673.044
+    'REQUEST_TIME' => 1488489673
+]
+2017-03-02 18:21:42 [::1][-][-][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Getting unknown property: app\models\VisFabricacaoSearch::produto_comercial_fk' in C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Component.php:147
+Stack trace:
+#0 C:\wamp64\www\bcl\vendor\yiisoft\yii2\db\BaseActiveRecord.php(286): yii\base\Component->__get('produto_comerci...')
+#1 C:\wamp64\www\bcl\controllers\FabricacaoController.php(148): yii\db\BaseActiveRecord->__get('produto_comerci...')
+#2 [internal function]: app\controllers\FabricacaoController->actionMudaStatus('25')
+#3 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#4 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#5 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('muda-status', Array)
+#6 C:\wamp64\www\bcl\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('fabricacao/muda...', Array)
+#7 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 C:\wamp64\www\bcl\web\index.php(12): yii\base\Application->run()
+#9 {main}
+2017-03-02 18:21:42 [::1][-][-][info][application] $_GET = [
+    'id' => '25'
+]
+
+$_COOKIE = [
+    '_ga' => 'GA1.1.798709550.1486065091'
+    '__utma' => '111872281.798709550.1486065091.1488402151.1488471054.36'
+    '__utmz' => '111872281.1486136376.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    'snis_h' => 'p5br3grkoh5cbdn3r30r29m0k2'
+    '__utmc' => '111872281'
+    'sinisa_dev' => 'cemmp7g6cbao17ntqnjds05pn3'
+    '_csrf' => 'e4a95e2d609991255e396d1b273498617791e76189e6cff588161f11e66709b6a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"K73Yf1-aDxt7SyTnF5HEs06cStriab6d\";}'
+    'sinisa_test' => 'mo4s3isqkvq5e49tjlhk6k9kt5'
+    'PHPSESSID' => 'ta8i6dqvceapn0vb58uvvql9d0'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_ga=GA1.1.798709550.1486065091; __utma=111872281.798709550.1486065091.1488402151.1488471054.36; __utmz=111872281.1486136376.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); snis_h=p5br3grkoh5cbdn3r30r29m0k2; __utmc=111872281; sinisa_dev=cemmp7g6cbao17ntqnjds05pn3; _csrf=e4a95e2d609991255e396d1b273498617791e76189e6cff588161f11e66709b6a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22K73Yf1-aDxt7SyTnF5HEs06cStriab6d%22%3B%7D; sinisa_test=mo4s3isqkvq5e49tjlhk6k9kt5; PHPSESSID=ta8i6dqvceapn0vb58uvvql9d0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\wamp64\\bin\\php\\php5.6.16;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\MySQL\\MySQL Utilities 1.6\\;C:\\Program Files\\Git\\cmd;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win64) PHP/5.6.16 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win64) PHP/5.6.16'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www/'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/bcl/web/index.php'
+    'REMOTE_PORT' => '50182'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'id=25'
+    'REQUEST_URI' => '/bcl/web/index.php/fabricacao/muda-status?id=25'
+    'SCRIPT_NAME' => '/bcl/web/index.php'
+    'PATH_INFO' => '/fabricacao/muda-status'
+    'PATH_TRANSLATED' => 'C:\\wamp64\\www\\fabricacao\\muda-status'
+    'PHP_SELF' => '/bcl/web/index.php/fabricacao/muda-status'
+    'REQUEST_TIME_FLOAT' => 1488489702.235
+    'REQUEST_TIME' => 1488489702
+]
+2017-03-02 18:23:44 [::1][-][-][error][yii\base\UnknownPropertyException] exception 'yii\base\UnknownPropertyException' with message 'Getting unknown property: app\models\Fabricacao::obs' in C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Component.php:147
+Stack trace:
+#0 C:\wamp64\www\bcl\vendor\yiisoft\yii2\db\BaseActiveRecord.php(286): yii\base\Component->__get('obs')
+#1 C:\wamp64\www\bcl\vendor\yiisoft\yii2\validators\Validator.php(264): yii\db\BaseActiveRecord->__get('obs')
+#2 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Model.php(358): yii\validators\Validator->validateAttributes(Object(app\models\Fabricacao), Array)
+#3 C:\wamp64\www\bcl\vendor\yiisoft\yii2\db\ActiveRecord.php(455): yii\base\Model->validate(NULL)
+#4 C:\wamp64\www\bcl\vendor\yiisoft\yii2\db\BaseActiveRecord.php(635): yii\db\ActiveRecord->insert(true, NULL)
+#5 C:\wamp64\www\bcl\controllers\FabricacaoController.php(170): yii\db\BaseActiveRecord->save()
+#6 [internal function]: app\controllers\FabricacaoController->actionMudaStatus('1')
+#7 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#8 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#9 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('muda-status', Array)
+#10 C:\wamp64\www\bcl\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('fabricacao/muda...', Array)
+#11 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\wamp64\www\bcl\web\index.php(12): yii\base\Application->run()
+#13 {main}
+2017-03-02 18:23:44 [::1][-][-][info][application] $_GET = [
+    'id' => '1'
+]
+
+$_POST = [
+    '_csrf' => 'SEpmSk53ZVcDfVUTKEZINgwyEn0dDjE5Dn8uDz1HUzQbPhQjLxVTMw=='
+    'Fabricacao' => [
+        'status' => '2'
+        'qnt' => '2'
+    ]
+    'FabricacaoHistoricoSearch' => [
+        'pessoa' => 'teste'
+        'pago_status' => '1'
+        'obs' => 'testese'
+    ]
+]
+
+$_COOKIE = [
+    '_ga' => 'GA1.1.798709550.1486065091'
+    '__utma' => '111872281.798709550.1486065091.1488402151.1488471054.36'
+    '__utmz' => '111872281.1486136376.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    'snis_h' => 'p5br3grkoh5cbdn3r30r29m0k2'
+    '__utmc' => '111872281'
+    'sinisa_dev' => 'cemmp7g6cbao17ntqnjds05pn3'
+    '_csrf' => 'e4a95e2d609991255e396d1b273498617791e76189e6cff588161f11e66709b6a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"K73Yf1-aDxt7SyTnF5HEs06cStriab6d\";}'
+    'sinisa_test' => 'mo4s3isqkvq5e49tjlhk6k9kt5'
+    'PHPSESSID' => 'ta8i6dqvceapn0vb58uvvql9d0'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/bcl/web/index.php/fabricacao/muda-status?id=1'
+    'HTTP_COOKIE' => '_ga=GA1.1.798709550.1486065091; __utma=111872281.798709550.1486065091.1488402151.1488471054.36; __utmz=111872281.1486136376.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); snis_h=p5br3grkoh5cbdn3r30r29m0k2; __utmc=111872281; sinisa_dev=cemmp7g6cbao17ntqnjds05pn3; _csrf=e4a95e2d609991255e396d1b273498617791e76189e6cff588161f11e66709b6a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22K73Yf1-aDxt7SyTnF5HEs06cStriab6d%22%3B%7D; sinisa_test=mo4s3isqkvq5e49tjlhk6k9kt5; PHPSESSID=ta8i6dqvceapn0vb58uvvql9d0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '290'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\wamp64\\bin\\php\\php5.6.16;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\MySQL\\MySQL Utilities 1.6\\;C:\\Program Files\\Git\\cmd;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win64) PHP/5.6.16 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win64) PHP/5.6.16'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www/'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/bcl/web/index.php'
+    'REMOTE_PORT' => '50264'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'id=1'
+    'REQUEST_URI' => '/bcl/web/index.php/fabricacao/muda-status?id=1'
+    'SCRIPT_NAME' => '/bcl/web/index.php'
+    'PATH_INFO' => '/fabricacao/muda-status'
+    'PATH_TRANSLATED' => 'C:\\wamp64\\www\\fabricacao\\muda-status'
+    'PHP_SELF' => '/bcl/web/index.php/fabricacao/muda-status'
+    'REQUEST_TIME_FLOAT' => 1488489824.06
+    'REQUEST_TIME' => 1488489824
+]
+2017-03-02 18:38:36 [::1][-][-][error][yii\base\InvalidConfigException] exception 'yii\base\InvalidConfigException' with message 'Please specify the "model" property.' in C:\wamp64\www\bcl\vendor\yiisoft\yii2\widgets\DetailView.php:131
+Stack trace:
+#0 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Object.php(107): yii\widgets\DetailView->init()
+#1 [internal function]: yii\base\Object->__construct(Array)
+#2 C:\wamp64\www\bcl\vendor\yiisoft\yii2\di\Container.php(381): ReflectionClass->newInstanceArgs(Array)
+#3 C:\wamp64\www\bcl\vendor\yiisoft\yii2\di\Container.php(156): yii\di\Container->build('yii\\widgets\\Det...', Array, Array)
+#4 C:\wamp64\www\bcl\vendor\yiisoft\yii2\BaseYii.php(344): yii\di\Container->get('yii\\widgets\\Det...', Array, Array)
+#5 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Widget.php(136): yii\BaseYii::createObject(Array)
+#6 C:\wamp64\www\bcl\views\fabricacao\view.php(45): yii\base\Widget::widget(Array)
+#7 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\View.php(328): require('C:\\wamp64\\www\\b...')
+#8 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\View.php(250): yii\base\View->renderPhpFile('C:\\wamp64\\www\\b...', Array)
+#9 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\View.php(152): yii\base\View->renderFile('C:\\wamp64\\www\\b...', Array, Object(app\controllers\FabricacaoController))
+#10 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Controller.php(381): yii\base\View->render('view', Array, Object(app\controllers\FabricacaoController))
+#11 C:\wamp64\www\bcl\controllers\FabricacaoController.php(59): yii\base\Controller->render('view', Array)
+#12 [internal function]: app\controllers\FabricacaoController->actionView('26')
+#13 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#14 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#15 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('view', Array)
+#16 C:\wamp64\www\bcl\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('fabricacao/view', Array)
+#17 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#18 C:\wamp64\www\bcl\web\index.php(12): yii\base\Application->run()
+#19 {main}
+2017-03-02 18:38:36 [::1][-][-][info][application] $_GET = [
+    'id' => '26'
+]
+
+$_COOKIE = [
+    '_ga' => 'GA1.1.798709550.1486065091'
+    '__utma' => '111872281.798709550.1486065091.1488402151.1488471054.36'
+    '__utmz' => '111872281.1486136376.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    'snis_h' => 'p5br3grkoh5cbdn3r30r29m0k2'
+    '__utmc' => '111872281'
+    'sinisa_dev' => 'cemmp7g6cbao17ntqnjds05pn3'
+    '_csrf' => 'e4a95e2d609991255e396d1b273498617791e76189e6cff588161f11e66709b6a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"K73Yf1-aDxt7SyTnF5HEs06cStriab6d\";}'
+    'sinisa_test' => 'mo4s3isqkvq5e49tjlhk6k9kt5'
+    'PHPSESSID' => 'ta8i6dqvceapn0vb58uvvql9d0'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_ga=GA1.1.798709550.1486065091; __utma=111872281.798709550.1486065091.1488402151.1488471054.36; __utmz=111872281.1486136376.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); snis_h=p5br3grkoh5cbdn3r30r29m0k2; __utmc=111872281; sinisa_dev=cemmp7g6cbao17ntqnjds05pn3; _csrf=e4a95e2d609991255e396d1b273498617791e76189e6cff588161f11e66709b6a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22K73Yf1-aDxt7SyTnF5HEs06cStriab6d%22%3B%7D; sinisa_test=mo4s3isqkvq5e49tjlhk6k9kt5; PHPSESSID=ta8i6dqvceapn0vb58uvvql9d0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\wamp64\\bin\\php\\php5.6.16;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\MySQL\\MySQL Utilities 1.6\\;C:\\Program Files\\Git\\cmd;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win64) PHP/5.6.16 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win64) PHP/5.6.16'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www/'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/bcl/web/index.php'
+    'REMOTE_PORT' => '50324'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'id=26'
+    'REQUEST_URI' => '/bcl/web/index.php/fabricacao/view?id=26'
+    'SCRIPT_NAME' => '/bcl/web/index.php'
+    'PATH_INFO' => '/fabricacao/view'
+    'PATH_TRANSLATED' => 'C:\\wamp64\\www\\fabricacao\\view'
+    'PHP_SELF' => '/bcl/web/index.php/fabricacao/view'
+    'REQUEST_TIME_FLOAT' => 1488490716.005
+    'REQUEST_TIME' => 1488490716
+]
+2017-03-02 18:38:45 [::1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  invalid input syntax for integer: "25,"' in C:\wamp64\www\bcl\vendor\yiisoft\yii2\db\Command.php:902
+Stack trace:
+#0 C:\wamp64\www\bcl\vendor\yiisoft\yii2\db\Command.php(902): PDOStatement->execute()
+#1 C:\wamp64\www\bcl\vendor\yiisoft\yii2\db\Command.php(376): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#2 C:\wamp64\www\bcl\vendor\yiisoft\yii2\db\Query.php(253): yii\db\Command->queryOne()
+#3 C:\wamp64\www\bcl\vendor\yiisoft\yii2\db\ActiveQuery.php(295): yii\db\Query->one('<span class="ke...')
+#4 C:\wamp64\www\bcl\vendor\yiisoft\yii2\db\BaseActiveRecord.php(107): yii\db\ActiveQuery->one()
+#5 C:\wamp64\www\bcl\controllers\FabricacaoController.php(53): yii\db\BaseActiveRecord::findOne('[<span class="s...')
+#6 [internal function]: app\controllers\FabricacaoController->actionView('<span class="st...')
+#7 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array('[<span class="t...', '[<span class="s...')
+#8 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams('[<span class="s...')
+#9 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#10 C:\wamp64\www\bcl\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#11 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\wamp64\www\bcl\web\index.php(12): yii\base\Application->run()
+#13 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[22P02]: Invalid text representation: 7 ERROR:  invalid input syntax for integer: "25,"
+The SQL being executed was: SELECT * FROM "bcl"."vis_fabricacao" WHERE "id"='25,'' in C:\wamp64\www\bcl\vendor\yiisoft\yii2\db\Schema.php:636
+Stack trace:
+#0 C:\wamp64\www\bcl\vendor\yiisoft\yii2\db\Command.php(917): yii\db\Schema->convertException(Object(PDOException), 'SELECT * FROM "...')
+#1 C:\wamp64\www\bcl\vendor\yiisoft\yii2\db\Command.php(376): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#2 C:\wamp64\www\bcl\vendor\yiisoft\yii2\db\Query.php(253): yii\db\Command->queryOne()
+#3 C:\wamp64\www\bcl\vendor\yiisoft\yii2\db\ActiveQuery.php(295): yii\db\Query->one('<span class="ke...')
+#4 C:\wamp64\www\bcl\vendor\yiisoft\yii2\db\BaseActiveRecord.php(107): yii\db\ActiveQuery->one()
+#5 C:\wamp64\www\bcl\controllers\FabricacaoController.php(53): yii\db\BaseActiveRecord::findOne('[<span class="s...')
+#6 [internal function]: app\controllers\FabricacaoController->actionView('<span class="st...')
+#7 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array('[<span class="t...', '[<span class="s...')
+#8 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams('[<span class="s...')
+#9 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#10 C:\wamp64\www\bcl\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#11 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\wamp64\www\bcl\web\index.php(12): yii\base\Application->run()
+#13 {main}
+Additional Information:
+Array
+(
+    [0] => 22P02
+    [1] => 7
+    [2] => ERROR:  invalid input syntax for integer: "25,"
+)
+
+2017-03-02 18:38:45 [::1][-][-][info][application] $_GET = [
+    'id' => '25,'
+]
+
+$_COOKIE = [
+    '_ga' => 'GA1.1.798709550.1486065091'
+    '__utma' => '111872281.798709550.1486065091.1488402151.1488471054.36'
+    '__utmz' => '111872281.1486136376.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    'snis_h' => 'p5br3grkoh5cbdn3r30r29m0k2'
+    '__utmc' => '111872281'
+    'sinisa_dev' => 'cemmp7g6cbao17ntqnjds05pn3'
+    '_csrf' => 'e4a95e2d609991255e396d1b273498617791e76189e6cff588161f11e66709b6a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"K73Yf1-aDxt7SyTnF5HEs06cStriab6d\";}'
+    'sinisa_test' => 'mo4s3isqkvq5e49tjlhk6k9kt5'
+    'PHPSESSID' => 'ta8i6dqvceapn0vb58uvvql9d0'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => '_ga=GA1.1.798709550.1486065091; __utma=111872281.798709550.1486065091.1488402151.1488471054.36; __utmz=111872281.1486136376.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); snis_h=p5br3grkoh5cbdn3r30r29m0k2; __utmc=111872281; sinisa_dev=cemmp7g6cbao17ntqnjds05pn3; _csrf=e4a95e2d609991255e396d1b273498617791e76189e6cff588161f11e66709b6a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22K73Yf1-aDxt7SyTnF5HEs06cStriab6d%22%3B%7D; sinisa_test=mo4s3isqkvq5e49tjlhk6k9kt5; PHPSESSID=ta8i6dqvceapn0vb58uvvql9d0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\wamp64\\bin\\php\\php5.6.16;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\MySQL\\MySQL Utilities 1.6\\;C:\\Program Files\\Git\\cmd;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win64) PHP/5.6.16 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win64) PHP/5.6.16'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www/'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/bcl/web/index.php'
+    'REMOTE_PORT' => '50327'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'id=25,'
+    'REQUEST_URI' => '/bcl/web/index.php/fabricacao/view?id=25,'
+    'SCRIPT_NAME' => '/bcl/web/index.php'
+    'PATH_INFO' => '/fabricacao/view'
+    'PATH_TRANSLATED' => 'C:\\wamp64\\www\\fabricacao\\view'
+    'PHP_SELF' => '/bcl/web/index.php/fabricacao/view'
+    'REQUEST_TIME_FLOAT' => 1488490725.681
+    'REQUEST_TIME' => 1488490725
+]
+2017-03-02 18:39:13 [::1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[42P01]: Undefined table: 7 ERROR:  relation "bcl.vis_produto" does not exist
+LINE 1: ...icao" AS "label", "produto_preco_fk" AS "id" FROM "bcl"."vis...
+                                                             ^' in C:\wamp64\www\bcl\vendor\yiisoft\yii2\db\Command.php:902
+Stack trace:
+#0 C:\wamp64\www\bcl\vendor\yiisoft\yii2\db\Command.php(902): PDOStatement->execute()
+#1 C:\wamp64\www\bcl\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#2 C:\wamp64\www\bcl\vendor\yiisoft\yii2\db\Query.php(213): yii\db\Command->queryAll()
+#3 C:\wamp64\www\bcl\vendor\yiisoft\yii2\db\ActiveQuery.php(133): yii\db\Query->all('<span class="ke...')
+#4 C:\wamp64\www\bcl\controllers\FabricacaoController.php(74): yii\db\ActiveQuery->all()
+#5 [internal function]: app\controllers\FabricacaoController->actionCreate()
+#6 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array('[<span class="t...', '[]')
+#7 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams('[]')
+#8 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('<span class="st...', '[]')
+#9 C:\wamp64\www\bcl\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('<span class="st...', '[]')
+#10 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 C:\wamp64\www\bcl\web\index.php(12): yii\base\Application->run()
+#12 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[42P01]: Undefined table: 7 ERROR:  relation "bcl.vis_produto" does not exist
+LINE 1: ...icao" AS "label", "produto_preco_fk" AS "id" FROM "bcl"."vis...
+                                                             ^
+The SQL being executed was: SELECT "descricao" AS "value", "descricao" AS "label", "produto_preco_fk" AS "id" FROM "bcl"."vis_produto"' in C:\wamp64\www\bcl\vendor\yiisoft\yii2\db\Schema.php:636
+Stack trace:
+#0 C:\wamp64\www\bcl\vendor\yiisoft\yii2\db\Command.php(917): yii\db\Schema->convertException(Object(PDOException), 'SELECT "descric...')
+#1 C:\wamp64\www\bcl\vendor\yiisoft\yii2\db\Command.php(362): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#2 C:\wamp64\www\bcl\vendor\yiisoft\yii2\db\Query.php(213): yii\db\Command->queryAll()
+#3 C:\wamp64\www\bcl\vendor\yiisoft\yii2\db\ActiveQuery.php(133): yii\db\Query->all('<span class="ke...')
+#4 C:\wamp64\www\bcl\controllers\FabricacaoController.php(74): yii\db\ActiveQuery->all()
+#5 [internal function]: app\controllers\FabricacaoController->actionCreate()
+#6 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array('[<span class="t...', '[]')
+#7 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams('[]')
+#8 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('<span class="st...', '[]')
+#9 C:\wamp64\www\bcl\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('<span class="st...', '[]')
+#10 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 C:\wamp64\www\bcl\web\index.php(12): yii\base\Application->run()
+#12 {main}
+Additional Information:
+Array
+(
+    [0] => 42P01
+    [1] => 7
+    [2] => ERROR:  relation "bcl.vis_produto" does not exist
+LINE 1: ...icao" AS "label", "produto_preco_fk" AS "id" FROM "bcl"."vis...
+                                                             ^
+)
+
+2017-03-02 18:39:13 [::1][-][-][info][application] $_COOKIE = [
+    '_ga' => 'GA1.1.798709550.1486065091'
+    '__utma' => '111872281.798709550.1486065091.1488402151.1488471054.36'
+    '__utmz' => '111872281.1486136376.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    'snis_h' => 'p5br3grkoh5cbdn3r30r29m0k2'
+    '__utmc' => '111872281'
+    'sinisa_dev' => 'cemmp7g6cbao17ntqnjds05pn3'
+    '_csrf' => 'e4a95e2d609991255e396d1b273498617791e76189e6cff588161f11e66709b6a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"K73Yf1-aDxt7SyTnF5HEs06cStriab6d\";}'
+    'sinisa_test' => 'mo4s3isqkvq5e49tjlhk6k9kt5'
+    'PHPSESSID' => 'ta8i6dqvceapn0vb58uvvql9d0'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/bcl/web/index.php/fabricacao/index'
+    'HTTP_COOKIE' => '_ga=GA1.1.798709550.1486065091; __utma=111872281.798709550.1486065091.1488402151.1488471054.36; __utmz=111872281.1486136376.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); snis_h=p5br3grkoh5cbdn3r30r29m0k2; __utmc=111872281; sinisa_dev=cemmp7g6cbao17ntqnjds05pn3; _csrf=e4a95e2d609991255e396d1b273498617791e76189e6cff588161f11e66709b6a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22K73Yf1-aDxt7SyTnF5HEs06cStriab6d%22%3B%7D; sinisa_test=mo4s3isqkvq5e49tjlhk6k9kt5; PHPSESSID=ta8i6dqvceapn0vb58uvvql9d0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\wamp64\\bin\\php\\php5.6.16;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\MySQL\\MySQL Utilities 1.6\\;C:\\Program Files\\Git\\cmd;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win64) PHP/5.6.16 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win64) PHP/5.6.16'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www/'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/bcl/web/index.php'
+    'REMOTE_PORT' => '50337'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/bcl/web/index.php/fabricacao/create'
+    'SCRIPT_NAME' => '/bcl/web/index.php'
+    'PATH_INFO' => '/fabricacao/create'
+    'PATH_TRANSLATED' => 'C:\\wamp64\\www\\fabricacao\\create'
+    'PHP_SELF' => '/bcl/web/index.php/fabricacao/create'
+    'REQUEST_TIME_FLOAT' => 1488490753.712
+    'REQUEST_TIME' => 1488490753
+]
+2017-03-02 18:41:03 [::1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Class 'yii\jui\AutoComplete' not found' in C:\wamp64\www\bcl\views\fabricacao\_form.php:21
+Stack trace:
+#0 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\View.php(250): yii\base\View->renderPhpFile()
+#1 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\View.php(152): yii\base\View->renderFile()
+#2 C:\wamp64\www\bcl\views\fabricacao\create.php(22): yii\base\View->render()
+#3 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\View.php(328): ::unknown()
+#4 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\View.php(250): yii\base\View->renderPhpFile()
+#5 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\View.php(152): yii\base\View->renderFile()
+#6 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Controller.php(381): yii\base\View->render()
+#7 C:\wamp64\www\bcl\controllers\FabricacaoController.php(109): yii\base\Controller->render()
+#8 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\InlineAction.php(57): app\controllers\FabricacaoController->actionCreate()
+#9 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\InlineAction.php(57): ::call_user_func_array:{C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\InlineAction.php:57}()
+#10 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams()
+#11 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction()
+#12 C:\wamp64\www\bcl\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction()
+#13 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest()
+#14 C:\wamp64\www\bcl\web\index.php(12): yii\base\Application->run()
+#15 {main}
+2017-03-02 18:41:03 [::1][-][-][info][application] $_COOKIE = [
+    '_ga' => 'GA1.1.798709550.1486065091'
+    '__utma' => '111872281.798709550.1486065091.1488402151.1488471054.36'
+    '__utmz' => '111872281.1486136376.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    'snis_h' => 'p5br3grkoh5cbdn3r30r29m0k2'
+    '__utmc' => '111872281'
+    'sinisa_dev' => 'cemmp7g6cbao17ntqnjds05pn3'
+    '_csrf' => 'e4a95e2d609991255e396d1b273498617791e76189e6cff588161f11e66709b6a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"K73Yf1-aDxt7SyTnF5HEs06cStriab6d\";}'
+    'sinisa_test' => 'mo4s3isqkvq5e49tjlhk6k9kt5'
+    'PHPSESSID' => 'ta8i6dqvceapn0vb58uvvql9d0'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/bcl/web/index.php/fabricacao/index'
+    'HTTP_COOKIE' => '_ga=GA1.1.798709550.1486065091; __utma=111872281.798709550.1486065091.1488402151.1488471054.36; __utmz=111872281.1486136376.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); snis_h=p5br3grkoh5cbdn3r30r29m0k2; __utmc=111872281; sinisa_dev=cemmp7g6cbao17ntqnjds05pn3; _csrf=e4a95e2d609991255e396d1b273498617791e76189e6cff588161f11e66709b6a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22K73Yf1-aDxt7SyTnF5HEs06cStriab6d%22%3B%7D; sinisa_test=mo4s3isqkvq5e49tjlhk6k9kt5; PHPSESSID=ta8i6dqvceapn0vb58uvvql9d0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\wamp64\\bin\\php\\php5.6.16;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\MySQL\\MySQL Utilities 1.6\\;C:\\Program Files\\Git\\cmd;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win64) PHP/5.6.16 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win64) PHP/5.6.16'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www/'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/bcl/web/index.php'
+    'REMOTE_PORT' => '50341'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/bcl/web/index.php/fabricacao/create'
+    'SCRIPT_NAME' => '/bcl/web/index.php'
+    'PATH_INFO' => '/fabricacao/create'
+    'PATH_TRANSLATED' => 'C:\\wamp64\\www\\fabricacao\\create'
+    'PHP_SELF' => '/bcl/web/index.php/fabricacao/create'
+    'REQUEST_TIME_FLOAT' => 1488490863.532
+    'REQUEST_TIME' => 1488490863
+]
+2017-03-02 18:52:19 [::1][-][-][error][yii\base\UnknownMethodException] exception 'yii\base\UnknownMethodException' with message 'Calling unknown method: app\controllers\FabricacaoController::dd()' in C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Component.php:290
+Stack trace:
+#0 C:\wamp64\www\bcl\controllers\FabricacaoController.php(79): yii\base\Component->__call('dd', Array)
+#1 C:\wamp64\www\bcl\controllers\FabricacaoController.php(79): app\controllers\FabricacaoController->dd(Array)
+#2 [internal function]: app\controllers\FabricacaoController->actionCreate()
+#3 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#4 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#5 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('create', Array)
+#6 C:\wamp64\www\bcl\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('fabricacao/crea...', Array)
+#7 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 C:\wamp64\www\bcl\web\index.php(12): yii\base\Application->run()
+#9 {main}
+2017-03-02 18:52:19 [::1][-][-][info][application] $_POST = [
+    '_csrf' => 'b0J5YXpoc0okdUo4HFleKys6DVYpESckKXcxJAlYRSk8NgsIGwpFLg=='
+    'FabricacaoSearch' => [
+        'produto_comercial_fk' => '19'
+        'produto_comercial' => 'Pano de Prato - Ipês - Ipês'
+        'qnt' => '33'
+        'status' => '1'
+    ]
+    'FabricacaoHistoricoSearch' => [
+        'pessoa' => '33'
+        'pago_status' => '1'
+        'obs' => '333'
+    ]
+]
+
+$_COOKIE = [
+    '_ga' => 'GA1.1.798709550.1486065091'
+    '__utma' => '111872281.798709550.1486065091.1488402151.1488471054.36'
+    '__utmz' => '111872281.1486136376.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    'snis_h' => 'p5br3grkoh5cbdn3r30r29m0k2'
+    '__utmc' => '111872281'
+    'sinisa_dev' => 'cemmp7g6cbao17ntqnjds05pn3'
+    '_csrf' => 'e4a95e2d609991255e396d1b273498617791e76189e6cff588161f11e66709b6a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"K73Yf1-aDxt7SyTnF5HEs06cStriab6d\";}'
+    'sinisa_test' => 'mo4s3isqkvq5e49tjlhk6k9kt5'
+    'PHPSESSID' => 'ta8i6dqvceapn0vb58uvvql9d0'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/bcl/web/index.php/fabricacao/create'
+    'HTTP_COOKIE' => '_ga=GA1.1.798709550.1486065091; __utma=111872281.798709550.1486065091.1488402151.1488471054.36; __utmz=111872281.1486136376.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); snis_h=p5br3grkoh5cbdn3r30r29m0k2; __utmc=111872281; sinisa_dev=cemmp7g6cbao17ntqnjds05pn3; _csrf=e4a95e2d609991255e396d1b273498617791e76189e6cff588161f11e66709b6a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22K73Yf1-aDxt7SyTnF5HEs06cStriab6d%22%3B%7D; sinisa_test=mo4s3isqkvq5e49tjlhk6k9kt5; PHPSESSID=ta8i6dqvceapn0vb58uvvql9d0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '420'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\wamp64\\bin\\php\\php5.6.16;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\MySQL\\MySQL Utilities 1.6\\;C:\\Program Files\\Git\\cmd;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win64) PHP/5.6.16 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win64) PHP/5.6.16'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www/'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/bcl/web/index.php'
+    'REMOTE_PORT' => '50568'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/bcl/web/index.php/fabricacao/create'
+    'SCRIPT_NAME' => '/bcl/web/index.php'
+    'PATH_INFO' => '/fabricacao/create'
+    'PATH_TRANSLATED' => 'C:\\wamp64\\www\\fabricacao\\create'
+    'PHP_SELF' => '/bcl/web/index.php/fabricacao/create'
+    'REQUEST_TIME_FLOAT' => 1488491539.052
+    'REQUEST_TIME' => 1488491539
+]
+2017-03-02 18:54:07 [::1][-][ta8i6dqvceapn0vb58uvvql9d0][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request: cliente/preco' in C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Controller.php:127
+Stack trace:
+#0 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Module.php(523): yii\base\Controller->runAction('preco', Array)
+#1 C:\wamp64\www\bcl\vendor\yiisoft\yii2\web\Application.php(102): yii\base\Module->runAction('cliente/preco', Array)
+#2 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 C:\wamp64\www\bcl\web\index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Página não encontrada.' in C:\wamp64\www\bcl\vendor\yiisoft\yii2\web\Application.php:114
+Stack trace:
+#0 C:\wamp64\www\bcl\vendor\yiisoft\yii2\base\Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\wamp64\www\bcl\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2017-03-02 18:54:07 [::1][-][ta8i6dqvceapn0vb58uvvql9d0][info][application] $_COOKIE = [
+    '_ga' => 'GA1.1.798709550.1486065091'
+    '__utma' => '111872281.798709550.1486065091.1488402151.1488471054.36'
+    '__utmz' => '111872281.1486136376.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)'
+    'snis_h' => 'p5br3grkoh5cbdn3r30r29m0k2'
+    '__utmc' => '111872281'
+    'sinisa_dev' => 'cemmp7g6cbao17ntqnjds05pn3'
+    '_csrf' => 'e4a95e2d609991255e396d1b273498617791e76189e6cff588161f11e66709b6a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"K73Yf1-aDxt7SyTnF5HEs06cStriab6d\";}'
+    'sinisa_test' => 'mo4s3isqkvq5e49tjlhk6k9kt5'
+    'PHPSESSID' => 'ta8i6dqvceapn0vb58uvvql9d0'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64; rv:51.0) Gecko/20100101 Firefox/51.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'pt-BR,pt;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/bcl/web/index.php/fabricacao/view?id=20'
+    'HTTP_COOKIE' => '_ga=GA1.1.798709550.1486065091; __utma=111872281.798709550.1486065091.1488402151.1488471054.36; __utmz=111872281.1486136376.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); snis_h=p5br3grkoh5cbdn3r30r29m0k2; __utmc=111872281; sinisa_dev=cemmp7g6cbao17ntqnjds05pn3; _csrf=e4a95e2d609991255e396d1b273498617791e76189e6cff588161f11e66709b6a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22K73Yf1-aDxt7SyTnF5HEs06cStriab6d%22%3B%7D; sinisa_test=mo4s3isqkvq5e49tjlhk6k9kt5; PHPSESSID=ta8i6dqvceapn0vb58uvvql9d0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => 'C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\wamp64\\bin\\php\\php5.6.16;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files\\MySQL\\MySQL Utilities 1.6\\;C:\\Program Files\\Git\\cmd;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.17 (Win64) PHP/5.6.16 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.17 (Win64) PHP/5.6.16'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/wamp64/www/'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/wamp64/www/'
+    'SERVER_ADMIN' => 'admin@example.com'
+    'SCRIPT_FILENAME' => 'C:/wamp64/www/bcl/web/index.php'
+    'REMOTE_PORT' => '50589'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/bcl/web/index.php/cliente/preco'
+    'SCRIPT_NAME' => '/bcl/web/index.php'
+    'PATH_INFO' => '/cliente/preco'
+    'PATH_TRANSLATED' => 'C:\\wamp64\\www\\cliente\\preco'
+    'PHP_SELF' => '/bcl/web/index.php/cliente/preco'
+    'REQUEST_TIME_FLOAT' => 1488491647.452
+    'REQUEST_TIME' => 1488491647
+]

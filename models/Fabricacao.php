@@ -33,9 +33,8 @@ class Fabricacao extends \app\models\Models
     public function rules()
     {
         return [
-            [['data_inclusao'], 'safe'],
+            [['data_inclusao', 'data_exclusao'], 'safe'],
             [['qnt', 'status', 'produto_comercial_fk'], 'integer'],
-            [['obs'], 'string', 'max' => 80],
             [['produto_comercial_fk'], 'exist', 'skipOnError' => true, 'targetClass' => ProdutoComercial::className(), 'targetAttribute' => ['produto_comercial_fk' => 'id']],
 
         ];

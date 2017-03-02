@@ -50,10 +50,10 @@ class FabricacaoController extends Controller {
      * @return mixed
      */
     public function actionView($id) {
-        $model = $this->findModel($id);
+        $model = \app\models\VisFabricacaoSearch::findOne(['id'=>$id]);
         $status = [1 => 'Riscar', 2 => 'Bordar Terceiros', 3 => 'Bordar', 4 => 'Pronto'];
 
-        $this->view->title = "Fabricação: {$status[$model->status]} -" . $model->produto_comercial_fk;
+        $this->view->title = "Fabricação: {$status[$model->status]} - " . $model->produto;
         return $this->render('view', [
                     'model' => $model,
         ]);
@@ -69,16 +69,16 @@ class FabricacaoController extends Controller {
         $model = new FabricacaoSearch();
         $modelHitorico = new \app\models\FabricacaoHistoricoSearch();
         $this->view->title = "Cadastrar Estoque de Fabricação";
-        //$produto = ['produto'=>'Almofada', 'cor_pano'=>'Branco', 'desenho'=>'9 ipes', 'classificacao'=>'Ipês', 'id'=>1];
-
-        $produto = \app\models\VisProduto::find()->select(['descricao as value', 'descricao as  label', 'produto_preco_fk as id'])->asArray()->all();
+		
+		$produto = \app\models\VisProdutoComercialSearch::find()->select(['produto_comercial as value', 'produto_comercial as  label', 'id as id'])->asArray()->all();
+       
         $status = [1 => 'Riscado', 2 => 'Bordando Terceiros', 3 => 'Bordado', 4 => 'Pronto'];
 
         if (Yii::$app->request->post()) {
             $model->load(Yii::$app->request->post());
+			
 
             $modelExiste = Fabricacao::findOne(['produto_comercial_fk' => $model->produto_comercial_fk, 'status' => $model->status]);
-
 
             if ($modelExiste) {
 
@@ -138,22 +138,22 @@ class FabricacaoController extends Controller {
       } */
     public function actionMudaStatus($id) {
 
-
-        $model = $this->findModel($id);
+        $model = \app\models\VisFabricacaoSearch::findOne(['id'=>$id]);
         $modelNovo = new Fabricacao();
         $modelHitorico = new \app\models\FabricacaoHistoricoSearch();
 
-        $produto = ArrayHelper::map(\app\models\VisProduto::find()->select("produto_preco_fk, descricao")->orderBy('descricao')->all(), 'produto_preco_fk', 'descricao');
+        $produto = ArrayHelper::map(\app\models\VisProdutoComercialSearch::find()->select("id, produto_comercial")->orderBy('produto_comercial')->all(), 'id', 'produto_comercial');
 
         $status = [1 => 'Riscado', 2 => 'Bordando Terceiros', 3 => 'Bordado', 4 => 'Pronto'];
-        $this->view->title = "Alterar Estágio de Fabricação: {$status[$model->status]} -" . $model->produto_comercial_fk;
+        $this->view->title = "Alterar Estágio de Fabricação: {$model->status_descricao} - " . $model->produto;
 
         unset($status[$model->status]);
 
         if ($modelNovo->load(Yii::$app->request->post())) {
+			$model = $this->findModel($id);
+			
             $modelNovo->produto_comercial_fk = $model->produto_comercial_fk;
-
-
+			
             $modelExiste = Fabricacao::findOne(['produto_comercial_fk' => $model->produto_comercial_fk, 'status' => $modelNovo->status]);
 
             if ($modelExiste) {

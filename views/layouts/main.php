@@ -41,7 +41,7 @@ AppAsset::register($this);
 					['label' => 'Desenho', 'url' => ['/desenho/index']],
 					['label' => 'Classificacao', 'url' => ['/classificacao/index']],
 					['label' => 'Preco', 'url' => ['/cliente/preco']],
-					['label' => 'Produto Comercial', 'url' => ['/estoque/produto-comercial']],
+					['label' => 'Produto Comercial', 'url' => ['/produto-comercial/index']],
                                         ['label' => 'Fabricacao', 'url' => ['/fabricacao/index']],
 					//['label' => 'Estoque', 'url' => ['/estoque/index']],
 //					['label' => 'Movimentação', 'url' => ['/movimentacao/index']],

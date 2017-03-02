@@ -32,8 +32,9 @@ class VisFabricacao extends \app\models\Models
     public function rules()
     {
         return [
-            [['classificacao', 'status_descricao'], 'string'],
+            [['classificacao', 'status_descricao', 'produto_comercial'], 'string'],
             [['qnt', 'status', 'id'], 'integer'],
+			[['data_inclusao'], 'safe'],
             [['produto', 'cor_pano', 'desenho'], 'string', 'max' => 200],
         ];
     }

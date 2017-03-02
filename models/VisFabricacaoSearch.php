@@ -11,17 +11,6 @@ use app\models\VisFabricacao;
 
 class VisFabricacaoSearch extends VisFabricacao
 {
-    /**
-     * @inheritdoc
-     */
-    public function rules()
-    {
-        return [
-            [['id'], 'integer'],
-            [['descricao'], 'safe'],
-        ];
-    }
-
 
 	public function attributeLabels() {
 		return [
@@ -31,11 +20,7 @@ class VisFabricacaoSearch extends VisFabricacao
 			'classificacao' => 'Classificacao',
 			'qnt' => 'Qnt',
 			'status' => 'Status',
-			'cor_pano_fk' => 'Cor Pano Fk',
-			'produto_preco_fk' => 'Produto Preco Fk',
-			'id' => 'ID',
-			'produto_fk' => 'Produto Fk',
-			'desenho_fk' => 'Desenho Fk',
+			'data_inclusao'=>'Inclusao'
 		];
 	}
 
@@ -62,18 +47,18 @@ class VisFabricacaoSearch extends VisFabricacao
 			'id' => $this->id,
 			'qnt' => $this->qnt,
 			'status' => $this->status,
-			'cor_pano_fk' => $this->cor_pano_fk,
-			'produto_preco_fk' => $this->produto_preco_fk,
-			'produto_fk' => $this->produto_fk,
-			'desenho_fk' => $this->desenho_fk,
+			
+
 		]);
 
 		$query->andFilterWhere(['like', 'produto', $this->produto]);
-		$query->andFilterWhere(['like', 'cor', $this->cor]);
-		$query->andFilterWhere(['like', 'desenho', $this->desenho]);
+		$query->andFilterWhere(['like', 'produto_comercial', $this->produto_comercial]);
+		$query->andFilterWhere(['like', 'data_inclusao', $this->data_inclusao]);
+		$query->andFilterWhere(['like', 'cor_pano', $this->cor_pano]);
+		 $query->andFilterWhere(['like', 'desenho', $this->desenho]);
 		$query->andFilterWhere(['like', 'classificacao', $this->classificacao]);
 
-
+		$query->orderBy('produto_comercial, data_inclusao desc');
 		return $dataProvider;
 	}
 

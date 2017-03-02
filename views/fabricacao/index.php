@@ -23,13 +23,24 @@ $this->params['breadcrumbs'][] = $this->title;
 		'dataProvider' => $dataProvider,
 		'filterModel' => $searchModel,
 		'columns' => [
-			'id',
-			'produto_comercial_fk',
+			'produto_comercial',
 			'qnt',
-			'status',
+			'status_descricao',
+			'data_inclusao',
 			['class' => 'yii\grid\ActionColumn',
 				'template' => '{view} {mudar} {delete}',
-				'buttons' => ['mudar' => function ($urls, $model, $class) {
+				'buttons' => [
+					'view' => function ($urls, $model, $class) {
+
+						return Html::a(
+								'<span class="glyphicon glyphicon-eye-open"> </span>', yii\helpers\Url::to(['view', 'id' => $model['id']]), [
+								'data-toggle' => 'tooltip',
+								'title' => 'Visualizar',
+								'data-pjax' => '0',
+								]
+						);
+					},
+						'mudar' => function ($urls, $model, $class) {
 
 						return Html::a(
 								'<span class="glyphicon glyphicon-edit"> </span>', yii\helpers\Url::to(['muda-status', 'id' => $model['id']]), [
@@ -38,7 +49,20 @@ $this->params['breadcrumbs'][] = $this->title;
 								'data-pjax' => '0',
 								]
 						);
-					}],
+					},
+						'delete' => function ($urls, $model, $class) {
+
+						return Html::a(
+								'<span class="glyphicon glyphicon-trash"> </span>', yii\helpers\Url::to(['delete', 'id' => $model['id']]), [
+								'data-toggle' => 'tooltip',
+								'title' => 'Excluir',
+								'data-pjax' => '0',
+								'data-confirm' => Yii::t('yii', 'Are you sure you want to delete this item?'),
+								'data-method' => 'post',
+								]
+						);
+					},
+					],
 				],
 			],
 		]);
