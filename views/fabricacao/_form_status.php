@@ -3,11 +3,6 @@
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
-$js = " 
-	var urlDesenho = '" . \yii\helpers\Url::toRoute('incluir-desenho') . "';	
-	var urlClassificacao = '" . \yii\helpers\Url::toRoute('incluir-classificacao') . "';	
-";
-$this->registerJs($js, $this::POS_BEGIN);
 
 $this->registerJsFile('@web/js/fabricacao.js', ['position' => $this::POS_END, 'depends' => [\app\assets\AppAsset::className()]]);
 /* @var $this yii\web\View */
@@ -40,13 +35,8 @@ $this->registerJsFile('@web/js/fabricacao.js', ['position' => $this::POS_END, 'd
         </div>
         <div class="row">
             <div class="col-md-12">
-                <?= $form->field($modelHitorico, 'data_conclusao')->textInput() ?>
+                <?= $form->field($modelHitorico, 'obs')->textInput(['maxlength' => true]) ?>
             </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12">
-            <?= $form->field($model, 'obs')->textInput(['maxlength' => true]) ?>
         </div>
     </div>
     <div class="form-group">

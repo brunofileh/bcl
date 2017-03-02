@@ -5,12 +5,12 @@ namespace app\models;
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\models\CorPano;
+use app\models\VisFabricacao;
 
 /**
  * CorPanoSearch represents the model behind the search form about `app\models\CorPano`.
  */
-class CorPanoSearch extends CorPano
+class VisFabricacaoSearch extends VisFabricacao
 {
     /**
      * @inheritdoc

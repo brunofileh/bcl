@@ -35,12 +35,16 @@ AppAsset::register($this);
 			echo Nav::widget([
 				'options' => ['class' => 'navbar-nav navbar-right'],
 				'items' => [
+                                    
 					['label' => 'Home', 'url' => ['/site/index']],
 					['label' => 'Produto', 'url' => ['/produto/index']],
+					['label' => 'Desenho', 'url' => ['/desenho/index']],
 					['label' => 'Classificacao', 'url' => ['/classificacao/index']],
-					['label' => 'Cliente', 'url' => ['/cliente/index']],
-					['label' => 'Estoque', 'url' => ['/estoque/index']],
-					['label' => 'Movimentação', 'url' => ['/movimentacao/index']],
+					['label' => 'Preco', 'url' => ['/cliente/preco']],
+					['label' => 'Produto Comercial', 'url' => ['/estoque/produto-comercial']],
+                                        ['label' => 'Fabricacao', 'url' => ['/fabricacao/index']],
+					//['label' => 'Estoque', 'url' => ['/estoque/index']],
+//					['label' => 'Movimentação', 'url' => ['/movimentacao/index']],
 					Yii::$app->user->isGuest ? (
 						['label' => 'Login', 'url' => ['/site/login']]
 						) : (

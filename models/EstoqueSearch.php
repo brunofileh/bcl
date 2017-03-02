@@ -17,9 +17,9 @@ class EstoqueSearch extends Estoque {
 	 */
 	public function rules() {
 		return [
-			[['id', 'produto_fk', 'classificacao_fk'], 'integer'],
+			[['id'], 'integer'],
 			[['data_inclusao'], 'safe'],
-			[['valor_custo', 'valor_unitario', 'qnt_diponivel', 'qnt_minimo', 'pano', 'bordado', 'costureira', 'linha', 'enchimento'], 'number'],
+			[['qnt_diponivel'], 'number'],
 		];
 	}
 
@@ -29,19 +29,6 @@ class EstoqueSearch extends Estoque {
 	public function scenarios() {
 		// bypass scenarios() implementation in the parent class
 		return Model::scenarios();
-	}
-
-	public function beforeSave($insert) {
-		$this->valor_custo = Models::decimalFormatForBank($this->valor_custo);
-		$this->valor_unitario = Models::decimalFormatForBank($this->valor_unitario);
-		$this->pano = Models::decimalFormatForBank($this->pano);
-
-		$this->bordado = Models::decimalFormatForBank($this->bordado);
-		$this->costureira = Models::decimalFormatForBank($this->costureira);
-		$this->linha = Models::decimalFormatForBank($this->linha);
-		$this->enchimento = Models::decimalFormatForBank($this->enchimento);
-
-		parent::beforeSave($insert);
 	}
 
 	/**
@@ -71,18 +58,9 @@ class EstoqueSearch extends Estoque {
 		// grid filtering conditions
 		$query->andFilterWhere([
 			'id' => $this->id,
-			'produto_fk' => $this->produto_fk,
 			'data_inclusao' => $this->data_inclusao,
-			'valor_custo' => $this->valor_custo,
-			'valor_unitario' => $this->valor_unitario,
 			'qnt_diponivel' => $this->qnt_diponivel,
-			'qnt_minimo' => $this->qnt_minimo,
-			'pano' => $this->pano,
-			'bordado' => $this->bordado,
-			'costureira' => $this->costureira,
-			'linha' => $this->linha,
-			'enchimento' => $this->enchimento,
-			'classificacao_fk' => $this->classificacao_fk,
+			'produto_comercial_fk' => $this->produto_comercial_fk,
 		]);
 
 		return $dataProvider;

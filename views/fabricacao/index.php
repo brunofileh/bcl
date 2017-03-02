@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel app\models\FabricacaoSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Fabricacaos';
+
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="fabricacao-index">
@@ -18,20 +18,29 @@ $this->params['breadcrumbs'][] = $this->title;
     <p>
         <?= Html::a('Create Fabricacao', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
-    <?= GridView::widget([
+    <?=
+    GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
         'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
-
-            'produtoPrecoFk.produtoFk.descricao',
-            'classificacaoFk.descricao',
-            
-            'desenhoFk.descricao',
-             'qnt',
-             'status',
-
-            ['class' => 'yii\grid\ActionColumn'],
+             'id',
+            'produto_comercial_fk',
+            'qnt',
+            'status',
+                ['class' => 'yii\grid\ActionColumn',
+                'template' => '{view} {mudar} {delete}',
+                'buttons' => ['mudar' => function ($urls, $model, $class) {
+                 
+                    return Html::a(
+                                '<span class="glyphicon glyphicon-edit"> </span>', yii\helpers\Url::to(['muda-status', 'id'=>$model['id']]), [
+                                'data-toggle' => 'tooltip',
+                                'title' => 'Mudar status',
+                                'data-pjax' => '0',
+                        ]
+                    );
+                }],
+            ],
         ],
-    ]); ?>
+    ]);
+    ?>
 </div>
