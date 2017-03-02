@@ -9,7 +9,7 @@ use Yii;
  *
  * @property string $id
  * @property string $data_inclusao
- * @property string $obs
+ * @property string $data_exclusao
  * @property integer $qnt
  * @property integer $status
  * @property string $produto_comercial_fk
@@ -37,6 +37,7 @@ class Fabricacao extends \app\models\Models
             [['qnt', 'status', 'produto_comercial_fk'], 'integer'],
             [['obs'], 'string', 'max' => 80],
             [['produto_comercial_fk'], 'exist', 'skipOnError' => true, 'targetClass' => ProdutoComercial::className(), 'targetAttribute' => ['produto_comercial_fk' => 'id']],
+
         ];
     }
 
@@ -48,7 +49,6 @@ class Fabricacao extends \app\models\Models
         return [
             'id' => 'ID',
             'data_inclusao' => 'Data Inclusao',
-            'obs' => 'Obs',
             'qnt' => 'Qnt',
             'status' => 'Status',
             'produto_comercial_fk' => 'Produto Comercial Fk',
@@ -58,6 +58,7 @@ class Fabricacao extends \app\models\Models
     /**
      * @return \yii\db\ActiveQuery
      */
+
     public function getProdutoComercialFk()
     {
         return $this->hasOne(ProdutoComercial::className(), ['id' => 'produto_comercial_fk']);
@@ -66,7 +67,8 @@ class Fabricacao extends \app\models\Models
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getFabricacaoHistoricos()
+
+   public function getFabricacaoHistoricos()
     {
         return $this->hasMany(FabricacaoHistorico::className(), ['fabricacao_fk' => 'id']);
     }

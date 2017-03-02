@@ -8,7 +8,20 @@ use app\models\VisFabricacao;
 /**
  * CorPanoSearch represents the model behind the search form about `app\models\CorPano`.
  */
-class VisFabricacaoSearch extends VisFabricacao {
+
+class VisFabricacaoSearch extends VisFabricacao
+{
+    /**
+     * @inheritdoc
+     */
+    public function rules()
+    {
+        return [
+            [['id'], 'integer'],
+            [['descricao'], 'safe'],
+        ];
+    }
+
 
 	public function attributeLabels() {
 		return [

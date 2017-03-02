@@ -10,26 +10,35 @@ use app\models\Fabricacao;
 /**
  * FabricacaoSearch represents the model behind the search form about `app\models\Fabricacao`.
  */
-class FabricacaoSearch extends Fabricacao
-{
+class FabricacaoSearch extends Fabricacao {
+
+    public $produto_comercial;
+
     /**
      * @inheritdoc
      */
-    public function rules()
-    {
+    public function rules() {
         return [
-            [['id', 'classificacao_fk', 'produto_preco_fk', 'desenho_fk', 'qnt', 'status'], 'integer'],
-            [['data_inclusao', 'obs'], 'safe'],
+                [['id', 'produto_comercial_fk', 'qnt', 'status'], 'integer'],
+                [['data_inclusao', 'produto_comercial', 'data_exclusao'], 'safe'],
         ];
     }
 
     /**
      * @inheritdoc
      */
-    public function scenarios()
-    {
+    public function scenarios() {
         // bypass scenarios() implementation in the parent class
         return Model::scenarios();
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function attributeLabels() {
+        $label = parent::attributeLabels();
+        $label['qnt'] = 'Quantidade';
+        return $label;
     }
 
     /**
@@ -39,9 +48,8 @@ class FabricacaoSearch extends Fabricacao
      *
      * @return ActiveDataProvider
      */
-    public function search($params)
-    {
-        $query = Fabricacao::find();
+    public function search($params) {
+        $query = FabricacaoSearch::find();
 
         // add conditions that should always apply here
 
@@ -58,51 +66,28 @@ class FabricacaoSearch extends Fabricacao
         }
 
         // grid filtering conditions
+
         $query->andFilterWhere([
             'id' => $this->id,
             'data_inclusao' => $this->data_inclusao,
-            'classificacao_fk' => $this->classificacao_fk,
-            'produto_preco_fk' => $this->produto_preco_fk,
-			'desenho_fk' => $this->desenho_fk,
+            'produto_comercial_fk' => $this->produto_comercial_fk,
             'qnt' => $this->qnt,
             'status' => $this->status,
+            //'data_exclusao' =>  (new \yii\db\Expression('Null')),
+            
         ]);
-
-        //$query->andFilterWhere(['like', 'desenho', $this->desenho]);
+        $query->andWhere(['data_exclusao' => null]);
+        $query->orderBy('id');
 
         return $dataProvider;
     }
-	
-	
-	  /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getClassificacaoFk()
-    {
-        return $this->hasOne(ClassificacaoSearch::className(), ['id' => 'classificacao_fk']);
-    }
 
     /**
+      /**
      * @return \yii\db\ActiveQuery
      */
-    public function getDesenhoFk()
-    {
-        return $this->hasOne(DesenhoSearch::className(), ['id' => 'desenho_fk']);
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getProdutoPrecoFk()
-    {
-        return $this->hasOne(ProdutoPrecoSearch::className(), ['id' => 'produto_preco_fk']);
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getFabricacaoHistoricos()
-    {
+    public function getFabricacaoHistoricos() {
         return $this->hasMany(FabricacaoHistoricoSearch::className(), ['fabricacao_fk' => 'id']);
     }
+
 }

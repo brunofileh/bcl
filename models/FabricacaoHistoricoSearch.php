@@ -12,17 +12,6 @@ use app\models\FabricacaoHistorico;
  */
 class FabricacaoHistoricoSearch extends FabricacaoHistorico
 {
-    /**
-     * @inheritdoc
-     */
-    public function rules()
-    {
-        return [
-            [['id', 'qnt', 'status', 'fabricacao_fk'], 'integer'],
-            [['data_inclusao', 'data_conclusao', 'pessoa'], 'safe'],
-            [['pago_status'], 'boolean'],
-        ];
-    }
 
     /**
      * @inheritdoc
@@ -31,6 +20,23 @@ class FabricacaoHistoricoSearch extends FabricacaoHistorico
     {
         // bypass scenarios() implementation in the parent class
         return Model::scenarios();
+    }
+    
+     /**
+     * @inheritdoc
+     */
+    public function attributeLabels()
+    {
+        return [
+            'id' => 'ID',
+            'data_inclusao' => 'Data Inclusao',
+            'pessoa' => 'Artesão',
+            'qnt' => 'Quantidade',
+            'status' => 'Status',
+            'pago_status' => 'Pago?',
+            'fabricacao_fk' => 'Fabricacao Fk',
+            'obs' => 'Observação',
+        ];
     }
 
     /**
@@ -62,7 +68,6 @@ class FabricacaoHistoricoSearch extends FabricacaoHistorico
         $query->andFilterWhere([
             'id' => $this->id,
             'data_inclusao' => $this->data_inclusao,
-            'data_conclusao' => $this->data_conclusao,
             'qnt' => $this->qnt,
             'status' => $this->status,
             'pago_status' => $this->pago_status,
@@ -70,6 +75,7 @@ class FabricacaoHistoricoSearch extends FabricacaoHistorico
         ]);
 
         $query->andFilterWhere(['like', 'pessoa', $this->pessoa]);
+        
 
         return $dataProvider;
     }
