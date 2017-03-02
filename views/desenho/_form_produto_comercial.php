@@ -10,7 +10,7 @@ Modal::begin([
 		'id' => 'modalHeader'
 	],
 	'header' => '<h3><div id="tituloInfra">Incluir Desenho</div><h3>',
-	'id' => 'modalDesenho',
+	'id' => 'modal-desenho',
 	'closeButton' => false,
 	'size' => 'modal-lg',
 	'footer' =>
@@ -31,8 +31,8 @@ $model = new app\models\DesenhoSearch();
 
 ?>
 
-<div id='formDesenho' >
-
+<div id='form-desenho' >
+	<div id="errorAuxiliares-desenho" style="color:red" class="help-block"></div>
 	<?= $form->field($model, 'descricao')->textInput() ?>
 
 </div>

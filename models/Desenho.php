@@ -10,9 +10,9 @@ use Yii;
  * @property integer $id
  * @property string $descricao
  *
- * @property Fabricacao[] $fabricacaos
+ * @property ProdutoComercial[] $produtoComercials
  */
-class Desenho extends Models
+class Desenho extends \app\models\Models
 {
     /**
      * @inheritdoc
@@ -46,8 +46,8 @@ class Desenho extends Models
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getFabricacaos()
+    public function getProdutoComercials()
     {
-        return $this->hasMany(Fabricacao::className(), ['desenho_fk' => 'id']);
+        return $this->hasMany(ProdutoComercial::className(), ['desenho_fk' => 'id']);
     }
 }

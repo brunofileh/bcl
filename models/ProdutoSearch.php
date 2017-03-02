@@ -21,6 +21,8 @@ class ProdutoSearch extends Produto {
 		return [
 			[['id', 'unidade'], 'integer'],
 			[['descricao', 'unidade_desc'], 'safe'],
+			[['descricao'], 'unique'],
+			[['descricao'], 'required', 'on'=>'produtoComercial'],
 		];
 	}
 

@@ -34,7 +34,7 @@ class FabricacaoController extends Controller {
      * @return mixed
      */
     public function actionIndex() {
-        $searchModel = new FabricacaoSearch();
+        $searchModel = new \app\models\VisFabricacaoSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -188,6 +188,23 @@ class FabricacaoController extends Controller {
             $model->qnt = $model->qnt - $qtd;
             $model->save();
             
+			if($modelNovo->status==4){
+				$estoque = \app\models\EstoqueSearch::findOne(['classificacao_fk' => $model->classificacao_fk, 'produto_preco_fk' => $model->produto_preco_fk, 'desenho_fk' => $model->desenho_fk]);
+				
+				if($estoque){
+					$estoque->qnt_diponivel = $estoque->qnt_diponivel+$modelNovo->status;
+					$estoque->save();
+				}else{
+					$estoqueMod = \app\models\EstoqueSearch::findOne(['produto_preco_fk' => $model->produto_preco_fk]);
+					
+					if($estoqueMod){
+						$estoque = new \app\models\EstoqueSearch();
+						$estoque->classificacao_fk = $model->classificacao_fk;
+						$estoque->produto_fk = $model->classificacao_fk;
+					}
+					
+				}
+			}
 
             return $this->redirect(['view', 'id' => $modelNovo->id]);
         } else {

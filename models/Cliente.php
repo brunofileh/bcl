@@ -18,7 +18,7 @@ use Yii;
  *
  * @property Movimentacao[] $movimentacaos
  */
-class Cliente extends Models
+class Cliente extends \app\models\Models
 {
     /**
      * @inheritdoc

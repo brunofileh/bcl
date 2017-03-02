@@ -9,19 +9,15 @@ use Yii;
  *
  * @property string $id
  * @property string $data_inclusao
- * @property string $classificacao_fk
- * @property string $produto_preco_fk
  * @property string $obs
  * @property integer $qnt
  * @property integer $status
- * @property string $desenho_fk
+ * @property string $produto_comercial_fk
  *
- * @property Classificacao $classificacaoFk
- * @property Desenho $desenhoFk
- * @property ProdutoPreco $produtoPrecoFk
+ * @property ProdutoComercial $produtoComercialFk
  * @property FabricacaoHistorico[] $fabricacaoHistoricos
  */
-class Fabricacao extends Models
+class Fabricacao extends \app\models\Models
 {
     /**
      * @inheritdoc
@@ -38,11 +34,9 @@ class Fabricacao extends Models
     {
         return [
             [['data_inclusao'], 'safe'],
-            [['classificacao_fk', 'produto_preco_fk', 'qnt', 'status', 'desenho_fk'], 'integer'],
+            [['qnt', 'status', 'produto_comercial_fk'], 'integer'],
             [['obs'], 'string', 'max' => 80],
-            [['classificacao_fk'], 'exist', 'skipOnError' => true, 'targetClass' => Classificacao::className(), 'targetAttribute' => ['classificacao_fk' => 'id']],
-            [['desenho_fk'], 'exist', 'skipOnError' => true, 'targetClass' => Desenho::className(), 'targetAttribute' => ['desenho_fk' => 'id']],
-            [['produto_preco_fk'], 'exist', 'skipOnError' => true, 'targetClass' => ProdutoPreco::className(), 'targetAttribute' => ['produto_preco_fk' => 'id']],
+            [['produto_comercial_fk'], 'exist', 'skipOnError' => true, 'targetClass' => ProdutoComercial::className(), 'targetAttribute' => ['produto_comercial_fk' => 'id']],
         ];
     }
 
@@ -54,37 +48,19 @@ class Fabricacao extends Models
         return [
             'id' => 'ID',
             'data_inclusao' => 'Data Inclusao',
-            'classificacao_fk' => 'Classificacao Fk',
-            'produto_preco_fk' => 'Produto Preco Fk',
             'obs' => 'Obs',
             'qnt' => 'Qnt',
             'status' => 'Status',
-            'desenho_fk' => 'Desenho Fk',
+            'produto_comercial_fk' => 'Produto Comercial Fk',
         ];
     }
 
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getClassificacaoFk()
+    public function getProdutoComercialFk()
     {
-        return $this->hasOne(ClassificacaoSearch::className(), ['id' => 'classificacao_fk']);
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getDesenhoFk()
-    {
-        return $this->hasOne(DesenhoSearch::className(), ['id' => 'desenho_fk']);
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getProdutoPrecoFk()
-    {
-        return $this->hasOne(ProdutoPrecoSearch::className(), ['id' => 'produto_preco_fk']);
+        return $this->hasOne(ProdutoComercial::className(), ['id' => 'produto_comercial_fk']);
     }
 
     /**
@@ -92,6 +68,6 @@ class Fabricacao extends Models
      */
     public function getFabricacaoHistoricos()
     {
-        return $this->hasMany(FabricacaoHistoricoSearch::className(), ['fabricacao_fk' => 'id']);
+        return $this->hasMany(FabricacaoHistorico::className(), ['fabricacao_fk' => 'id']);
     }
 }

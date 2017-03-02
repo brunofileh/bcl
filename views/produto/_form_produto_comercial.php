@@ -9,15 +9,15 @@ Modal::begin([
 	'headerOptions' => [
 		'id' => 'modalHeader'
 	],
-	'header' => '<h3><div id="tituloInfra">Incluir Desenho</div><h3>',
-	'id' => 'modalDesenho',
+	'header' => '<h3><div id="tituloInfra">Incluir Produto</div><h3>',
+	'id' => 'modal-produto',
 	'closeButton' => false,
 	'size' => 'modal-lg',
 	'footer' =>
 	Html::a('Fechar', '#', ['class' => 'btn btn-default', 'id' => 'botaoFechar', 'data-dismiss' => 'modal'])
 	. PHP_EOL .
 	Html::button('Incluir registro', [
-		'id' => 'botaoDesenho',
+		'id' => 'botaoProduto',
 		'class' => 'btn btn-primary',
 	]),
 	'clientOptions' => [
@@ -26,12 +26,14 @@ Modal::begin([
 	]
 ]);
 
-$model = new app\models\DesenhoSearch();
+$model = new app\models\ProdutoSearch();
 
 
 ?>
 
-<div id='formDesenho' >
+<div id='form-produto' >
+	
+	<div id="errorAuxiliares-produto" style="color:red" class="help-block"></div>
 
 	<?= $form->field($model, 'descricao')->textInput() ?>
 

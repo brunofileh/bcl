@@ -18,7 +18,7 @@ use Yii;
  *
  * @property Fabricacao $fabricacaoFk
  */
-class FabricacaoHistorico extends Models
+class FabricacaoHistorico extends \app\models\Models
 {
     /**
      * @inheritdoc

@@ -9,15 +9,15 @@ Modal::begin([
 	'headerOptions' => [
 		'id' => 'modalHeader'
 	],
-	'header' => '<h3><div id="tituloInfra">Incluir Desenho</div><h3>',
-	'id' => 'modalDesenho',
+	'header' => '<h3><div id="tituloInfra">Incluir Cor pano</div><h3>',
+	'id' => 'modal-corpano',
 	'closeButton' => false,
 	'size' => 'modal-lg',
 	'footer' =>
 	Html::a('Fechar', '#', ['class' => 'btn btn-default', 'id' => 'botaoFechar', 'data-dismiss' => 'modal'])
 	. PHP_EOL .
 	Html::button('Incluir registro', [
-		'id' => 'botaoDesenho',
+		'id' => 'botaoCorPano',
 		'class' => 'btn btn-primary',
 	]),
 	'clientOptions' => [
@@ -26,13 +26,13 @@ Modal::begin([
 	]
 ]);
 
-$model = new app\models\DesenhoSearch();
+$model = new app\models\CorPanoSearch();
 
 
 ?>
 
-<div id='formDesenho' >
-
+<div id='form-cor-pano' >
+<div id="errorAuxiliares-corpano" style="color:red" class="help-block"></div>
 	<?= $form->field($model, 'descricao')->textInput() ?>
 
 </div>
