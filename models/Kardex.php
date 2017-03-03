@@ -15,7 +15,7 @@ use Yii;
  *
  * @property ItensMovimentacao $itensMovimentacaoFk
  */
-class Kardex extends Models
+class Kardex extends \app\models\Models
 {
     /**
      * @inheritdoc

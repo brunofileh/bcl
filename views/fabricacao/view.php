@@ -30,8 +30,9 @@ $this->params['breadcrumbs'][] = $this->title;
     DetailView::widget([
         'model' => $model,
         'attributes' => [
-            'produto_comercial_fk',
+            'produto_comercial',
             'qnt',
+			'data_inclusao',
                 [
                 'attribute' => 'status',
                 'value' => function ($model) {

@@ -9,11 +9,12 @@ use Yii;
  *
  * @property string $id
  * @property string $data_inclusao
- * @property string data_exclusao
+ * @property string $data_exclusao
  * @property integer $qnt
  * @property integer $status
  * @property string $produto_comercial_fk
  *
+ * @property ProdutoComercial $produtoComercialFk
  * @property FabricacaoHistorico[] $fabricacaoHistoricos
  */
 class Fabricacao extends \app\models\Models
@@ -32,8 +33,10 @@ class Fabricacao extends \app\models\Models
     public function rules()
     {
         return [
-            [['data_inclusao'], 'safe'],
+            [['data_inclusao', 'data_exclusao'], 'safe'],
             [['qnt', 'status', 'produto_comercial_fk'], 'integer'],
+            [['produto_comercial_fk'], 'exist', 'skipOnError' => true, 'targetClass' => ProdutoComercial::className(), 'targetAttribute' => ['produto_comercial_fk' => 'id']],
+
         ];
     }
 
@@ -54,7 +57,17 @@ class Fabricacao extends \app\models\Models
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getFabricacaoHistoricos()
+
+    public function getProdutoComercialFk()
+    {
+        return $this->hasOne(ProdutoComercial::className(), ['id' => 'produto_comercial_fk']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+
+   public function getFabricacaoHistoricos()
     {
         return $this->hasMany(FabricacaoHistorico::className(), ['fabricacao_fk' => 'id']);
     }

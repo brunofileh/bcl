@@ -18,8 +18,9 @@ class DesenhoSearch extends Desenho
     public function rules()
     {
         return [
-            [['id'], 'integer'],
-            [['descricao'], 'safe'],
+             [['id'], 'integer'],
+	    	 [['descricao'], 'required', 'on'=>'produtoComercial'],
+            [['descricao'], 'unique', 'on'=>'produtoComercial'],
         ];
     }
 

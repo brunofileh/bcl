@@ -11,7 +11,7 @@ Modal::begin([
 		'id' => 'modalHeader'
 	],
 	'header' => '<h3><div id="tituloInfra">Incluir Classificacao</div><h3>',
-	'id' => 'modalClassificacao',
+	'id' => 'modal-classificacao',
 	'closeButton' => false,
 	'size' => 'modal-lg',
 	'footer' =>
@@ -33,9 +33,9 @@ $subClass = yii\helpers\ArrayHelper::map(app\models\ClassificacaoSearch::find()-
 ?>
 
 
-<div class="formClassificacao">
+<div class="form-classificacao">
 
-
+<div id="errorAuxiliares-classificacao" style="color:red" class="help-block"></div>
     <?= $form->field($model, 'descricao')->textInput() ?>
 
     <?= $form->field($model, 'fk_classificacao')->dropDownList($subClass,  ['prompt' => 'Selecione']) ?>

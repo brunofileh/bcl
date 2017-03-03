@@ -11,8 +11,8 @@ use app\models\Estoque;
  * EstoqueSearch represents the model behind the search form about `app\models\Estoque`.
  */
 class EstoqueSearch extends Estoque {
-
-	/**
+    public $produto_comercial;
+    /**
 	 * @inheritdoc
 	 */
 	public function rules() {

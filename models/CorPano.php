@@ -10,10 +10,10 @@ use Yii;
  * @property integer $id
  * @property string $descricao
  *
- * @property Estoque[] $estoques
- * @property ProdutoPreco[] $produtoPrecos
+ * @property Estoque2[] $estoque2s
+ * @property ProdutoComercial[] $produtoComercials
  */
-class CorPano extends Models
+class CorPano extends \app\models\Models
 {
     /**
      * @inheritdoc
@@ -47,16 +47,16 @@ class CorPano extends Models
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getEstoques()
+    public function getEstoque2s()
     {
-        return $this->hasMany(Estoque::className(), ['cor_pano_fk' => 'id']);
+        return $this->hasMany(Estoque2::className(), ['cor_pano_fk' => 'id']);
     }
 
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getProdutoPrecos()
+    public function getProdutoComercials()
     {
-        return $this->hasMany(ProdutoPreco::className(), ['cor_pano_fk' => 'id']);
+        return $this->hasMany(ProdutoComercial::className(), ['cor_pano_fk' => 'id']);
     }
 }

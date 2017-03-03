@@ -2,77 +2,91 @@
 
 namespace app\models;
 
-use Yii;
-use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\models\CorPano;
+use app\models\VisProdutoComercial;
 
 /**
  * CorPanoSearch represents the model behind the search form about `app\models\CorPano`.
  */
-class CorPanoSearch extends CorPano
-{
-    /**
-     * @inheritdoc
-     */
-    public function rules()
-    {
-        return [
-            [['id'], 'integer'],
-            [['descricao'], 'safe'],
-        ];
-    }
+class VisProdutoComercialSearch extends VisProdutoComercial {
 
-    /**
-     * @inheritdoc
-     */
-    public function scenarios()
-    {
-        // bypass scenarios() implementation in the parent class
-        return Model::scenarios();
-    }
-	
-	
-	public function attributeLabels()
-    {
-        return [
-            'id' => 'ID',
-            'descricao' => 'Cor/Pano',
-        ];
-    }
-	
-    /**
-     * Creates data provider instance with search query applied
-     *
-     * @param array $params
-     *
-     * @return ActiveDataProvider
-     */
-    public function search($params)
-    {
-        $query = CorPano::find();
+	public function attributeLabels() {
+		return [
+			'produto' => 'Produto',
+			'cor_pano' => 'Cor Pano',
+			'desenho' => 'Desenho',
+			'classificacao' => 'Classificacao',
+			'risco' => 'Risco',
+			'pano' => 'Pano',
+			'linha' => 'Linha',
+			'bordado' => 'Bordado',
+			'costureira' => 'Costureira',
+			'enchimento' => 'Enchimento',
+			'id' => 'ID',
+			'desenho_fk' => 'Desenho Fk',
+			'classificacao_fk' => 'Classificacao Fk',
+			'preco_fk' => 'Preco Fk',
+			'produto_fk' => 'Produto Fk',
+			'cor_pano_fk' => 'Cor Pano Fk',
+		];
+	}
 
-        // add conditions that should always apply here
+	/**
+	 * Creates data provider instance with search query applied
+	 *
+	 * @param array $params
+	 *
+	 * @return ActiveDataProvider
+	 */
+	public function search($params, $provider = true, $page = 0, $pagiSize = 5) {
 
-        $dataProvider = new ActiveDataProvider([
-            'query' => $query,
-        ]);
+		$query = VisProdutoComercialSearch::find();
 
-        $this->load($params);
+		// add conditions that should always apply here
+		if ($provider) {
+			$dataProvider = new ActiveDataProvider([
+				'query' => $query,
+				'pagination' => ['pageSize' => 5],
+			]);
+		}else{
+			$dataProvider = new ActiveDataProvider([
+				'query' => $query,
+				'pagination' => ['pageSize' => 5],
+			]);
+			
+		}
 
-        if (!$this->validate()) {
-            // uncomment the following line if you do not want to return any records when validation fails
-            // $query->where('0=1');
-            return $dataProvider;
-        }
+		$this->load($params);
 
-        // grid filtering conditions
-        $query->andFilterWhere([
-            'id' => $this->id,
-        ]);
+		// grid filtering conditions
+		$query->andFilterWhere([
+			'id' => $this->id,
+			'cor_pano_fk' => $this->cor_pano_fk,
+			'preco_fk' => $this->preco_fk,
+			'produto_fk' => $this->produto_fk,
+			'desenho_fk' => $this->desenho_fk,
+			'classificacao_fk' => $this->classificacao_fk,
+		]);
 
-        $query->andFilterWhere(['like', 'descricao', $this->descricao]);
+		$query->andFilterWhere(['like', 'produto', $this->produto]);
+		$query->andFilterWhere(['like', 'cor_pano', $this->cor_pano]);
+		$query->andFilterWhere(['like', 'desenho', $this->desenho]);
+		$query->andFilterWhere(['like', 'classificacao', $this->classificacao]);
 
-        return $dataProvider;
-    }
+
+		return ($provider) ? $dataProvider : $query->all();
+	}
+
+	public function afterFind() {
+		parent::afterFind();
+
+		$this->pano = Models::decimalFormatToBank($this->pano);
+		$this->bordado = Models::decimalFormatToBank($this->bordado);
+		$this->costureira = Models::decimalFormatToBank($this->costureira);
+		$this->linha = Models::decimalFormatToBank($this->linha);
+		$this->enchimento = Models::decimalFormatToBank($this->enchimento);
+		$this->risco = Models::decimalFormatToBank($this->risco);
+		$this->valor_custo = Models::decimalFormatToBank($this->valor_custo);
+	}
+
 }

@@ -13,13 +13,13 @@ use Yii;
  * @property string $valor_desconto
  * @property string $valor_unitario
  * @property integer $quantidade
- * @property string $desenho
+ * @property string $status
  *
- * @property Estoque $estoqueFk
+ * @property Estoque2 $estoqueFk
  * @property Movimentacao $movimentacaoFk
  * @property Kardex[] $kardexes
  */
-class ItensMovimentacao extends Models
+class ItensMovimentacao extends \app\models\Models
 {
     /**
      * @inheritdoc
@@ -35,11 +35,10 @@ class ItensMovimentacao extends Models
     public function rules()
     {
         return [
-            [['movimentacao_fk', 'estoque_fk', 'valor_desconto', 'valor_unitario', 'quantidade', 'desenho'], 'required'],
+            [['movimentacao_fk', 'estoque_fk', 'valor_desconto', 'valor_unitario', 'quantidade'], 'required'],
             [['movimentacao_fk', 'estoque_fk', 'quantidade'], 'integer'],
-            [['valor_desconto', 'valor_unitario'], 'number'],
-            [['desenho'], 'string'],
-            [['estoque_fk'], 'exist', 'skipOnError' => true, 'targetClass' => Estoque::className(), 'targetAttribute' => ['estoque_fk' => 'id']],
+            [['valor_desconto', 'valor_unitario', 'status'], 'number'],
+            [['estoque_fk'], 'exist', 'skipOnError' => true, 'targetClass' => Estoque2::className(), 'targetAttribute' => ['estoque_fk' => 'id']],
             [['movimentacao_fk'], 'exist', 'skipOnError' => true, 'targetClass' => Movimentacao::className(), 'targetAttribute' => ['movimentacao_fk' => 'id']],
         ];
     }
@@ -56,7 +55,7 @@ class ItensMovimentacao extends Models
             'valor_desconto' => 'Valor Desconto',
             'valor_unitario' => 'Valor Unitario',
             'quantidade' => 'Quantidade',
-            'desenho' => 'Desenho',
+            'status' => 'Status',
         ];
     }
 
@@ -65,7 +64,7 @@ class ItensMovimentacao extends Models
      */
     public function getEstoqueFk()
     {
-        return $this->hasOne(Estoque::className(), ['id' => 'estoque_fk']);
+        return $this->hasOne(Estoque2::className(), ['id' => 'estoque_fk']);
     }
 
     /**

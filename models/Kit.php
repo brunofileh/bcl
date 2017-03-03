@@ -13,7 +13,7 @@ use Yii;
  *
  * @property Produto $produtoFk
  */
-class Kit extends Models
+class Kit extends \app\models\Models
 {
     /**
      * @inheritdoc

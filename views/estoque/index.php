@@ -15,26 +15,32 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
-    <p>
-        <?= Html::a('Create Estoque', ['create'], ['class' => 'btn btn-success']) ?>
-    </p>
-    <?= GridView::widget([
+  
+    <?=
+    GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
         'columns' => [
-			'id',
-			'produto',
-            'descricao',
-			'qnt_diponivel',
-            'valor_unitario',          
-			'valor_custo',
-			'valor_lucro',
-            'pano',
-            'bordado',
-            'costureira',
-            'linha',
-            'enchimento',
-            ['class' => 'yii\grid\ActionColumn'],
+            'produto_comercial',
+            'qnt_disponivel',
+            'valor_custo',
+            'valor_comercial',
+                ['class' => 'yii\grid\ActionColumn',
+                'template' => '{view}',
+                'buttons' => [
+                    'view' => function ($urls, $model, $class) {
+
+                        return Html::a(
+                                        '<span class="glyphicon glyphicon-eye-open"> </span>', yii\helpers\Url::to(['view', 'id' => $model['id']]), [
+                                    'data-toggle' => 'tooltip',
+                                    'title' => 'Visualizar',
+                                    'data-pjax' => '0',
+                                        ]
+                        );
+                    },
+                ],
+            ],
         ],
-    ]); ?>
+    ]);
+    ?>
 </div>

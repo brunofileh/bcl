@@ -13,10 +13,11 @@ use Yii;
  *
  * @property Classificacao $fkClassificacao
  * @property Classificacao[] $classificacaos
- * @property Estoque[] $estoques
+ * @property Estoque2[] $estoque2s
+ * @property ProdutoComercial[] $produtoComercials
  * @property TerceirizadoItens[] $terceirizadoItens
  */
-class Classificacao extends Models
+class Classificacao extends \app\models\Models
 {
     /**
      * @inheritdoc
@@ -69,9 +70,17 @@ class Classificacao extends Models
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getEstoques()
+    public function getEstoque2s()
     {
-        return $this->hasMany(Estoque::className(), ['classificacao_fk' => 'id']);
+        return $this->hasMany(Estoque2::className(), ['classificacao_fk' => 'id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getProdutoComercials()
+    {
+        return $this->hasMany(ProdutoComercial::className(), ['classificacao_fk' => 'id']);
     }
 
     /**

@@ -20,7 +20,8 @@ class ClassificacaoSearch extends Classificacao
     {
         return [
             [['id', 'fk_classificacao'], 'integer'],
-            [['descricao'], 'safe'],
+            [['descricao'], 'required', 'on'=>'produtoComercial'],
+			[['descricao'], 'unique', 'on'=>'produtoComercial'],
         ];
     }
 

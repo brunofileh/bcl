@@ -8,24 +8,13 @@ use Yii;
  * This is the model class for table "bcl.estoque".
  *
  * @property string $id
- * @property string $produto_fk
  * @property string $data_inclusao
- * @property string $valor_custo
- * @property string $valor_unitario
- * @property string $qnt_diponivel
- * @property string $qnt_minimo
- * @property string $pano
- * @property string $bordado
- * @property string $costureira
- * @property string $linha
- * @property string $enchimento
- * @property string $classificacao_fk
+ * @property string $qnt_disponivel
+ * @property string $produto_comercial_fk
  *
- * @property Classificacao $classificacaoFk
- * @property Produto $produtoFk
- * @property ItensMovimentacao[] $itensMovimentacaos
+ * @property ProdutoComercial $produtoComercialFk
  */
-class Estoque extends Models
+class Estoque extends \app\models\Models
 {
     /**
      * @inheritdoc
@@ -41,12 +30,10 @@ class Estoque extends Models
     public function rules()
     {
         return [
-            [['produto_fk', 'valor_unitario'], 'required'],
-            [['produto_fk', 'classificacao_fk'], 'integer'],
             [['data_inclusao'], 'safe'],
-            [['valor_custo', 'valor_unitario', 'qnt_diponivel', 'qnt_minimo', 'pano', 'bordado', 'costureira', 'linha', 'enchimento'], 'number'],
-            [['classificacao_fk'], 'exist', 'skipOnError' => true, 'targetClass' => Classificacao::className(), 'targetAttribute' => ['classificacao_fk' => 'id']],
-            [['produto_fk'], 'exist', 'skipOnError' => true, 'targetClass' => Produto::className(), 'targetAttribute' => ['produto_fk' => 'id']],
+            [['qnt_disponivel'], 'number'],
+            [['produto_comercial_fk'], 'integer'],
+            [['produto_comercial_fk'], 'exist', 'skipOnError' => true, 'targetClass' => ProdutoComercial::className(), 'targetAttribute' => ['produto_comercial_fk' => 'id']],
         ];
     }
 
@@ -57,42 +44,17 @@ class Estoque extends Models
     {
         return [
             'id' => 'ID',
-            'produto_fk' => 'Produto Fk',
             'data_inclusao' => 'Data Inclusao',
-            'valor_custo' => 'Valor Custo',
-            'valor_unitario' => 'Valor Unitario',
-            'qnt_diponivel' => 'Qnt Diponivel',
-            'qnt_minimo' => 'Qnt Minimo',
-            'pano' => 'Pano',
-            'bordado' => 'Bordado',
-            'costureira' => 'Costureira',
-            'linha' => 'Linha',
-            'enchimento' => 'Enchimento',
-            'classificacao_fk' => 'Classificacao Fk',
+            'qnt_disponivel' => 'Qnt Disponivel',
+            'produto_comercial_fk' => 'Produto Comercial Fk',
         ];
     }
 
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getClassificacaoFk()
+    public function getProdutoComercialFk()
     {
-        return $this->hasOne(Classificacao::className(), ['id' => 'classificacao_fk']);
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getProdutoFk()
-    {
-        return $this->hasOne(Produto::className(), ['id' => 'produto_fk']);
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getItensMovimentacaos()
-    {
-        return $this->hasMany(ItensMovimentacao::className(), ['estoque_fk' => 'id']);
+        return $this->hasOne(ProdutoComercial::className(), ['id' => 'produto_comercial_fk']);
     }
 }

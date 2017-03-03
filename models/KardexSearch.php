@@ -2,15 +2,36 @@
 
 namespace app\models;
 
+use Yii;
+use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\models\VisEstoques;
+use app\models\Kardex;
 
 /**
- * EstoqueSearch represents the model behind the search form about `app\models\Estoque`.
+ * KardexSearch represents the model behind the search form about `app\models\Kardex`.
  */
-class VisEstoquesSearch extends VisEstoques
+class KardexSearch extends Kardex
 {
-    
+    /**
+     * @inheritdoc
+     */
+    public function rules()
+    {
+        return [
+            [['id', 'entrada_saida', 'itens_movimentacao_fk'], 'integer'],
+            [['valor', 'qnt'], 'number'],
+        ];
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function scenarios()
+    {
+        // bypass scenarios() implementation in the parent class
+        return Model::scenarios();
+    }
+
     /**
      * Creates data provider instance with search query applied
      *
@@ -20,7 +41,7 @@ class VisEstoquesSearch extends VisEstoques
      */
     public function search($params)
     {
-        $query = VisEstoques::find();
+        $query = Kardex::find();
 
         // add conditions that should always apply here
 
@@ -39,18 +60,14 @@ class VisEstoquesSearch extends VisEstoques
         // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
-            'produto' => $this->produto,
-            'valor_custo' => $this->valor_custo,
-            'valor_unitario' => $this->valor_unitario,
-            'qnt_diponivel' => $this->qnt_diponivel,
-            'pano' => $this->pano,
-            'bordado' => $this->bordado,
-            'costureira' => $this->costureira,
-            'linha' => $this->linha,
-            'enchimento' => $this->enchimento,
-            'descricao' => $this->descricao,
+            'entrada_saida' => $this->entrada_saida,
+            'itens_movimentacao_fk' => $this->itens_movimentacao_fk,
+            'valor' => $this->valor,
+            'qnt' => $this->qnt,
         ]);
 
         return $dataProvider;
     }
+    
+    
 }

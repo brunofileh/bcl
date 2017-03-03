@@ -25,7 +25,7 @@ use Yii;
  * @property ItensMovimentacao[] $itensMovimentacaos
  * @property Cliente $clienteFk
  */
-class Movimentacao extends Models
+class Movimentacao extends \app\models\Models
 {
     /**
      * @inheritdoc
@@ -42,7 +42,6 @@ class Movimentacao extends Models
     {
         return [
             [['cliente_fk', 'status', 'entrada_saida'], 'integer'],
-            [['data_entrega', 'status', 'parcela_atual', 'tipo_pagamento', 'entrada_saida'], 'required'],
             [['data_entrega', 'data_inclusao'], 'safe'],
             [['valor_frete', 'valor_pago', 'parcelas', 'parcela_atual', 'desconto', 'tipo_pagamento', 'canal_venda'], 'number'],
             [['nome_feira'], 'string', 'max' => 150],

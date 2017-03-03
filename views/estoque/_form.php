@@ -7,79 +7,45 @@ use yii\widgets\ActiveForm;
 /* @var $model app\models\Estoque */
 /* @var $form yii\widgets\ActiveForm */
 
-$produto = yii\helpers\ArrayHelper::map(app\models\ProdutoSearch::find()->orderBy('descricao')->all(), 'id', 'descricao');
-$class = yii\helpers\ArrayHelper::map(app\models\ClassificacaoSearch::find()->orderBy('descricao')->all(), 'id', 'descricao');
 ?>
 
 <div class="estoque-form">
 
     <?php $form = ActiveForm::begin(); ?>
 
+    <?= $form->field($model, 'produto_comercial_fk')->hiddenInput()->label(false); ?>
 
-	 <?= $form->field($model, 'produto_fk')->dropDownList($produto) ?>
-	 <?= $form->field($model, 'classificacao_fk')->dropDownList($class) ?>
-	
-    <?= $form->field($model, 'valor_unitario')->textInput()->widget(\kartik\money\MaskMoney::className(), [
-		'pluginOptions'=>[
-           'thousands' => '.',
-        'decimal' => ',',
-        'precision' => 2, 
-        'allowZero' => false,]
-]) ?>
+    <?php
+    if ($model->isNewRecord) {
+        echo $form->field($model, 'produto_comercial')->textInput()->widget(yii\jui\AutoComplete::classname(), [
+            'name' => 'produto_comercial',
+            'options' => ['class' => 'form-control'],
+            'clientOptions' => [
+                'source' => $produto,
+                'minLength' => '3',
+                'autoFill' => true,
+                'select' => new \yii\web\JsExpression("function( event, ui ) {
+                    $('#estoquesearch-produto_comercial_fk').val(ui.item.id);}")
+            ],
+        ]);
+    } else {
+        echo $form->field($model, 'produto_comercial')->textInput(['disabled' => true]);
+    }
+    ?>
+    <?=
+    $form->field($model, 'qnt_disponivel')->textInput()->widget(\kartik\money\MaskMoney::className(), [
+        'pluginOptions' => [
+            'thousands' => '.',
+            'precision' => 0,
+            'allowZero' => false,]
+    ])
+    ?>
 
-    <?= $form->field($model, 'qnt_minimo')->textInput()->widget(\kartik\money\MaskMoney::className(), [
-		'pluginOptions'=>[
-        'thousands' => '.',
-        'precision' => 0, 
-        'allowZero' => false,]
-])  ?>
 
-    <?= $form->field($model, 'pano')->textInput()->widget(\kartik\money\MaskMoney::className(), [
-		'pluginOptions'=>[
-           'thousands' => '.',
-        'decimal' => ',',
-        'precision' => 2, 
-        'allowZero' => false,]
-]) ?>
-
-    <?= $form->field($model, 'bordado')->textInput()->widget(\kartik\money\MaskMoney::className(), [
-		'pluginOptions'=>[
-           'thousands' => '.',
-        'decimal' => ',',
-        'precision' => 2, 
-        'allowZero' => false,]
-]) ?>
-
-    <?= $form->field($model, 'costureira')->textInput()->widget(\kartik\money\MaskMoney::className(), [
-		'pluginOptions'=>[
-           'thousands' => '.',
-        'decimal' => ',',
-        'precision' => 2, 
-        'allowZero' => false,]
-]) ?>
-
-    <?= $form->field($model, 'linha')->textInput()->widget(\kartik\money\MaskMoney::className(), [
-		'pluginOptions'=>[
-           'thousands' => '.',
-        'decimal' => ',',
-        'precision' => 2, 
-        'allowZero' => false,]
-]) ?>
-
-    <?= $form->field($model, 'enchimento')->textInput()->widget(\kartik\money\MaskMoney::className(), [
-		'pluginOptions'=>[
-           'thousands' => '.',
-        'decimal' => ',',
-        'precision' => 2, 
-        'allowZero' => false,]
-]) ?>
-
-   
-	
     <div class="form-group">
-        <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
+<?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
     </div>
 
-    <?php ActiveForm::end(); ?>
+<?php ActiveForm::end(); ?>
 
 </div>

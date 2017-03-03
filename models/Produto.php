@@ -12,8 +12,7 @@ use Yii;
  * @property integer $unidade
  *
  * @property Kit[] $kits
- * @property ProdutoPreco[] $produtoPrecos
- * @property TerceirizadoItens[] $terceirizadoItens
+ * @property ProdutoComercial[] $produtoComercials
  */
 class Produto extends \app\models\Models
 {
@@ -60,16 +59,8 @@ class Produto extends \app\models\Models
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getProdutoPrecos()
+    public function getProdutoComercials()
     {
-        return $this->hasMany(ProdutoPreco::className(), ['produto_fk' => 'id']);
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getTerceirizadoItens()
-    {
-        return $this->hasMany(TerceirizadoItens::className(), ['produto_fk' => 'id']);
+        return $this->hasMany(ProdutoComercial::className(), ['produto_fk' => 'id']);
     }
 }

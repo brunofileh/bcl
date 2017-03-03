@@ -9,6 +9,7 @@ use Yii;
  *
  * @property string $id
  * @property string $data_inclusao
+ * @property string $data_conclusao
  * @property string $pessoa
  * @property integer $qnt
  * @property integer $status
@@ -34,11 +35,10 @@ class FabricacaoHistorico extends \app\models\Models
     public function rules()
     {
         return [
-            [['data_inclusao'], 'safe'],
+            [['data_inclusao', 'data_conclusao'], 'safe'],
             [['qnt', 'status', 'fabricacao_fk'], 'integer'],
             [['pago_status'], 'boolean'],
-            [['obs'], 'string'],
-            [['pessoa'], 'string', 'max' => 80],
+            [['pessoa', 'obs'], 'string', 'max' => 80],
             [['fabricacao_fk'], 'exist', 'skipOnError' => true, 'targetClass' => Fabricacao::className(), 'targetAttribute' => ['fabricacao_fk' => 'id']],
         ];
     }
@@ -51,6 +51,7 @@ class FabricacaoHistorico extends \app\models\Models
         return [
             'id' => 'ID',
             'data_inclusao' => 'Data Inclusao',
+            'data_conclusao' => 'Data Conclusao',
             'pessoa' => 'Pessoa',
             'qnt' => 'Qnt',
             'status' => 'Status',
