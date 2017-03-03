@@ -11,5 +11,12 @@
             <file>file:/C:/wamp64/www/bcl/views/fabricacao/_form.php</file>
             <file>file:/C:/wamp64/www/bcl/views/fabricacao/create.php</file>
         </group>
+        <group>
+            <file>file:/var/www/bcl/models/EstoqueSearch.php</file>
+            <file>file:/var/www/bcl/models/VisFabricacaoSearch.php</file>
+            <file>file:/var/www/bcl/models/Fabricacao.php</file>
+            <file>file:/var/www/bcl/controllers/MovimentacaoController.php</file>
+            <file>file:/var/www/bcl/controllers/FabricacaoController.php</file>
+        </group>
     </open-files>
 </project-private>
