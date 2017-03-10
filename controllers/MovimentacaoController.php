@@ -62,6 +62,9 @@ class MovimentacaoController extends Controller {
 	 */
 	public function actionCreate() {
 		$model = new MovimentacaoSearch();
+		
+		$this->view->title = "Cadastrar Estoque de Fabricação";
+		$model->tipo_entrada=1;
 
 		if ($model->load(Yii::$app->request->post())) {
 			$post = Yii::$app->request->post();
@@ -79,7 +82,7 @@ class MovimentacaoController extends Controller {
 					$modelItens = new \app\models\ItensMovimentacaoSearch();
 					$modelItens->attributes = $value;
 					$modelItens->movimentacao_fk = $model->id;
-				
+					
 					$modelItens->save();
 					
 				}
@@ -93,6 +96,47 @@ class MovimentacaoController extends Controller {
 				'model' => $model,
 		]);
 	}
+	
+	
+	/**
+	 * Creates a new Movimentacao model.
+	 * If creation is successful, the browser will be redirected to the 'view' page.
+	 * @return mixed
+	 */
+	public function actionPedido() {
+		$model = new MovimentacaoSearch();
+		$model->tipo_entrada=2;
+		if ($model->load(Yii::$app->request->post())) {
+			$post = Yii::$app->request->post();
+
+			$model->valor_frete = $post['movimentacaosearch-valor_frete-disp'];
+			$model->valor_pago = $post['movimentacaosearch-valor_pago-disp'];
+			$model->parcelas = $post['movimentacaosearch-parcelas-disp'];
+			$model->parcela_atual = $post['movimentacaosearch-parcela_atual-disp'];
+			$model->desconto = $post['movimentacaosearch-desconto-disp'];
+
+			if ($model->save()) {
+				
+				foreach (\Yii::$app->session->get('itens') as $key => $value) {
+
+					$modelItens = new \app\models\ItensMovimentacaoSearch();
+					$modelItens->attributes = $value;
+					$modelItens->movimentacao_fk = $model->id;
+					
+					$modelItens->save();
+					
+				}
+			}
+
+			\Yii::$app->session->set('itens', null);
+			return $this->redirect(['view', 'id' => $model->id]);
+		}	
+
+		return $this->render('create', [
+				'model' => $model,
+		]);
+	}
+	
 
 	/**
 	 * Updates an existing Movimentacao model.
@@ -193,26 +237,29 @@ class MovimentacaoController extends Controller {
 		$msg = $new = null;
 		$model = null;
 		$itens = \Yii::$app->session->get('itens');
-		//print_r($post); exit;
+		
 		if ($post['ItensMovimentacaoSearch']['id'] != null) {
 
-
+			
 			$model = ItensMovimentacaoSearch::findOne($post['ItensMovimentacaoSearch']['id']);
-			$itens[$model->id] = $model->attributes;
+			$itens[$model->estoque_fk] = $model->attributes;
+			$itens[$model->estoque_fk]['descricao_produto'] = \app\models\VisEstoqueSearch::findOne(['id' => $post['ItensMovimentacaoSearch']['estoque_fk']])->produto_comercial;
 		} else {
 
 			$model = new \app\models\ItensMovimentacaoSearch();
 			$model->attributes = $post['ItensMovimentacaoSearch'];
+			
 			if ($model->novo) {
 				$itens[$model->novo] = $model->attributes;
 				$itens[$model->novo]['novo'] = $model->novo;
 			} else {
-				$model->novo = 'p_' . rand('11111', '99999');
-				$itens[$model->novo] = $model->attributes;
-				$itens[$model->novo]['novo'] = $model->novo;
+				$model->novo = $post['ItensMovimentacaoSearch']['estoque_fk'];
+				$itens[$post['ItensMovimentacaoSearch']['estoque_fk']] = $model->attributes;
+				$itens[$post['ItensMovimentacaoSearch']['estoque_fk']]['novo'] = $model->novo;
 			}
+			$itens[$post['ItensMovimentacaoSearch']['estoque_fk']]['descricao_produto'] = \app\models\VisEstoqueSearch::findOne(['id' => $post['ItensMovimentacaoSearch']['estoque_fk']])->produto_comercial;
 		}
-
+		
 
 		$model->validate();
 
@@ -220,6 +267,7 @@ class MovimentacaoController extends Controller {
 			$msg = $model->getErrors();
 			$dados = ['grid' => $this->renderAjax('/itens-movimentacao/_grid', ['msg' => $msg])];
 		} else {
+	
 			\Yii::$app->session->set('itens', $itens);
 
 			$str = 'Inclusão com sucesso';
@@ -252,6 +300,18 @@ class MovimentacaoController extends Controller {
 
 		$dados = ['grid' => $this->renderAjax('/itens-movimentacao/_grid', ['msg' => $msg])];
 
+		return \yii\helpers\Json::encode($dados);
+	}
+	
+	
+	
+	public function actionConsultaPrecoItem($id = null) {
+
+		$post = Yii::$app->request->post();
+		$estoque = \app\models\VisEstoqueSearch::findOne(['id'=>$post['ItensMovimentacaoSearch']['estoque_fk']]);
+
+		$dados = $estoque->attributes;
+		
 		return \yii\helpers\Json::encode($dados);
 	}
 

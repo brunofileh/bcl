@@ -19,6 +19,7 @@ class MovimentacaoSearch extends Movimentacao
 	public $status_desc;
 	public $entrada_saida_desc;
 	public $valor_total;
+	public $valor_comercial;
 	
     public function rules()
     {

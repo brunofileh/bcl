@@ -5,18 +5,6 @@
         <group name="meu">
             <file>file:/C:/wamp64/www/bcl/config/web.php</file>
         </group>
-        <group name="desenvolvimento">
-            <file>file:/C:/wamp64/www/bcl/controllers/FabricacaoController.php</file>
-            <file>file:/C:/wamp64/www/bcl/views/fabricacao/index.php</file>
-            <file>file:/C:/wamp64/www/bcl/views/fabricacao/_form.php</file>
-            <file>file:/C:/wamp64/www/bcl/views/fabricacao/create.php</file>
-        </group>
-        <group>
-            <file>file:/var/www/bcl/models/EstoqueSearch.php</file>
-            <file>file:/var/www/bcl/models/VisFabricacaoSearch.php</file>
-            <file>file:/var/www/bcl/models/Fabricacao.php</file>
-            <file>file:/var/www/bcl/controllers/MovimentacaoController.php</file>
-            <file>file:/var/www/bcl/controllers/FabricacaoController.php</file>
-        </group>
+        <group name="desenvolvimento"/>
     </open-files>
 </project-private>

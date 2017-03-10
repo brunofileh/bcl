@@ -5,6 +5,7 @@ use yii\helpers\Html;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\ItensMovimentacao */
+
 $this->registerJsFile('@web/js/movimentacao.js', ['position' => $this::POS_END, 'depends' => [\app\assets\AppAsset::className()]]);
 	
 $this->title = 'Create Itens Movimentacao';

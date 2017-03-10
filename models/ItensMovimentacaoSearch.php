@@ -16,13 +16,16 @@ class ItensMovimentacaoSearch extends ItensMovimentacao
      * @inheritdoc
      */
 	public $novo;
+	public $qnt_estoque;
+	public $descricao_produto;
+	public $valor_total;
 	
 	public function rules()
     {
         return [
             [['movimentacao_fk', 'estoque_fk'], 'integer'],
             [['valor_desconto', 'valor_unitario'], 'number'],
-            [['desenho', 'novo', 'status', 'quantidade'], 'safe'],
+            [['novo', 'status', 'quantidade', 'qnt_estoque', 'descricao_produto'], 'safe'],
         ];
     }
 
@@ -78,8 +81,8 @@ class ItensMovimentacaoSearch extends ItensMovimentacao
 	
 	public static function buscaCampos($itens = []) {
 
-		$itens = (\Yii::$app->session->get('itens')) ? \Yii::$app->session->get('itens') : ($itens) ? $itens : [];
-		
+		$itens = (\Yii::$app->session->get('itens')) ? \Yii::$app->session->get('itens') : ( ($itens) ? $itens : []);
+		//print_r($itens); exit;
 		$dataProvider = new \yii\data\ArrayDataProvider([
 			'id' => 'movimentacao_itens',
 			'allModels' => $itens,

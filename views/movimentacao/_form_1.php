@@ -28,63 +28,56 @@ $entradaSaida = ['1' => 'Entrada', '2' => 'Saída'];
 
 	<?php $form = ActiveForm::begin(['id' => 'movimentacaoPop']); ?>
 
-	<div style="display:<?=($model->tipo_entrada==1) ? 'none' : 'block'; ?>">
-		<?= $form->field($model, 'cliente_fk')->dropDownList($client, ['prompt' => 'Selecione']) ?>
-		<?=
-		$form->field($model, 'data_entrega')->widget(
-			\dosamigos\datepicker\DatePicker::className(), [
-			// inline too, not bad
-			//   'inline' => true, 
-			'language' => 'pt-BR',
-			// modify template for custom rendering
-			//   'template' => '<div class="well well-sm" style="background-color: #fff; width:250px">{input}</div>',
-			'clientOptions' => [
-				'autoclose' => true,
-				'format' => 'dd/mm/yyyy'
-			]
-		]);
-		?>
+	<?= $form->field($model, 'cliente_fk')->dropDownList($client, ['prompt' => 'Selecione']) ?>
 
-		<?= $form->field($model, 'status')->dropDownList($status) ?>
+	
+	
+	<?= $form->field($model, 'data_entrega')->widget(
+	 \dosamigos\datepicker\DatePicker::className(), [
+        // inline too, not bad
+      //   'inline' => true, 
+		 'language'=>'pt-BR',
+         // modify template for custom rendering
+     //   'template' => '<div class="well well-sm" style="background-color: #fff; width:250px">{input}</div>',
+        'clientOptions' => [
+            'autoclose' => true,
+            'format' => 'dd/mm/yyyy'
+        ]
+]);?>
 
-		<?=
-		$form->field($model, 'valor_frete')->textInput()->widget(\kartik\money\MaskMoney::className(), [
-			'pluginOptions' => [
-				'thousands' => '.',
-				'decimal' => ',',
-				'precision' => 2,
-				'allowZero' => false,]
-		])
-		?>
+	<?= $form->field($model, 'status')->dropDownList($status) ?>
 
-		<?=
-		$form->field($model, 'valor_pago')->textInput()->widget(\kartik\money\MaskMoney::className(), [
-			'pluginOptions' => [
-				'thousands' => '.',
-				'decimal' => ',',
-				'precision' => 2,
-				'allowZero' => false,]
-		])
-		?>
+	<?= $form->field($model, 'valor_frete')->textInput()->widget(\kartik\money\MaskMoney::className(), [
+		'pluginOptions'=>[
+		'thousands' => '.',
+        'decimal' => ',',
+			
+        'precision' => 2, 
+        'allowZero' => false,]
+])  ?>
 
-		<?=
-		$form->field($model, 'parcelas')->textInput()->widget(\kartik\money\MaskMoney::className(), [
-			'pluginOptions' => [
-				'thousands' => '.',
-				'precision' => 0,
-				'allowZero' => false,]
-		])
-		?>
+	<?= $form->field($model, 'valor_pago')->textInput()->widget(\kartik\money\MaskMoney::className(), [
+		'pluginOptions'=>[
+           'thousands' => '.',
+        'decimal' => ',',
+        'precision' => 2, 
+        'allowZero' => false,]
+])  ?>
 
-		<?=
-		$form->field($model, 'parcela_atual')->textInput()->widget(\kartik\money\MaskMoney::className(), [
-			'pluginOptions' => [
-				'thousands' => '.',
-				'precision' => 0,
-				'allowZero' => false,]
-		])
-		?>
-	</div>
+	<?= $form->field($model, 'parcelas')->textInput()->widget(\kartik\money\MaskMoney::className(), [
+		'pluginOptions'=>[
+        'thousands' => '.',
+        'precision' => 0, 
+        'allowZero' => false,]
+])  ?>
+
+	<?= $form->field($model, 'parcela_atual')->textInput()->widget(\kartik\money\MaskMoney::className(), [
+		'pluginOptions'=>[
+        'thousands' => '.',
+        'precision' => 0, 
+        'allowZero' => false,]
+])  ?>
+
 	<?= $form->field($model, 'tipo_pagamento')->dropDownList($tpPag, ['prompt' => 'Selecione']) ?>
 
 	<?= $form->field($model, 'entrada_saida')->dropDownList($entradaSaida, ['prompt' => 'Selecione']) ?>
