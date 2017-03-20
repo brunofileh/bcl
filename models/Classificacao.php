@@ -15,7 +15,6 @@ use Yii;
  * @property Classificacao[] $classificacaos
  * @property Estoque2[] $estoque2s
  * @property ProdutoComercial[] $produtoComercials
- * @property TerceirizadoItens[] $terceirizadoItens
  */
 class Classificacao extends \app\models\Models
 {
@@ -81,13 +80,5 @@ class Classificacao extends \app\models\Models
     public function getProdutoComercials()
     {
         return $this->hasMany(ProdutoComercial::className(), ['classificacao_fk' => 'id']);
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getTerceirizadoItens()
-    {
-        return $this->hasMany(TerceirizadoItens::className(), ['classificacao_fk' => 'id']);
     }
 }

@@ -40,11 +40,11 @@ AppAsset::register($this);
 					['label' => 'Produto', 'url' => ['/produto/index']],
 					['label' => 'Desenho', 'url' => ['/desenho/index']],
 					['label' => 'Classificacao', 'url' => ['/classificacao/index']],
-					['label' => 'Preco', 'url' => ['/cliente/preco']],
+					['label' => 'Preco', 'url' => ['/preco/index']],
 					['label' => 'Produto Comercial', 'url' => ['/produto-comercial/index']],
-                                        ['label' => 'Fabricacao', 'url' => ['/fabricacao/index']],
-					//['label' => 'Estoque', 'url' => ['/estoque/index']],
-//					['label' => 'Movimentação', 'url' => ['/movimentacao/index']],
+                    ['label' => 'Fabricacao', 'url' => ['/fabricacao/index']],
+					['label' => 'Cliente', 'url' => ['/cliente/index']],				
+					['label' => 'Movimentação', 'url' => ['/movimentacao/index']],
 					Yii::$app->user->isGuest ? (
 						['label' => 'Login', 'url' => ['/site/login']]
 						) : (

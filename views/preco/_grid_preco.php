@@ -11,7 +11,7 @@ use yii\widgets\Pjax;
 	echo \yii\grid\GridView::widget([
 		'dataProvider' => $produto_preco,
 		//'filterModel' => $modelVis,
-		'columns' => [
+		'columns' => [	
 
 			[
 				'class' => 'yii\grid\RadioButtonColumn',
