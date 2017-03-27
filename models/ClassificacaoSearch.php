@@ -13,6 +13,7 @@ use app\models\Classificacao;
 class ClassificacaoSearch extends Classificacao
 {
 	public $tipo;
+
     /**
      * @inheritdoc
      */

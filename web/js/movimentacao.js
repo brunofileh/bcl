@@ -2,6 +2,30 @@
 $(function () {
     $('.field-movimentacaosearch-nome_feira').hide();
 
+    if ($('#movimentacaosearch-entrada_saida').val() == 1) {
+        $('#divES').show();
+    } else {
+        $('#divES').hide();
+    }
+
+    $('#movimentacaosearch-entrada_saida').change(function () {
+        if ($('#movimentacaosearch-entrada_saida').val() == 1) {
+            $('#divES').show();
+        } else {
+            $('#movimentacaosearch-cliente').val('');
+            $('#movimentacaosearch-cliente_fk').val('');
+            $('#movimentacaosearch-status').val('');
+            $('#movimentacaosearch-data_entrega').val('');
+            
+            $('#movimentacaosearch-valor_frete-disp').val('');
+            $('#movimentacaosearch-valor_pago-disp').val('');
+            $('#movimentacaosearch-parcelas-disp').val('');
+            $('#movimentacaosearch-parcela_atual-disp').val('');
+            $('#divES').hide();
+        }
+    });
+
+
 
     $('#movimentacaosearch-canal_venda').change(function () {
         if ($('#movimentacaosearch-canal_venda').val() == 1) {
@@ -53,7 +77,8 @@ $(function () {
         return false;
     });
 
-    $('#itensmovimentacaosearch-valor_desconto, #itensmovimentacaosearch-quantidade').change(function ( ) {
+    $('#itensmovimentacaosearch-valor_desconto-disp, #itensmovimentacaosearch-quantidade').change(function ( ) {
+
         calculaTotalItem();
 
     });
@@ -69,8 +94,7 @@ $(function () {
 
                 var dados = $.parseJSON(response);
                 $('#qnt_estoque').html('Quantidade estoque: ' + dados.qnt_disponivel);
-                $('#qnt_estoque').html('Quantidade estoque: ' + dados.qnt_disponivel);
-                $('#itensmovimentacaosearch-qnt_estoque').val(dados.valor_comercial);
+                $('#itensmovimentacaosearch-qnt_estoque').val(dados.qnt_disponivel);
                 $('#itensmovimentacaosearch-valor_unitario').val(dados.valor_comercial);
             }
         });
@@ -84,10 +108,10 @@ function preencheForm(dados, acao) {
     $('#itensmovimentacaosearch-novo').val(dados.novo);
 
     $('#itensmovimentacaosearch-estoque_fk').val(dados.estoque_fk);
-    $('#itensmovimentacaosearch-valor_desconto').val(dados.valor_desconto);
+    $('#itensmovimentacaosearch-valor_desconto-disp').val(dados.valor_desconto);
     $('#itensmovimentacaosearch-valor_unitario').val(dados.valor_unitario);
     $('#itensmovimentacaosearch-quantidade').val(dados.quantidade);
-    $('#itensmovimentacaosearch-desenho').val(dados.desenho);
+    $('#itensmovimentacaosearch-valor_total').val((dados.valor_unitario*dados.quantidade) -(dados.quantidade*dados.valor_desconto)  );
     $('#itensmovimentacaosearch-status').val(dados.status);
 
     if (acao == 'view') {
@@ -125,6 +149,8 @@ function  limpaForm( ) {
     $('#itensmovimentacaosearch-quantidade').val('');
     $('#itensmovimentacaosearch-desenho').val('');
     $('#itensmovimentacaosearch-status').val('');
+    $('#itensmovimentacaosearch-valor_total').val('');
+    $('#itensmovimentacaosearch-valor_desconto-disp').val('')
 
 
 }
@@ -136,10 +162,10 @@ function  retiraFormatoMoeda(valor) {
 
 
 function  calculaTotalItem( ) {
-    $('#itensmovimentacaosearch-valor_desconto').val(
-            retiraFormatoMoeda($('#itensmovimentacaosearch-quantidade').val()) *
-            ($('#itensmovimentacaosearch-valor_unitario').val() -
-                    retiraFormatoMoeda($('#itensmovimentacaosearch-valor_desconto').val())
+
+    $('#itensmovimentacaosearch-valor_total').val(
+           (retiraFormatoMoeda($('#itensmovimentacaosearch-quantidade').val()) * ($('#itensmovimentacaosearch-valor_unitario').val()) -
+           (retiraFormatoMoeda($('#itensmovimentacaosearch-valor_desconto-disp').val()) * retiraFormatoMoeda($('#itensmovimentacaosearch-quantidade').val()) )
                     ));
     ;
 }

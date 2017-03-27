@@ -91,12 +91,13 @@ class FabricacaoController extends Controller {
             }
 
             if ($model->save()) {
-
+                
                 $modelHitorico->load(Yii::$app->request->post());
                 $modelHitorico->qnt = $qtd;
                 $modelHitorico->fabricacao_fk = $model->id;
                 $modelHitorico->status = '1';
                 $modelHitorico->save();
+                
             }
 
             return $this->redirect(['view', 'id' => $model->id]);

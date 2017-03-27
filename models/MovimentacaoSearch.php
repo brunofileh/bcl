@@ -20,11 +20,13 @@ class MovimentacaoSearch extends Movimentacao
 	public $entrada_saida_desc;
 	public $valor_total;
 	public $valor_comercial;
-	
+	        public $cliente;
     public function rules()
     {
         return [
-            [['id', 'cliente_fk', 'status', 'entrada_saida','data_entrega', 'data_inclusao', 'nome_feira','valor_frete', 'valor_pago', 'parcelas', 'parcela_atual', 'desconto', 'tipo_pagamento', 'canal_venda'], 'safe'],
+            
+            [['entrada_saida', 'tipo_pagamento', 'canal_venda'], 'required', 'on'=>'movimentacao'],
+            [['id', 'cliente', 'cliente_fk', 'status', 'entrada_saida','data_entrega', 'data_inclusao', 'nome_feira','valor_frete', 'valor_pago', 'parcelas', 'parcela_atual', 'desconto', 'tipo_pagamento', 'canal_venda'], 'safe'],
                   ];
     }
 
@@ -42,7 +44,7 @@ class MovimentacaoSearch extends Movimentacao
 		$this->status_desc = ($this->status==1) ? 'Pendente' : ( ($this->status==2) ? 'em andamento' : 'concluido');
 		$this->entrada_saida_desc = ($this->entrada_saida_desc==1) ? 'Entrada' : 'Saída';
 		$this->valor_total = ($this->valor_pago * $this->parcelas)-$this->desconto;
-		$this->data_entrega = MovimentacaoSearch::formataDataDoBanco($this->data_entrega);
+		//$this->data_entrega = MovimentacaoSearch::formataDataDoBanco($this->data_entrega);
 	}
 
 	/**
@@ -100,7 +102,7 @@ class MovimentacaoSearch extends Movimentacao
 
 		$this->parcela_atual = Models::decimalFormatForBank($this->parcela_atual);
 		$this->desconto = Models::decimalFormatForBank($this->desconto);
-		$this->data_entrega = Models::formataDataParaBanco($this->data_entrega);
+	
 		
 		return parent::beforeSave($insert);
 	}

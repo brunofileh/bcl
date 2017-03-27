@@ -6,5 +6,22 @@
             <file>file:/C:/wamp64/www/bcl/config/web.php</file>
         </group>
         <group name="desenvolvimento"/>
+        <group>
+            <file>file:/var/www/bcl/models/EstoqueSearch.php</file>
+            <file>file:/var/www/bcl/models/ItensMovimentacao.php</file>
+            <file>file:/var/www/bcl/models/Fabricacao.php</file>
+            <file>file:/var/www/bcl/models/ItensMovimentacaoSearch.php</file>
+            <file>file:/var/www/bcl/controllers/MovimentacaoController.php</file>
+            <file>file:/var/www/bcl/views/itens-movimentacao/_form.php</file>
+            <file>file:/var/www/bcl/controllers/FabricacaoController.php</file>
+            <file>file:/var/www/bcl/controllers/ItensMovimentacaoController.php</file>
+            <file>file:/var/www/bcl/views/movimentacao/create.php</file>
+            <file>file:/var/www/bcl/models/Estoque.php</file>
+            <file>file:/var/www/bcl/models/VisFabricacaoSearch.php</file>
+            <file>file:/var/www/bcl/web/js/movimentacao.js</file>
+            <file>file:/var/www/bcl/controllers/ClassificacaoController.php</file>
+            <file>file:/var/www/bcl/views/movimentacao/_form.php</file>
+            <file>file:/var/www/bcl/views/itens-movimentacao/create.php</file>
+        </group>
     </open-files>
 </project-private>

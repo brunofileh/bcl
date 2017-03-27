@@ -10,30 +10,36 @@ use app\models\ItensMovimentacao;
 /**
  * ItensMovimentacaoSearch represents the model behind the search form about `app\models\ItensMovimentacao`.
  */
-class ItensMovimentacaoSearch extends ItensMovimentacao
-{
+class ItensMovimentacaoSearch extends ItensMovimentacao {
+
     /**
      * @inheritdoc
      */
-	public $novo;
-	public $qnt_estoque;
-	public $descricao_produto;
-	public $valor_total;
-	
-	public function rules()
-    {
+    public $novo;
+    public $qnt_estoque;
+    public $descricao_produto;
+    public $valor_total;
+
+    public function rules() {
         return [
-            [['movimentacao_fk', 'estoque_fk'], 'integer'],
-            [['valor_desconto', 'valor_unitario'], 'number'],
-            [['novo', 'status', 'quantidade', 'qnt_estoque', 'descricao_produto'], 'safe'],
+                [['movimentacao_fk', 'estoque_fk'], 'integer'],
+                [['valor_unitario'], 'number'],
+                [['novo', 'status', 'quantidade', 'qnt_estoque', 'descricao_produto', 'valor_total', 'valor_desconto'], 'safe'],
+                ['quantidade', 'validaQuantidade'],
+                [['estoque_fk', 'status', 'quantidade'], 'required']
         ];
+    }
+
+    public function validaQuantidade($attribute, $params) {
+        if ($this->quantidade > $this->qnt_estoque) {
+            $this->addError('quantidade', 'Quantidade não pode ser maior do que o estoque');
+        }
     }
 
     /**
      * @inheritdoc
      */
-    public function scenarios()
-    {
+    public function scenarios() {
         // bypass scenarios() implementation in the parent class
         return Model::scenarios();
     }
@@ -45,8 +51,7 @@ class ItensMovimentacaoSearch extends ItensMovimentacao
      *
      * @return ActiveDataProvider
      */
-    public function search($params)
-    {
+    public function search($params) {
         $query = ItensMovimentacao::find();
 
         // add conditions that should always apply here
@@ -77,28 +82,20 @@ class ItensMovimentacaoSearch extends ItensMovimentacao
 
         return $dataProvider;
     }
-	
-	
-	public static function buscaCampos($itens = []) {
 
-		$itens = (\Yii::$app->session->get('itens')) ? \Yii::$app->session->get('itens') : ( ($itens) ? $itens : []);
-		//print_r($itens); exit;
-		$dataProvider = new \yii\data\ArrayDataProvider([
-			'id' => 'movimentacao_itens',
-			'allModels' => $itens,
-			'sort' => false,
-			'pagination' => ['pageSize' => 10],
-		]);
+    public static function buscaCampos($itens = []) {
+
+        $itens = (\Yii::$app->session->get('itens')) ? \Yii::$app->session->get('itens') : ( ($itens) ? $itens : []);
+        //print_r($itens); exit;
+        $dataProvider = new \yii\data\ArrayDataProvider([
+            'id' => 'movimentacao_itens',
+            'allModels' => $itens,
+            'sort' => false,
+            'pagination' => ['pageSize' => 10],
+        ]);
 
 
-		return $dataProvider;
-	}
-	
-	public function beforeSave($insert) {
-		$this->valor_desconto = Models::decimalFormatForBank($this->valor_desconto);
-		$this->valor_unitario = Models::decimalFormatForBank($this->valor_unitario);
-		$this->quantidade = Models::decimalFormatForBank($this->quantidade);
-		
-		return parent::beforeSave($insert);
-	}
+        return $dataProvider;
+    }
+
 }

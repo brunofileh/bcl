@@ -19,7 +19,7 @@ class EstoqueSearch extends Estoque {
 		return [
 			[['id'], 'integer'],
 			[['data_inclusao'], 'safe'],
-			[['qnt_diponivel'], 'number'],
+			[['qnt_disponivel'], 'number'],
 		];
 	}
 
@@ -59,7 +59,7 @@ class EstoqueSearch extends Estoque {
 		$query->andFilterWhere([
 			'id' => $this->id,
 			'data_inclusao' => $this->data_inclusao,
-			'qnt_diponivel' => $this->qnt_diponivel,
+			'qnt_disponivel' => $this->qnt_disponivel,
 			'produto_comercial_fk' => $this->produto_comercial_fk,
 		]);
 

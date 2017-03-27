@@ -8,7 +8,7 @@ use yii\helpers\Html;
 
 $this->registerJsFile('@web/js/movimentacao.js', ['position' => $this::POS_END, 'depends' => [\app\assets\AppAsset::className()]]);
 	
-$this->title = 'Create Itens Movimentacao';
+$this->title = 'Lista de itens';
 $this->params['breadcrumbs'][] = ['label' => 'Itens Movimentacaos', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
