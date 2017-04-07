@@ -68,7 +68,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 }
             ],
             'qnt',
-            'pessoa',
+            	'artesaoFk.nome', 
             'data_inclusao',
             'pago_status:boolean',
             // 'fabricacao_fk',

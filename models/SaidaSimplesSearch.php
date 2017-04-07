@@ -5,12 +5,12 @@ namespace app\models;
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\models\Kardex;
+use app\models\SaidaSimples;
 
 /**
- * KardexSearch represents the model behind the search form about `app\models\Kardex`.
+ * SaidaSimplesSearch represents the model behind the search form about `app\models\SaidaSimples`.
  */
-class KardexSearch extends Kardex
+class SaidaSimplesSearch extends SaidaSimples
 {
     /**
      * @inheritdoc
@@ -18,8 +18,11 @@ class KardexSearch extends Kardex
     public function rules()
     {
         return [
-            [['id', 'entrada_saida', 'itens_movimentacao_fk'], 'integer'],
-            [['valor', 'qnt'], 'number'],
+            [['id'], 'integer'],
+            [['descricao', 'data_inclusao', 'data_exclusao', 'data_saida'], 'safe'],
+            [['valor'], 'number'],
+            [['valor', 'descricao', 'data_saida', 'entrada_saida'], 'required'],
+			
         ];
     }
 
@@ -41,7 +44,7 @@ class KardexSearch extends Kardex
      */
     public function search($params)
     {
-        $query = Kardex::find();
+        $query = SaidaSimples::find();
 
         // add conditions that should always apply here
 
@@ -51,17 +54,17 @@ class KardexSearch extends Kardex
 
         $this->load($params);
 
+      
         // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
-            'entrada_saida' => $this->entrada_saida,
-            'itens_movimentacao_fk' => $this->itens_movimentacao_fk,
             'valor' => $this->valor,
-            'qnt' => $this->qnt,
+            'data_inclusao' => $this->data_inclusao,
+            'data_exclusao' => $this->data_exclusao,
         ]);
+		$query->andWhere(['is', 'data_exclusao', null]);
+        $query->andFilterWhere(['like', 'descricao', $this->descricao]);
 
         return $dataProvider;
     }
-    
-    
 }

@@ -11,6 +11,7 @@ use Yii;
  * @property string $data_inclusao
  * @property string $qnt_disponivel
  * @property string $produto_comercial_fk
+ * @property string $data_exclusao
  *
  * @property ProdutoComercial $produtoComercialFk
  */
@@ -30,7 +31,7 @@ class Estoque extends \app\models\Models
     public function rules()
     {
         return [
-            [['data_inclusao'], 'safe'],
+            [['data_inclusao', 'data_exclusao'], 'safe'],
             [['qnt_disponivel'], 'number'],
             [['produto_comercial_fk'], 'integer'],
             [['produto_comercial_fk'], 'exist', 'skipOnError' => true, 'targetClass' => ProdutoComercial::className(), 'targetAttribute' => ['produto_comercial_fk' => 'id']],
@@ -47,6 +48,7 @@ class Estoque extends \app\models\Models
             'data_inclusao' => 'Data Inclusao',
             'qnt_disponivel' => 'Qnt Disponivel',
             'produto_comercial_fk' => 'Produto Comercial Fk',
+            'data_exclusao' => 'Data Exclusao',
         ];
     }
 

@@ -43,7 +43,6 @@ class MovimentacaoSearch extends Movimentacao
 		parent::afterFind();
 		$this->status_desc = ($this->status==1) ? 'Pendente' : ( ($this->status==2) ? 'em andamento' : 'concluido');
 		$this->entrada_saida_desc = ($this->entrada_saida_desc==1) ? 'Entrada' : 'Saída';
-		$this->valor_total = ($this->valor_pago * $this->parcelas)-$this->desconto;
 		//$this->data_entrega = MovimentacaoSearch::formataDataDoBanco($this->data_entrega);
 	}
 
@@ -89,8 +88,11 @@ class MovimentacaoSearch extends Movimentacao
             'canal_venda' => $this->canal_venda,
         ]);
 
+		$query->andWhere(['is', 'data_exclusao', null]);
+		
         $query->andFilterWhere(['like', 'nome_feira', $this->nome_feira]);
-		$query->orderBy('data_entrega desc ', 'status');
+		//$query->orderBy('data_entrega desc ', 'status');
+		$query->orderBy('id desc');
         return $dataProvider;
     }
 	

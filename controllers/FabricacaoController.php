@@ -15,354 +15,370 @@ use yii\helpers\ArrayHelper;
  */
 class FabricacaoController extends Controller {
 
-    /**
-     * @inheritdoc
-     */
-    public function behaviors() {
-        return [
-            'verbs' => [
-                'class' => VerbFilter::className(),
-                'actions' => [
-                    'delete' => ['POST'],
-                ],
-            ],
-        ];
-    }
+	/**
+	 * @inheritdoc
+	 */
+	public function behaviors() {
+		return [
+			'verbs' => [
+				'class' => VerbFilter::className(),
+				'actions' => [
+					'delete' => ['POST'],
+				],
+			],
+		];
+	}
 
-    /**
-     * Lists all Fabricacao models.
-     * @return mixed
-     */
-    public function actionIndex() {
-        $searchModel = new \app\models\VisFabricacaoSearch();
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+	/**
+	 * Lists all Fabricacao models.
+	 * @return mixed
+	 */
+	public function actionIndex() {
+		$searchModel = new \app\models\VisFabricacaoSearch();
+		$dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
-        $this->view->title = "Lista de Produtos Estoque de Fabricação";
-        return $this->render('index', [
-                    'searchModel' => $searchModel,
-                    'dataProvider' => $dataProvider,
-        ]);
-    }
+		$this->view->title = "Lista de Produtos Estoque de Fabricação";
+		return $this->render('index', [
+				'searchModel' => $searchModel,
+				'dataProvider' => $dataProvider,
+		]);
+	}
 
-    /**
-     * Displays a single Fabricacao model.
-     * @param string $id
-     * @return mixed
-     */
-    public function actionView($id) {
-        $model = \app\models\VisFabricacaoSearch::findOne(['id'=>$id]);
-        $status = [1 => 'Riscar', 2 => 'Bordar Terceiros', 3 => 'Bordar', 4 => 'Pronto'];
+	/**
+	 * Displays a single Fabricacao model.
+	 * @param string $id
+	 * @return mixed
+	 */
+	public function actionView($id) {
+		$model = \app\models\VisFabricacaoSearch::findOne(['id' => $id]);
+		$status = [1 => 'Riscar', 2 => 'Bordar Terceiros', 3 => 'Bordar', 4 => 'Pronto'];
 
-        $this->view->title = "Fabricação: {$status[$model->status]} - " . $model->produto;
-        return $this->render('view', [
-                    'model' => $model,
-        ]);
-    }
+		$this->view->title = "Fabricação: {$status[$model->status]} - " . $model->produto;
+		return $this->render('view', [
+				'model' => $model,
+		]);
+	}
 
-    /**
-     * Creates a new Fabricacao model.
-     * If creation is successful, the browser will be redirected to the 'view' page.
-     * @return mixed
-     */
-    public function actionCreate() {
+	/**
+	 * Creates a new Fabricacao model.
+	 * If creation is successful, the browser will be redirected to the 'view' page.
+	 * @return mixed
+	 */
+	public function actionCreate() {
 
-        $model = new FabricacaoSearch();
-        $modelHitorico = new \app\models\FabricacaoHistoricoSearch();
-        $this->view->title = "Cadastrar Estoque de Fabricação";
-		
-	$produto = \app\models\VisProdutoComercialSearch::find()->select(['produto_comercial as value', 'produto_comercial as  label', 'id as id'])->asArray()->all();
-       
-        $status = [1 => 'Riscado', 2 => 'Bordando Terceiros', 3 => 'Bordado', 4 => 'Pronto'];
+		$model = new FabricacaoSearch();
+		$modelHitorico = new \app\models\FabricacaoHistoricoSearch();
+		$this->view->title = "Cadastrar Estoque de Fabricação";
 
-        if (Yii::$app->request->post()) {
-            $model->load(Yii::$app->request->post());
-			
+		$produto = \app\models\VisProdutoComercialSearch::find()->select(['produto_comercial as value', 'produto_comercial as  label', 'id as id'])->asArray()->all();
 
-            $modelExiste = Fabricacao::findOne(['produto_comercial_fk' => $model->produto_comercial_fk, 'status' => $model->status]);
+		$status = [1 => 'Riscado', 2 => 'Bordando Terceiros', 3 => 'Bordado', 5 => 'Costurado', 4 => 'Pronto'];
 
-            if ($modelExiste) {
+		if (Yii::$app->request->post()) {
+			$model->load(Yii::$app->request->post());
 
-                $qtd = $model->qnt;
-                $modelExiste->qnt = $modelExiste->qnt + $model->qnt;
-                $model = $modelExiste;
-            } else {
 
-                $qtd = $model->qnt;
-            }
+			$modelExiste = Fabricacao::findOne(['produto_comercial_fk' => $model->produto_comercial_fk, 'status' => $model->status]);
 
-            if ($model->save()) {
-                
-                $modelHitorico->load(Yii::$app->request->post());
-                $modelHitorico->qnt = $qtd;
-                $modelHitorico->fabricacao_fk = $model->id;
-                $modelHitorico->status = '1';
-                $modelHitorico->save();
-                
-            }
+			if ($modelExiste) {
 
-            return $this->redirect(['view', 'id' => $model->id]);
-        } else {
-            return $this->render('create', [
-                        'model' => $model,
-                        'produto' => $produto,
-                        'status' => $status,
-                        'modelHitorico' => $modelHitorico,
-            ]);
-        }
-    }
+				$qtd = $model->qnt;
+				$modelExiste->qnt = $modelExiste->qnt + $model->qnt;
+				$model = $modelExiste;
+			} else {
 
-    /**
-     * Updates an existing Fabricacao model.
-     * If update is successful, the browser will be redirected to the 'view' page.
-     * @param string $id
-     * @return mixed
+				$qtd = $model->qnt;
+			}
+			$transaction = Yii::$app->db->beginTransaction();
 
-      public function actionUpdate($id) {
-      $model = $this->findModel($id);
-      $modelHitorico = new \app\models\FabricacaoHistoricoSearch();
+			try {
+				if ($model->save()) {
 
-      $model->produto_comercial =  'Produto comercial';//\app\models\VisProduto::find()->select("produto_preco_fk, descricao")->orderBy('descricao')->all();
+					$modelHitorico->load(Yii::$app->request->post());
+					$modelHitorico->qnt = $qtd;
+					$modelHitorico->fabricacao_fk = $model->id;
+					$modelHitorico->status = '1';
+					$modelHitorico->save();
 
-      $status = [1 => 'Riscado', 2 => 'Bordando Terceiros', 3 => 'Bordado', 4 => 'Pronto'];
+					if ($modelHitorico->pago_status) {
+						$kardex = new \app\models\KardexSearch();
+						$kardex->entrada_saida = '2';
+						$kardex->fabricacao_historico_fk = $modelHitorico->id;
 
-      if ($model->load(Yii::$app->request->post()) && $model->save()) {
+						$produto = \app\models\VisProdutoComercialSearch::findOne(['id' => $model->produto_comercial_fk]);
 
-      return $this->redirect(['view', 'id' => $model->id]);
-      } else {
-      return $this->render('update', [
-      'model' => $model,
+						switch ($model->status) {
+							case '1': $kardex->valor = $produto->risco;
+								break;
+							case '2':
+							case '3': $kardex->valor = $produto->bordado;
+								break;
+							case '4': $kardex->valor = $produto->costureira;
+								break;
+						}
 
-      'status' => $status,
-      'modelHitorico' => $modelHitorico,
-      ]);
-      }
-      } */
-    public function actionMudaStatus($id) {
+						$kardex->valor = \app\models\Models::decimalFormatForBank($kardex->valor);
+						$kardex->qnt = $modelHitorico->qnt;
+						$kardex->save();
+					}
+				}
+				$transaction->commit();
+			} catch (\Exception $e) {
+				$transaction->rollBack();
+				throw $e;
+			}
 
-        $model = \app\models\VisFabricacaoSearch::findOne(['id'=>$id]);
-        $modelNovo = new Fabricacao();
-        $modelHitorico = new \app\models\FabricacaoHistoricoSearch();
+			return $this->redirect(['view', 'id' => $model->id]);
+		} else {
+			return $this->render('create', [
+					'model' => $model,
+					'produto' => $produto,
+					'status' => $status,
+					'modelHitorico' => $modelHitorico,
+			]);
+		}
+	}
 
-        $produto = ArrayHelper::map(\app\models\VisProdutoComercialSearch::find()->select("id, produto_comercial")->orderBy('produto_comercial')->all(), 'id', 'produto_comercial');
+	public function actionMudaStatus($id) {
 
-        $status = [1 => 'Riscado', 2 => 'Bordando Terceiros', 3 => 'Bordado', 4 => 'Pronto'];
-        $this->view->title = "Alterar Estágio de Fabricação: {$model->status_descricao} - " . $model->produto;
+		$model = \app\models\VisFabricacaoSearch::findOne(['id' => $id]);
+		$modelNovo = new Fabricacao();
+		$modelHitorico = new \app\models\FabricacaoHistoricoSearch();
 
-        unset($status[$model->status]);
+		$produto = ArrayHelper::map(\app\models\VisProdutoComercialSearch::find()->select("id, produto_comercial")->orderBy('produto_comercial')->all(), 'id', 'produto_comercial');
 
-        if ($modelNovo->load(Yii::$app->request->post())) {
+		$status = [1 => 'Riscado', 2 => 'Bordando Terceiros', 3 => 'Bordado', 5 => 'Costurado', 4 => 'Pronto'];
+		$this->view->title = "Alterar Estágio de Fabricação: {$model->status_descricao} - " . $model->produto;
+
+		unset($status[$model->status]);
+
+		if ($modelNovo->load(Yii::$app->request->post())) {
 			$model = $this->findModel($id);
-			
-            $modelNovo->produto_comercial_fk = $model->produto_comercial_fk;
-			
-            $modelExiste = Fabricacao::findOne(['produto_comercial_fk' => $model->produto_comercial_fk, 'status' => $modelNovo->status]);
 
-            if ($modelExiste) {
+			$modelNovo->produto_comercial_fk = $model->produto_comercial_fk;
 
-                $qtd = $modelNovo->qnt;
-                $modelExiste->qnt = $modelExiste->qnt + $modelNovo->qnt;
-                $modelNovo = $modelExiste;
-            } else {
+			$modelExiste = Fabricacao::findOne(['produto_comercial_fk' => $model->produto_comercial_fk, 'status' => $modelNovo->status]);
 
-                $qtd = $modelNovo->qnt;
-            }
+			if ($modelExiste) {
 
-            if ($modelNovo->save()) {
+				$qtd = $modelNovo->qnt;
+				$modelExiste->qnt = $modelExiste->qnt + $modelNovo->qnt;
+				$modelNovo = $modelExiste;
+			} else {
 
-                $modelHitorico = new \app\models\FabricacaoHistoricoSearch();
-                $modelHitorico->load(Yii::$app->request->post());
-                $modelHitorico->qnt = $qtd;
-                $modelHitorico->fabricacao_fk = $modelNovo->id;
-                $modelHitorico->status = '1';
-                $modelHitorico->save();
+				$qtd = $modelNovo->qnt;
+			}
 
-                $modelHitorico = new \app\models\FabricacaoHistoricoSearch();
-                $modelHitorico->load(Yii::$app->request->post());
-                $modelHitorico->qnt = $qtd;
-                $modelHitorico->fabricacao_fk = $model->id;
-                $modelHitorico->status = '2';
-                $modelHitorico->save();
-            }
+			if ($modelNovo->save()) {
 
-            $model->qnt = $model->qnt - $qtd;
-            $model->save();
+				$modelHitorico = new \app\models\FabricacaoHistoricoSearch();
+				$modelHitorico->load(Yii::$app->request->post());
+				$modelHitorico->qnt = $qtd;
+				$modelHitorico->fabricacao_fk = $modelNovo->id;
+				$modelHitorico->status = '1';
+				$modelHitorico->save();
 
-            //inclui estoque
-            if ($modelNovo->status == 4) {
+				$modelHitorico = new \app\models\FabricacaoHistoricoSearch();
+				$modelHitorico->load(Yii::$app->request->post());
+				$modelHitorico->qnt = $qtd;
+				$modelHitorico->fabricacao_fk = $model->id;
+				$modelHitorico->status = '2';
+				$modelHitorico->save();
 
-                $estoqueExiste = \app\models\EstoqueSearch::findOne(['produto_comercial_fk' => $model->produto_comercial_fk]);
+				if ($modelHitorico->pago_status) {
+					$kardex = new \app\models\KardexSearch();
+					$kardex->entrada_saida = '2';
+					$kardex->fabricacao_historico_fk = $modelHitorico->id;
 
-                if ($estoqueExiste) {
+					$produto = \app\models\VisProdutoComercialSearch::findOne(['id' => $model->produto_comercial_fk]);
 
-                    $qtd = $modelNovo->qnt;
-                    $estoqueExiste->qnt_diponivel = $estoqueExiste->qnt_diponivel + $modelNovo->qnt;
-                    $estoque = $estoqueExiste;
-                } else {
-                    $estoque = new \app\models\EstoqueSearch();
-                    $qtd = $modelNovo->qnt;
-                    $estoque->qnt_diponivel = $qnt;
-                    $estoque->produto_comercial_fk = $modelNovo->produto_comercial_fk;
-                }
+					switch ($model->status) {
+						case '1': $kardex->valor = $produto->risco;
+							break;
+						case '2':
+						case '3': $kardex->valor = $produto->bordado;
+							break;
+						case '4': $kardex->valor = $produto->costureira;
+							break;
+					}
 
-                if ($estoque->save()) {
+					$kardex->valor = \app\models\Models::decimalFormatForBank($kardex->valor);
+					$kardex->qnt = $modelHitorico->qnt;
+					$kardex->save();
+				}
+			}
 
-                    $kardex = new \app\models\Kardex();
-                    $kardex->qnt = $qtd;
-                    $kardex->fabricacao_fk = $modelNovo->id;
-                    $kardex->entrada_saida = '1';
-                    $kardex->valor = 0.0; //$modelExiste->produtoComercialFk->PrecoFK->valor_venda;
-                    $kardex->valor_custo = 0.0; //$modelExiste->produtoComercialFk->PrecoFK->valor_custo;
-                    $kardex->save();
+			$model->qnt = $model->qnt - $qtd;
+			$model->save();
 
-                    $modelHitorico = new \app\models\FabricacaoHistoricoSearch();
-                    $modelHitorico->load(Yii::$app->request->post());
-                    $modelHitorico->qnt = $qtd;
-                    $modelHitorico->fabricacao_fk = $modelNovo->id;
-                    $modelHitorico->status = '2';
-                    $modelHitorico->save();
-                }
-            }
+			//inclui estoque
+			if ($modelNovo->status == 4) {
 
-            return $this->redirect(['view', 'id' => $modelNovo->id]);
-        } else {
-            return $this->render('muda-status', [
-                        'model' => $model,
-                        'modelNovo' => $modelNovo,
-                        'produto' => $produto,
-                        'status' => $status,
-                        'modelHitorico' => $modelHitorico,
-            ]);
-        }
-    }
+				$estoqueExiste = \app\models\EstoqueSearch::findOne(['produto_comercial_fk' => $model->produto_comercial_fk]);
 
-    /**
-     * Deletes an existing Fabricacao model.
-     * If deletion is successful, the browser will be redirected to the 'index' page.
-     * @param string $id
-     * @return mixed
-     */
-    public function actionDelete($id) {
-        $model = $this->findModel($id);
-        $model->data_exclusao = date('d/m/Y');
-        $model->save();
-        return $this->redirect(['index']);
-    }
+				if ($estoqueExiste) {
 
-    /**
-     * Finds the Fabricacao model based on its primary key value.
-     * If the model is not found, a 404 HTTP exception will be thrown.
-     * @param string $id
-     * @return Fabricacao the loaded model
-     * @throws NotFoundHttpException if the model cannot be found
-     */
-    protected function findModel($id) {
-        if (($model = FabricacaoSearch::findOne($id)) !== null) {
-            return $model;
-        } else {
-            throw new NotFoundHttpException('The requested page does not exist.');
-        }
-    }
+					$qtd = $modelNovo->qnt;
+					$estoqueExiste->qnt_diponivel = $estoqueExiste->qnt_diponivel + $modelNovo->qnt;
+					$estoque = $estoqueExiste;
+				} else {
+					$estoque = new \app\models\EstoqueSearch();
+					$qtd = $modelNovo->qnt;
+					$estoque->qnt_diponivel = $qnt;
+					$estoque->produto_comercial_fk = $modelNovo->produto_comercial_fk;
+				}
 
-    public function actionIncluirDesenho() {
+				if ($estoque->save()) {
 
-        $post = Yii::$app->request->post();
-        $model = null;
+					$modelHitorico = new \app\models\FabricacaoHistoricoSearch();
+					$modelHitorico->load(Yii::$app->request->post());
+					$modelHitorico->qnt = $qtd;
+					$modelHitorico->fabricacao_fk = $modelNovo->id;
+					$modelHitorico->status = '2';
+					$modelHitorico->save();
+				}
+			}
 
-        $model = new \app\models\DesenhoSearch();
-        $model->attributes = $post['DesenhoSearch'];
+			return $this->redirect(['view', 'id' => $modelNovo->id]);
+		} else {
+			return $this->render('muda-status', [
+					'model' => $model,
+					'modelNovo' => $modelNovo,
+					'produto' => $produto,
+					'status' => $status,
+					'modelHitorico' => $modelHitorico,
+			]);
+		}
+	}
 
+	/**
+	 * Deletes an existing Fabricacao model.
+	 * If deletion is successful, the browser will be redirected to the 'index' page.
+	 * @param string $id
+	 * @return mixed
+	 */
+	public function actionDelete($id) {
+		$model = $this->findModel($id);
+		$model->data_exclusao = date('d/m/Y');
+		$model->save();
+		return $this->redirect(['index']);
+	}
 
-        if ($model->save()) {
+	/**
+	 * Finds the Fabricacao model based on its primary key value.
+	 * If the model is not found, a 404 HTTP exception will be thrown.
+	 * @param string $id
+	 * @return Fabricacao the loaded model
+	 * @throws NotFoundHttpException if the model cannot be found
+	 */
+	protected function findModel($id) {
+		if (($model = FabricacaoSearch::findOne($id)) !== null) {
+			return $model;
+		} else {
+			throw new NotFoundHttpException('The requested page does not exist.');
+		}
+	}
 
-            $str = 'Inclusão com sucesso';
+	public function actionIncluirDesenho() {
 
-            $msg['tipo'] = 'success';
-            $msg['msg'] = $str . ' efetivada com sucesso.';
-            $msg['icon'] = 'check';
+		$post = Yii::$app->request->post();
+		$model = null;
 
-            //$desenho = ArrayHelper::map(\app\models\DesenhoSearch::find()->select("id, descricao")->orderBy('descricao')->all(), 'id', 'descricao');
-
-            $desenhos = \app\models\DesenhoSearch::find()
-                    ->select("id, descricao")
-                    ->asArray()
-                    ->orderBy('descricao')
-                    ->all();
-
-            if ($desenhos) {
-                $desenhosHtml .= "<option value=''>-- selecione --</option>";
-                foreach ($desenhos as $key => $value) {
-                    $desenhosHtml .= "<option value='" . $value['id'] . "'>" . $value['descricao'] . "</option>";
-                }
-            } else {
-                $desenhosHtml .= "<option value=''>Nenhum registro encontrado</option>";
-            }
+		$model = new \app\models\DesenhoSearch();
+		$model->attributes = $post['DesenhoSearch'];
 
 
-            $dados = ['dados' => $desenhosHtml, 'msg' => $msg];
-        } else {
-            $msg = $model->getErrors();
+		if ($model->save()) {
 
-            $msg['tipo'] = 'error';
-            $msg['msg'] = 'Erro incluir' . $msg;
-            $msg['icon'] = 'error';
+			$str = 'Inclusão com sucesso';
 
-            $dados = ['msg' => $msg];
-        }
+			$msg['tipo'] = 'success';
+			$msg['msg'] = $str . ' efetivada com sucesso.';
+			$msg['icon'] = 'check';
 
+			//$desenho = ArrayHelper::map(\app\models\DesenhoSearch::find()->select("id, descricao")->orderBy('descricao')->all(), 'id', 'descricao');
 
+			$desenhos = \app\models\DesenhoSearch::find()
+				->select("id, descricao")
+				->asArray()
+				->orderBy('descricao')
+				->all();
 
-        return \yii\helpers\Json::encode($dados);
-    }
-
-    public function actionIncluirClassificacao() {
-
-        $post = Yii::$app->request->post();
-        $model = null;
-
-        $model = new \app\models\ClassificacaoSearch();
-        $model->attributes = $post['ClassificacaoSearch'];
-
-
-        if ($model->save()) {
-
-            $str = 'Inclusão com sucesso';
-
-            $msg['tipo'] = 'success';
-            $msg['msg'] = $str . ' efetivada com sucesso.';
-            $msg['icon'] = 'check';
-
-            //$desenho = ArrayHelper::map(\app\models\DesenhoSearch::find()->select("id, descricao")->orderBy('descricao')->all(), 'id', 'descricao');
-
-            $classificacao = \app\models\ClassificacaoSearch::find()
-                    ->select("id, descricao")
-                    ->asArray()
-                    ->orderBy('descricao')
-                    ->all();
-
-            if ($classificacao) {
-                $html .= "<option value=''>-- selecione --</option>";
-                foreach ($classificacao as $key => $value) {
-                    $html .= "<option value='" . $value['id'] . "'>" . $value['descricao'] . "</option>";
-                }
-            } else {
-                $html .= "<option value=''>Nenhum registro encontrado</option>";
-            }
+			if ($desenhos) {
+				$desenhosHtml .= "<option value=''>-- selecione --</option>";
+				foreach ($desenhos as $key => $value) {
+					$desenhosHtml .= "<option value='" . $value['id'] . "'>" . $value['descricao'] . "</option>";
+				}
+			} else {
+				$desenhosHtml .= "<option value=''>Nenhum registro encontrado</option>";
+			}
 
 
-            $dados = ['dados' => $html, 'msg' => $msg];
-        } else {
-            $msg = $model->getErrors();
+			$dados = ['dados' => $desenhosHtml, 'msg' => $msg];
+		} else {
+			$msg = $model->getErrors();
 
-            $msg['tipo'] = 'error';
-            $msg['msg'] = 'Erro incluir' . $msg;
-            $msg['icon'] = 'error';
+			$msg['tipo'] = 'error';
+			$msg['msg'] = 'Erro incluir' . $msg;
+			$msg['icon'] = 'error';
 
-            $dados = ['msg' => $msg];
-        }
+			$dados = ['msg' => $msg];
+		}
 
 
 
-        return \yii\helpers\Json::encode($dados);
-    }
+		return \yii\helpers\Json::encode($dados);
+	}
+
+	public function actionIncluirClassificacao() {
+
+		$post = Yii::$app->request->post();
+		$model = null;
+
+		$model = new \app\models\ClassificacaoSearch();
+		$model->attributes = $post['ClassificacaoSearch'];
+
+
+		if ($model->save()) {
+
+			$str = 'Inclusão com sucesso';
+
+			$msg['tipo'] = 'success';
+			$msg['msg'] = $str . ' efetivada com sucesso.';
+			$msg['icon'] = 'check';
+
+			//$desenho = ArrayHelper::map(\app\models\DesenhoSearch::find()->select("id, descricao")->orderBy('descricao')->all(), 'id', 'descricao');
+
+			$classificacao = \app\models\ClassificacaoSearch::find()
+				->select("id, descricao")
+				->asArray()
+				->orderBy('descricao')
+				->all();
+
+			if ($classificacao) {
+				$html .= "<option value=''>-- selecione --</option>";
+				foreach ($classificacao as $key => $value) {
+					$html .= "<option value='" . $value['id'] . "'>" . $value['descricao'] . "</option>";
+				}
+			} else {
+				$html .= "<option value=''>Nenhum registro encontrado</option>";
+			}
+
+
+			$dados = ['dados' => $html, 'msg' => $msg];
+		} else {
+			$msg = $model->getErrors();
+
+			$msg['tipo'] = 'error';
+			$msg['msg'] = 'Erro incluir' . $msg;
+			$msg['icon'] = 'error';
+
+			$dados = ['msg' => $msg];
+		}
+
+
+
+		return \yii\helpers\Json::encode($dados);
+	}
 
 }

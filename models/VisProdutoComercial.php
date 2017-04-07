@@ -23,6 +23,9 @@ use Yii;
  * @property string $preco_fk
  * @property string $produto_fk
  * @property string $cor_pano_fk
+ * @property string $valor_custo
+ * @property string $valor_comercial
+ * @property string $produto_comercial
  */
 class VisProdutoComercial extends \app\models\Models
 {
@@ -40,8 +43,8 @@ class VisProdutoComercial extends \app\models\Models
     public function rules()
     {
         return [
-            [['classificacao'], 'string'],
-            [['risco', 'pano', 'linha', 'bordado', 'costureira', 'enchimento'], 'number'],
+            [['classificacao', 'produto_comercial'], 'string'],
+            [['risco', 'pano', 'linha', 'bordado', 'costureira', 'enchimento', 'valor_custo', 'valor_comercial'], 'number'],
             [['id', 'desenho_fk', 'classificacao_fk', 'preco_fk', 'produto_fk', 'cor_pano_fk'], 'integer'],
             [['produto', 'cor_pano', 'desenho'], 'string', 'max' => 200],
         ];
@@ -69,6 +72,9 @@ class VisProdutoComercial extends \app\models\Models
             'preco_fk' => 'Preco Fk',
             'produto_fk' => 'Produto Fk',
             'cor_pano_fk' => 'Cor Pano Fk',
+            'valor_custo' => 'Valor Custo',
+            'valor_comercial' => 'Valor Comercial',
+            'produto_comercial' => 'Produto Comercial',
         ];
     }
 }

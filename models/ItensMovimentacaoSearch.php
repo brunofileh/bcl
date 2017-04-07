@@ -24,11 +24,17 @@ class ItensMovimentacaoSearch extends ItensMovimentacao {
         return [
                 [['movimentacao_fk', 'estoque_fk'], 'integer'],
                 [['valor_unitario'], 'number'],
-                [['novo', 'status', 'quantidade', 'qnt_estoque', 'descricao_produto', 'valor_total', 'valor_desconto'], 'safe'],
+                [['novo', 'status', 'quantidade', 'qnt_estoque', 'descricao_produto', 'valor_total', 'valor_desconto', 'estoque_fk'], 'safe'],
                 ['quantidade', 'validaQuantidade'],
-                [['estoque_fk', 'status', 'quantidade'], 'required']
+                [['estoque_fk', 'status', 'quantidade'], 'required', 'on'=>'popup']
         ];
     }
+	
+	public function afterFind() {
+		parent::afterFind();
+		$this->valor_total =  ($this->valor_unitario * $this->quantidade) - ($this->valor_desconto * $this->quantidade);
+		return true;
+	}
 
     public function validaQuantidade($attribute, $params) {
         if ($this->quantidade > $this->qnt_estoque) {
@@ -86,8 +92,8 @@ class ItensMovimentacaoSearch extends ItensMovimentacao {
     public static function buscaCampos($itens = []) {
 
         $itens = (\Yii::$app->session->get('itens')) ? \Yii::$app->session->get('itens') : ( ($itens) ? $itens : []);
-        //print_r($itens); exit;
-        $dataProvider = new \yii\data\ArrayDataProvider([
+
+		$dataProvider = new \yii\data\ArrayDataProvider([
             'id' => 'movimentacao_itens',
             'allModels' => $itens,
             'sort' => false,

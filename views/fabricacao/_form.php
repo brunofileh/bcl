@@ -7,6 +7,8 @@ $this->registerJsFile('@web/js/fabricacao.js', ['position' => $this::POS_END, 'd
 /* @var $this yii\web\View */
 /* @var $model app\models\Fabricacao */
 /* @var $form yii\widgets\ActiveForm */
+$artesao = yii\helpers\ArrayHelper::map(app\models\ArtesaoSearch::find()->select("id, nome")->orderBy('nome')->all(), 'id', 'nome');
+
 ?>
 
 <div class="fabricacao-form">
@@ -52,7 +54,7 @@ $this->registerJsFile('@web/js/fabricacao.js', ['position' => $this::POS_END, 'd
     <div id="divHistorico" style="display:<?php echo ($model->id) ? 'none' : 'block' ?>">
         <div class="row">
             <div class="col-md-12">
-                <?= $form->field($modelHitorico, 'pessoa')->textInput(['maxlength' => true]) ?>
+                   	<?= $form->field($modelHitorico, 'artesao_fk')->dropDownList($artesao, ['prompt' => 'Selecione']) ?>
             </div>
         </div>
         <div class="row">

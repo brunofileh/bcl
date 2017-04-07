@@ -16,7 +16,7 @@ $(function () {
             $('#movimentacaosearch-cliente_fk').val('');
             $('#movimentacaosearch-status').val('');
             $('#movimentacaosearch-data_entrega').val('');
-            
+
             $('#movimentacaosearch-valor_frete-disp').val('');
             $('#movimentacaosearch-valor_pago-disp').val('');
             $('#movimentacaosearch-parcelas-disp').val('');
@@ -106,19 +106,26 @@ $(function () {
 function preencheForm(dados, acao) {
     $('#itensmovimentacaosearch-id').val(dados.id);
     $('#itensmovimentacaosearch-novo').val(dados.novo);
-
+    
     $('#itensmovimentacaosearch-estoque_fk').val(dados.estoque_fk);
+    $('#itensmovimentacaosearch-qnt_estoque').val(dados.qnt_disponivel);
+    $('#qnt_estoque').html('Quantidade estoque: ' + dados.qnt_disponivel);
     $('#itensmovimentacaosearch-valor_desconto-disp').val(dados.valor_desconto);
     $('#itensmovimentacaosearch-valor_unitario').val(dados.valor_unitario);
     $('#itensmovimentacaosearch-quantidade').val(dados.quantidade);
-    $('#itensmovimentacaosearch-valor_total').val((dados.valor_unitario*dados.quantidade) -(dados.quantidade*dados.valor_desconto)  );
+    
+    $('#itensmovimentacaosearch-valor_total').val((dados.valor_unitario * dados.quantidade) - (dados.quantidade * dados.valor_desconto));
     $('#itensmovimentacaosearch-status').val(dados.status);
+
 
     if (acao == 'view') {
         bloqueaForm(true);
     } else {
         $('#botaoSalvar').html('Alterar registro');
         bloqueaForm(false);
+    }
+    if(dados.id){
+        $('#itensmovimentacaosearch-estoque_fk').attr('disabled', true);
     }
 }
 
@@ -164,8 +171,8 @@ function  retiraFormatoMoeda(valor) {
 function  calculaTotalItem( ) {
 
     $('#itensmovimentacaosearch-valor_total').val(
-           (retiraFormatoMoeda($('#itensmovimentacaosearch-quantidade').val()) * ($('#itensmovimentacaosearch-valor_unitario').val()) -
-           (retiraFormatoMoeda($('#itensmovimentacaosearch-valor_desconto-disp').val()) * retiraFormatoMoeda($('#itensmovimentacaosearch-quantidade').val()) )
+            (retiraFormatoMoeda($('#itensmovimentacaosearch-quantidade').val()) * ($('#itensmovimentacaosearch-valor_unitario').val()) -
+                    (retiraFormatoMoeda($('#itensmovimentacaosearch-valor_desconto-disp').val()) * retiraFormatoMoeda($('#itensmovimentacaosearch-quantidade').val()))
                     ));
     ;
 }

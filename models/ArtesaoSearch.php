@@ -2,15 +2,14 @@
 
 namespace app\models;
 
-use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\models\Kardex;
+use app\models\Artesao;
 
 /**
- * KardexSearch represents the model behind the search form about `app\models\Kardex`.
+ * ArtesaoSearch represents the model behind the search form about `app\models\Artesao`.
  */
-class KardexSearch extends Kardex
+class ArtesaoSearch extends Artesao
 {
     /**
      * @inheritdoc
@@ -18,8 +17,9 @@ class KardexSearch extends Kardex
     public function rules()
     {
         return [
-            [['id', 'entrada_saida', 'itens_movimentacao_fk'], 'integer'],
-            [['valor', 'qnt'], 'number'],
+            [['id'], 'integer'],
+            [['nome', 'uf'], 'safe'],
+			[['nome', 'uf'], 'required'],
         ];
     }
 
@@ -31,6 +31,17 @@ class KardexSearch extends Kardex
         // bypass scenarios() implementation in the parent class
         return Model::scenarios();
     }
+	
+	 /**
+     * @inheritdoc
+     */
+    public function attributeLabels()
+    {
+		
+		$atributes = parent::attributeLabels();
+		$atributes['uf'] = 'UF';
+        return $atributes;
+    }
 
     /**
      * Creates data provider instance with search query applied
@@ -41,7 +52,7 @@ class KardexSearch extends Kardex
      */
     public function search($params)
     {
-        $query = Kardex::find();
+        $query = ArtesaoSearch::find();
 
         // add conditions that should always apply here
 
@@ -54,14 +65,16 @@ class KardexSearch extends Kardex
         // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
-            'entrada_saida' => $this->entrada_saida,
-            'itens_movimentacao_fk' => $this->itens_movimentacao_fk,
-            'valor' => $this->valor,
-            'qnt' => $this->qnt,
         ]);
+
+        $query->andFilterWhere(['like', 'nome', $this->nome])
+            ->andFilterWhere(['like', 'uf', $this->uf]);
 
         return $dataProvider;
     }
-    
-    
+	
+	public function beforeSave($insert) {
+		$this->uf = strtoupper($this->uf);
+		return parent::beforeSave($insert);
+	}
 }

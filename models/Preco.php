@@ -15,6 +15,7 @@ use Yii;
  * @property string $bordado
  * @property string $costureira
  * @property string $enchimento
+ * @property string $valor_comercial
  *
  * @property Estoque2[] $estoque2s
  * @property ProdutoComercial[] $produtoComercials
@@ -36,7 +37,7 @@ class Preco extends \app\models\Models
     {
         return [
             [['data_inclusao'], 'safe'],
-            [['risco', 'pano', 'linha', 'bordado', 'costureira', 'enchimento'], 'number'],
+            [['risco', 'pano', 'linha', 'bordado', 'costureira', 'enchimento', 'valor_comercial'], 'number'],
         ];
     }
 
@@ -54,6 +55,7 @@ class Preco extends \app\models\Models
             'bordado' => 'Bordado',
             'costureira' => 'Costureira',
             'enchimento' => 'Enchimento',
+            'valor_comercial' => 'Valor Comercial',
         ];
     }
 

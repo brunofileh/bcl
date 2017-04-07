@@ -29,7 +29,7 @@ $entradaSaida = ['1' => 'Entrada', '2' => 'Saída'];
 
     <?php $form = ActiveForm::begin(['id' => 'movimentacaoPop']); ?>
 
-    <?= $form->field($model, 'entrada_saida')->dropDownList($entradaSaida, ['disabled'=>($model->isNewRecord ? true : false)]) ?>
+    <?= $form->field($model, 'entrada_saida')->dropDownList($entradaSaida, ['disabled'=>($model->isNewRecord ? false : true)]) ?>
     
     <div id='divES' style="display:<?= ($model->tipo_entrada == 1) ? 'none' : 'block'; ?>">
          <?=$form->field($model, 'cliente_fk')->hiddenInput()->label(false); ?>

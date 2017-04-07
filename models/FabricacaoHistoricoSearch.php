@@ -30,7 +30,6 @@ class FabricacaoHistoricoSearch extends FabricacaoHistorico
         return [
             'id' => 'ID',
             'data_inclusao' => 'Data Inclusao',
-            'pessoa' => 'Artesão',
             'qnt' => 'Quantidade',
             'status' => 'Status',
             'pago_status' => 'Pago?',
@@ -74,8 +73,6 @@ class FabricacaoHistoricoSearch extends FabricacaoHistorico
             'fabricacao_fk' => $this->fabricacao_fk,
         ]);
 
-        $query->andFilterWhere(['like', 'pessoa', $this->pessoa]);
-        
 
         return $dataProvider;
     }
