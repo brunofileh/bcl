@@ -12,6 +12,8 @@ use app\models\Balancete;
  */
 class BalanceteSearch extends Balancete
 {
+	public $titulo;
+	
     /**
      * @inheritdoc
      */
@@ -33,6 +35,23 @@ class BalanceteSearch extends Balancete
         return Model::scenarios();
     }
 
+	
+	/**
+     * @inheritdoc
+     */
+    public function attributeLabels()
+    {
+        return [
+            'id' => 'ID',
+            'entrada' => 'Entrada',
+            'saida' => 'Saida',
+            'total' => 'Total',
+            'lucro' => 'Lucro',
+            'mes_ano' => 'Mes Ano',
+        ];
+    }
+	
+	
     /**
      * Creates data provider instance with search query applied
      *

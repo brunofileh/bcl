@@ -58,12 +58,8 @@ $entradaSaida = ['1' => 'Entrada', '2' => 'Saída'];
         <?=
         $form->field($model, 'data_entrega')->widget(
                 \dosamigos\datepicker\DatePicker::className(), [
-            // inline too, not bad
-            //   'inline' => true, 
-            'language' => 'pt-BR',
-            // modify template for custom rendering
-            //   'template' => '<div class="well well-sm" style="background-color: #fff; width:250px">{input}</div>',
-            'clientOptions' => [
+				'language' => 'pt-BR',
+				'clientOptions' => [
                 'autoclose' => true,
                 'format' => 'dd/mm/yyyy'
             ]

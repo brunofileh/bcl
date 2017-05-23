@@ -59,7 +59,8 @@ class BalanceteController extends Controller {
 	 * @return mixed
 	 */
 	public function actionCreate() {
-		$model = new Balancete();
+		$model = new BalanceteSearch();
+		$modelAnt = BalanceteSearch::find()->orderBy('mes_ano desc')->asArray()->one();
 
 		$entradas = \app\models\KardexSearch::find()->where("entrada_saida=1 and to_char(data_inclusao, 'MMYYYY')='" . date('mY') . "'")->all();
 		$saidas = \app\models\KardexSearch::find()->where("entrada_saida=2 and to_char(data_inclusao, 'MMYYYY')='" . date('mY') . "'")->all();
@@ -78,7 +79,19 @@ class BalanceteController extends Controller {
 					$ent['bor']['custo'] += $entrada->custo * $entrada->qnt;
 				}
 			}
+			 $gridEnd[0] = ['titulo'=>'Entrada de Produtos', 'mes_ano'=>date('Ym'), 'total'=>$ent['mov']['total'], 'custo'=>$ent['mov']['custo']];
+			 $gridEnd[1] = ['titulo'=>'Entrada de Simples', 'mes_ano'=>date('Ym'), 'total'=>$ent['sim']['total'], 'custo'=>$ent['sim']['custo']];
+			 
+			 
+			$dataProviderEnd = new \yii\data\ArrayDataProvider([
+				'id' => 'balancete_end',
+				'allModels' => $gridEnd,
+				'sort' => false,
+				'pagination' => ['pageSize' => 10],
+			]);
+			
 		}
+		
 		if ($saidas) {
 			foreach ($saidas as $key => $saida) {
 				if ($entrada->itens_movimentacao_fk) {
@@ -92,6 +105,17 @@ class BalanceteController extends Controller {
 					$sat['bor']['custo'] += $saida->custo * $saida->qnt;
 				}
 			}
+			
+			$gridSai[0] = ['titulo'=>'Saída de Produtos', 'mes_ano'=>date('Ym'), 'total'=>$ent['mov']['total'], 'custo'=>$ent['mov']['custo']];
+			$gridSai[0] = ['titulo'=>'Saída de Terceirização', 'mes_ano'=>date('Ym'), 'total'=>$ent['mov']['total'], 'custo'=>$ent['mov']['custo']];
+			$gridSai[1] = ['titulo'=>'Saída de Simples', 'mes_ano'=>date('Ym'), 'total'=>$ent['sim']['total'], 'custo'=>$ent['sim']['custo']];
+			
+			$dataProviderSai = new \yii\data\ArrayDataProvider([
+				'id' => 'balancete_sai',
+				'allModels' => $gridSai,
+				'sort' => false,
+				'pagination' => ['pageSize' => 10],
+			]);
 		}
 
 
@@ -99,7 +123,10 @@ class BalanceteController extends Controller {
 			return $this->redirect(['view', 'id' => $model->id]);
 		} else {
 			return $this->render('create', [
-					'model' => $model,
+				'model' => $model,
+				'modelAnt' => $modelAnt,
+				'dataProviderSai' => $dataProviderSai,
+				'dataProviderEnd' => $dataProviderEnd
 			]);
 		}
 	}

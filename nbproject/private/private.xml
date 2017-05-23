@@ -22,15 +22,6 @@
             <file>file:/var/www/bcl/views/movimentacao/_form.php</file>
             <file>file:/var/www/bcl/views/itens-movimentacao/create.php</file>
         </group>
-        <group name="desenvolvimento">
-            <file>file:/C:/wamp64/www/bcl/views/movimentacao/view.php</file>
-            <file>file:/C:/wamp64/www/bcl/models/ItensMovimentacaoSearch.php</file>
-            <file>file:/C:/wamp64/www/bcl/views/movimentacao/index.php</file>
-            <file>file:/C:/wamp64/www/bcl/views/movimentacao/_form.php</file>
-            <file>file:/C:/wamp64/www/bcl/views/itens-movimentacao/_grid.php</file>
-            <file>file:/C:/wamp64/www/bcl/controllers/MovimentacaoController.php</file>
-            <file>file:/C:/wamp64/www/bcl/controllers/ItensMovimentacaoController.php</file>
-            <file>file:/C:/wamp64/www/bcl/views/itens-movimentacao/index.php</file>
-        </group>
+        <group name="desenvolvimento"/>
     </open-files>
 </project-private>
